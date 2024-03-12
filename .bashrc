@@ -81,6 +81,11 @@ alias dmenu_themed="dmenu -fn 'JetBrainsMono Nerd Font Mono,JetBrainsMono NFM Li
 # aliases for ls
 alias la="ls -a"
 alias ll="ls -la"
+# git aliases
+alias gst="git status"
+alias gll="git log --oneline"
+alias gc="git commit -m"
+alias gad="git add ."
 
 
 
