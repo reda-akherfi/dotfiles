@@ -20,6 +20,8 @@ pacman -Sy vim
 pacman -Sy zathura zathura-pdf-mupdf  
 # vifm is a cozy file manager for a vim user
 pacman -Sy vifm
+# dunst as my go-to notification daemon
+pacman -Sy dunst
 
 ######################################################################
 ### Creating Symlinks for dotfiles and such
@@ -28,4 +30,11 @@ ln -sf /home/$username/dotfiles/.vimrc /home/$username/.vimrc
 ln -sf /home/$username/dotfiles/.bashrc /home/$username/.bashrc
 ln -sf /home/$username/dotfiles/.config/zathura /home/$username/.config/zathura
 ln -sf /home/$username/dotfiles/.config/vifm /home/$username/.config/vifm
+ln -sf /home/$username/dotfiles/.config/dunst /home/$username/.config/dunst
 
+
+######################################################################
+### setting up .xinitrc, Xsession etc
+######################################################################
+# dunst should start with the X server
+echo "dunst &" >> ~/.xinitrc
