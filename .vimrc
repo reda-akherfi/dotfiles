@@ -60,7 +60,6 @@ set wildmenu
 set wildoptions+=pum
 ""> set up my colorscheme
 colorscheme sorbet
-:w
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """    Editing settings

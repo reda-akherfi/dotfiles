@@ -78,6 +78,9 @@ PS1="\n${BROWN}\u ${GREEN}󰣇 ${BROWN}\h ${RED}in ${LIGHT_BLUE}\w ${GREEN}${NC}
 alias v="vim"
 alias vb="vim /home/reda/.bashrc"
 alias dmenu_themed="dmenu -fn 'JetBrainsMono Nerd Font Mono,JetBrainsMono NFM Light:style=Bold,Regular:size=18' -l 10 -nb '#333333' -nf '#f5f5f5' -sf '#ffd700' -sb '#333333'"
+# aliases for ls
+alias la="ls -a"
+alias ll="ls -la"
 
 
 
