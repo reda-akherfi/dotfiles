@@ -1,9 +1,9 @@
-######################################################################
-######################################################################
-###### This script is going to be completed bit by bit
-###### as I am setting up my working env
-######################################################################
-######################################################################
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%% This script is going to be completed bit by bit
+#%%%%% as I am setting up my working env
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 ######################################################################
@@ -31,6 +31,8 @@ ln -sf /home/$username/dotfiles/.bashrc /home/$username/.bashrc
 ln -sf /home/$username/dotfiles/.config/zathura /home/$username/.config/zathura
 ln -sf /home/$username/dotfiles/.config/vifm /home/$username/.config/vifm
 ln -sf /home/$username/dotfiles/.config/dunst /home/$username/.config/dunst
+ln -sf ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
+
 
 
 ######################################################################
@@ -38,3 +40,7 @@ ln -sf /home/$username/dotfiles/.config/dunst /home/$username/.config/dunst
 ######################################################################
 # dunst should start with the X server
 echo "dunst &" >> ~/.xinitrc
+# torrenting setup using transmission-cli
+# I might want to use a systemd job instead
+echo "transmission-daemon &" >> ~/.xinitrc
+echo "transmission-rss -f &" >> ~/.xinitrc
