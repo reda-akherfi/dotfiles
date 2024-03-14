@@ -6,12 +6,12 @@
 
 
 # making the font get bigger
-echo "this is the font before:"
-sleep 3
-setfont ter-132b
-echo "this is the font after"
-sleep 3
-clear
+# echo "this is the font before:"
+# sleep 3
+# setfont ter-132b
+# echo "this is the font after"
+# sleep 3
+# clear
 
 # set up the time
 echo "configuring the time has begun"
