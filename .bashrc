@@ -95,6 +95,6 @@ alias gpm="git push -u origin main"
 ################################################################################
 # openning man pages using vim
 #  viman () { text=$(man "$@") && echo "$text" | vim -R +":set ft=man" - ; }
-viman () { text=$(man "$@") && echo "$text" | vim -R +":set ft=man" - ; }
+vm () { text=$(man "$@") && echo "$text" | vim -R +":set ft=man" - ; }
 
 
