@@ -93,7 +93,7 @@ do
     # setting the bootable flag for the efi partition
     echo "setting the bootable flag for the efi partition\n"
     sleep 3
-    parted --fix --script $disk_name set ${disk_name}1 esp on
+    parted --fix --script $disk_name set 1 esp on
     # making the root partition as the rest of the disk
     echo "making the root partition as the rest of the disk\n"
     sleep 3
