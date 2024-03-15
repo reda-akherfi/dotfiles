@@ -217,7 +217,7 @@ title Arch Linux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
-options root=$(root_uuid) rw
+options root=$root_uuid rw
 EOF
 clear
 echo "here is the the boot entery:\n"
