@@ -89,7 +89,7 @@ do
     # making the efi partition
     echo -e "making the efi partition\n"
     sleep 3
-    parted --fix --script $disk_name mkpart "primary" "EFIREDA" "fat32" 1MiB 301MiB
+    parted --fix --script $disk_name mkpart  "EFIREDA" "fat32" 1MiB 301MiB
     # setting the bootable flag for the efi partition
     echo -e "setting the bootable flag for the efi partition\n"
     sleep 3
@@ -97,7 +97,7 @@ do
     # making the root partition as the rest of the disk
     echo -e "making the root partition as the rest of the disk\n"
     sleep 3
-    parted --fix --script $disk_name mkpart "primary" "ROOTREDA" "ext4" 301MiB 100%
+    parted --fix --script $disk_name mkpart  "ROOTREDA" "ext4" 301MiB 100%
     clear
     parted --script ${disk_name} print
     read -p "is this partioning scheme acceptable? [yes/No] " user_partitioning_answer
