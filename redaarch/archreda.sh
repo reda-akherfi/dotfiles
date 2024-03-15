@@ -148,7 +148,7 @@ clear
 ############################################################
 # chrooting to the live env
 echo "installing software"
-pacstrap -k /mnt base linux linux-firmware intel-ucode networkmanager
+pacstrap -K /mnt base linux linux-firmware intel-ucode networkmanager
 echo "all software has been installed successfully !\n"
 sleep 3
 
