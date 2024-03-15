@@ -87,6 +87,8 @@ alias gll="git log --oneline"
 alias gc="git commit -m"
 alias gad="git add ."
 alias gpm="git push -u origin main"
+# systemd aliases
+alias sscl="sudo systemctl"
 
 
 
