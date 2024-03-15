@@ -51,7 +51,7 @@ clear
 ############################################################
 # choosing the drive
 disk_is_selected=0
-until [ disk_is_selected -eq 1 ]
+until [ $disk_is_selected -eq 1 ]
 do
     echo "choosing the drive\n"
     sleep 3
@@ -76,7 +76,7 @@ done
 # $ parted [options] [device [command [options...]...]]
 # partitionning the disk
 partitionning_successful=0
-until [ partitionning_successful -eq 1 ]
+until [ $partitionning_successful -eq 1 ]
 do
     echo "partitionning the disk\n"
     sleep 3
@@ -175,7 +175,7 @@ clear
 # selecting the line and field numbers [ the field sep is <Space> by default ]
 uuid_target_acquired=0
 root_uuid=""
-until [ uuid_target_acquired -eq 1 ]
+until [ $uuid_target_acquired -eq 1 ]
 do
     bat /mnt/etc/fstab
     read -p "Enter the line number : " $line_number
