@@ -99,7 +99,7 @@ do
     sleep 3
     parted --fix --script $disk_name mkpart "primary" "ext4" 512MiB 100%
     clear
-    parted --script ${disk_name} print list
+    parted --script ${disk_name} print
     read -p "is this partioning scheme acceptable? [yes/No] " user_partitioning_answer
     if [ $user_partitioning_answer = "yes" ]
     then
@@ -178,8 +178,8 @@ root_uuid=""
 until [ $uuid_target_acquired -eq 1 ]
 do
     bat /mnt/etc/fstab
-    read -p "Enter the line number : " $line_number
-    read -p "Enter the field number : " $field_number
+    read -p "Enter the line number : " line_number
+    read -p "Enter the field number : " field_number
     root_uuid=$(awk -v line=$line_number -v field=$field_number -- ' NR == line { print $field } ' /mnt/etc/fstab)
     clear
     bat /mnt/etc/fstab
