@@ -8,7 +8,7 @@
 read -p "Is the text small for your taste Mr Redaa? [Y/n] " text_small
 if [ $text_small = "n" ]
 then
-    echo -e "Ok, we will continue using this font size Mr Reda/n"
+    echo -e "Ok, we will continue using this font size Mr Reda\n"
     sleep 3
     clear
 else 
@@ -56,14 +56,14 @@ do
     echo -e "choosing the drive\n"
     sleep 3
     lsblk
-    read -p "\nenter the name of the drive , beware of typos !!!\n" disk_name
+    read -p "enter the name of the drive , beware of typos !!!  " disk_name
     sleep 3
     echo -e "the disk you selected is $disk_name \n"
     read -p "Is this selection the right one ? [yes/No]" user_selected_disk
     if [ $user_selected_disk = "yes" ]
     then
         disk_is_selected=1
-        echo -e "\nyou chose yes/n"
+        echo -e "\nyou chose yes\n"
         sleep 3
         clear
     else 
