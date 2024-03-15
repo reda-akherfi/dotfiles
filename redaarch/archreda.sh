@@ -60,7 +60,7 @@ do
     sleep 3
     echo "the disk you selected is $disk_name \n"
     read -p "Is this selection the right one ? [yes/No]" user_selected_disk
-    if [ user_selected_disk = "yes" ]
+    if [ $user_selected_disk = "yes" ]
     then
         disk_is_selected=1
         echo "\nyou chose yes/n"
@@ -101,7 +101,7 @@ do
     clear
     parted --script ${disk_name} print list
     read -p "is this partioning scheme acceptable? [yes/No] " user_partitioning_answer
-    if [ user_partitioning_answer = "yes" ]
+    if [ $user_partitioning_answer = "yes" ]
     then
         echo "you have selected the cuurent partitionning scheme\n"
         partitionning_successful=1
