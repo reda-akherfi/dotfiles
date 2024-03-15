@@ -8,16 +8,16 @@
 read -p "Is the text small for your taste Mr Redaa? [Y/n] " text_small
 if [ $text_small = "n" ]
 then
+    echo "Ok, we will continue using this font size Mr Reda/n"
+    sleep 3
+    clear
+else 
     # making the font get bigger
     echo "making the font get bigger\n"
     echo "this is the font before:"
     sleep 3
     setfont ter-132b
     echo "this is the font after"
-    sleep 3
-    clear
-else 
-    echo "Ok, we will continue using this font size Mr Reda/n"
     sleep 3
     clear
 fi
