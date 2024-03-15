@@ -99,6 +99,7 @@ do
     sleep 3
     parted --fix --script $disk_name mkpart  "ROOTREDA" "ext4" 301MiB 100%
     clear
+    partitionning_successful=1
     parted --script ${disk_name} print
 ###    read -p "is this partioning scheme acceptable? [yes/No] " user_partitioning_answer
 ###    if [ $user_partitioning_answer = "yes" ]
