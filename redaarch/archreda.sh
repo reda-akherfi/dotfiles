@@ -185,7 +185,7 @@ do
     bat /mnt/etc/fstab
     echo "the root UUID is  : $root_uuid \n"
     read -p "Is that accurate? [yes/No] " answer
-    if [ $anwser = "yes" ]
+    if [ $answer = "yes" ]
     then
         echo "you chose yes\n"
         uuid_target_acquired=1
