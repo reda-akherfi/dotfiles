@@ -100,18 +100,19 @@ do
     parted --fix --script $disk_name mkpart  "ROOTREDA" "ext4" 301MiB 100%
     clear
     parted --script ${disk_name} print
-    read -p "is this partioning scheme acceptable? [yes/No] " user_partitioning_answer
-    if [ $user_partitioning_answer = "yes" ]
-    then
-        echo -e "you have selected the cuurent partitionning scheme\n"
-        partitionning_successful=1
-        sleep 3
-        clear
-    else
-        echo -e "something went wrong with the partitionning \n going at it again but you might want to rewrite the script\n"
-        sleep 2
-        clear
-    fi
+###    read -p "is this partioning scheme acceptable? [yes/No] " user_partitioning_answer
+###    if [ $user_partitioning_answer = "yes" ]
+###    then
+###        echo -e "you have selected the cuurent partitionning scheme\n"
+###        partitionning_successful=1
+###        sleep 3
+###        clear
+###    else
+###        echo -e "something went wrong with the partitionning \n going at it again but you might want to rewrite the script\n"
+###        sleep 2
+###        clear
+###    fi
+    sleep 5
 done
 
 # making the file system -- formatting
@@ -148,7 +149,7 @@ clear
 ############################################################
 # chrooting to the live env
 echo -e "installing software"
-pacstrap -K /mnt base linux linux-firmware intel-ucode networkmanager
+pacstrap -K /mnt base linux linux-firmware intel-ucode networkmanager sudo
 echo -e "all software has been installed successfully !\n"
 sleep 3
 
