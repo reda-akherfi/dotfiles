@@ -12,7 +12,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 #setting up the EDITOR
-export EDITOR="nvim"
+export EDITOR="vim"
 # icons for lf
 export LF_ICONS=$(cat ~/.config/lf/icons)
 
@@ -24,7 +24,7 @@ export PATH=$PATH:~/.local/scripts/
 alias zah="zathura --fork ~/Documents/mental_haven.epub"
 alias zathura="zathura --fork"
 ## neovim and config files
-alias v="nvim"
+alias v="vim"
 alias vq="nvim ~/redalo_setup/qtile_shit/qtile/config.py"
 alias vb="nvim ~/.bashrc"
 # starting the X server
@@ -33,11 +33,11 @@ alias x="startx"
 alias n="ncmpcpp"
 # youtube-dl 
 alias youtube-dl="yt-dlp"
-# clipmenud setup
-export CM_DEBUG=1
-export CM_DIR=~/clipmenu_cache
-export CM_LAUNCHER=dmenu
-export CM_SELECTIONS="primary clipboard secondary"
+## # clipmenud setup
+## export CM_DEBUG=1
+## export CM_DIR=$XDG_CACHE_HOME/clipmenu_cache
+## export CM_LAUNCHER=dmenu
+## export CM_SELECTIONS="primary clipboard secondary"
 
 # tmux
 alias tx="tmux -key-table vi"
@@ -98,5 +98,28 @@ alias sscl="sudo systemctl"
 # openning man pages using vim
 #  viman () { text=$(man "$@") && echo "$text" | vim -R +":set ft=man" - ; }
 vm () { text=$(man "$@") && echo "$text" | vim -R +":set ft=man" - ; }
+
+
+################################################################################
+###  XDG stuff
+################################################################################
+### !!!! the No No's | never touch them
+# ~/.profile
+### the good guys
+export XDG_DATA_HOME="/home/reda/.local/share"
+export XDG_CONFIG_HOME="/home/reda/.config"
+export XDG_STATE_HOME="/home/reda/.local/state"
+export XDG_CACHE_HOME="/home/reda/.cache"
+# XDG ninja recommendations
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/.android
+alias adb='HOME="$XDG_DATA_HOME"/.android adb'
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export MYPY_CACHE_DIR="$XDG_CACHE_HOME"/mypy
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
+export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc
 
 
