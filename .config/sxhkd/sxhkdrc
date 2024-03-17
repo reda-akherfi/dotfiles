@@ -1,0 +1,14 @@
+# make sxhkd reload its configuration files:
+alt + shift + Escape
+	pkill -USR1 -x sxhkd
+
+# rofi and its related scripts
+super + d
+    rofi -show drun
+super + u
+   i3lock --show-failed-attempts --image ~/dotfiles/wallpapers-stash/weird-mountain.png --tiling && systemctl suspend
+super + c
+    clipcat-menu
+super + Return
+    /home/reda/dotfiles/.config/qtile/scripts/tmux.sh
+

@@ -15,6 +15,7 @@ filetype plugin indent on
 ""> navigating between buffers without saving
 set hidden 
 ""> clipboard : vim's vs the system's
+set clipboard=unnamedplus
 "" vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
 "" map <C-l> :set paste<CR>i<CR><CR><Esc>k:.!xclip -o<CR>JkJ:set nopaste<CR>
 ""> setting up netrw 
@@ -88,6 +89,16 @@ nnoremap gc guiw~l
 ""> less dizzying half page up and down
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+""> allow undoing after quitting 
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo_dir")
+    call mkdir($HOME."/.vim/undo_dir", "", 0700)
+endif
+set undodir=~/.vim/undo_dir
+set undofile
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -396,5 +396,12 @@ config.bind(',sd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/
 config.bind(',sl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
 
 # dark mode
-# config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.darkmode.enabled", True)
 
+# keys
+bindings = {
+    "aa": 'set-cmd-text -s :quickmark-add {url} "',
+}
+
+for key, bind in bindings.items():
+    config.bind(key, bind)
