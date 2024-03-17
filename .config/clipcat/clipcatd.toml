@@ -1,7 +1,7 @@
 daemonize = true
 pid_file = "/run/user/1000/clipcatd.pid"
 max_history = 100
-synchronize_selection_with_clipboard = true
+synchronize_selection_with_clipboard = false
 history_file_path = "/home/reda/.cache/clipcat/clipcatd-history"
 snippets = []
 
@@ -13,7 +13,7 @@ level = "INFO"
 
 [watcher]
 enable_clipboard = true
-enable_primary = true
+enable_primary = false
 enable_secondary = false
 sensitive_x11_atoms = ["x-kde-passwordManagerHint"]
 filter_text_min_length = 5

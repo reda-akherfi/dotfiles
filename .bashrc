@@ -89,6 +89,8 @@ alias gad="git add ."
 alias gpm="git push -u origin main"
 # systemd aliases
 alias sscl="sudo systemctl"
+# pacman aliases
+alias p="sudo pacman"
 
 
 
