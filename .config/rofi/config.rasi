@@ -151,4 +151,4 @@ configuration {
   }
 }
 
-@theme  "/home/reda/dotfiles/.config/rofi/tokyonight_big1.rasi"
+@theme  "/home/reda/dotfiles/.config/rofi/themes/tokyonight_big1.rasi"

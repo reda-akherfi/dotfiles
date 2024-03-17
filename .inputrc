@@ -69,6 +69,6 @@ set enable-bracketed-paste on
 ### bash key bindings
 ######################################################################
 "\C-f":"cd /home/reda/.config/\n"
-"\a-b":"cd ..\n"
+"\eb":"cd ..\n"
 "\eh":"cd /home/reda/\n"
-"\ed":"cd /home/reda/dotfiles/\n"
+"\ed":"cd /home/reda/dotfiles/.config/\n"
