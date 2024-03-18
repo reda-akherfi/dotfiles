@@ -1,5 +1,5 @@
 # make sxhkd reload its configuration files:
-alt + shift + Escape
+shift + super + r
 	pkill -USR1 -x sxhkd
 
 # rofi and its related scripts
@@ -12,3 +12,10 @@ super + c
 super + Return
     /home/reda/dotfiles/.config/qtile/scripts/tmux.sh
 
+######################################################################
+#        software mode   [super s]
+######################################################################
+# setting up the wallpaper using feh
+# toggling picom
+super + s ; {p,w}
+    {picom_toggle --toggle,feh --bg-fill --recursive --randomize ~/dotfiles/wallpapers-stash}
