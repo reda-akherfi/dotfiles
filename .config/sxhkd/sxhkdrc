@@ -34,6 +34,10 @@ super + s ; {v}
 ######################################################################
 alt + {s,h,m} : {h,j,k,l}
     amixer -c 0 sset {"Speaker","Headphone","Master"}  {2%-,off,on,2%+}
+super + m ; {h,j,k,l,s}
+    mpc {prev,stop,play,next,random} && notify-send "mpd" {_,"playback stopped",_,_,"shuffle mode is toggled"}
+super + b : {h,j,k,l}
+    brightnessctl set {5%-,0%,60%,5%+}
 
 ###    # Qutebrowser mode
 ###    KeyChord([mod], "b", [

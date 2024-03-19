@@ -72,3 +72,4 @@ set enable-bracketed-paste on
 "\eb":"cd ..\n"
 "\eh":"cd /home/reda/\n"
 "\ed":"cd /home/reda/dotfiles/.config/\n"
+"\er":"ranger\n"

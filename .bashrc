@@ -124,4 +124,16 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc
 
+export RANGER_LOAD_DEFAULT_RC=false
 
+
+######################################################################
+##   pywal stuff
+######################################################################
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+(cat ~/.cache/wal/sequences &)
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh

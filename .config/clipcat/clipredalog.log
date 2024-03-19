@@ -1573,3 +1573,39 @@
   [2m2024-03-19T17:57:38.491331Z[0m [32m INFO[0m [1;32mclipcat_menu::cli[0m[32m: [32mNothing is selected[0m
     [2;3mat[0m clipcat-menu/src/cli/mod.rs:228 [2;3mon[0m main ThreadId(1)
 
+  [2m2024-03-19T18:28:39.135180Z[0m [32m INFO[0m [1;32mclipcat_client[0m[32m: [32mConnect to server via endpoint `/run/user/1000/clipcat/grpc.sock`[0m
+    [2;3mat[0m crates/client/src/lib.rs:32 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T18:28:44.759946Z[0m [32m INFO[0m [1;32mclipcat_menu::cli[0m[32m: [32mNothing is selected[0m
+    [2;3mat[0m clipcat-menu/src/cli/mod.rs:228 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T18:31:13.355006Z[0m [32m INFO[0m [1;32mclipcat_client[0m[32m: [32mConnect to server via endpoint `/run/user/1000/clipcat/grpc.sock`[0m
+    [2;3mat[0m crates/client/src/lib.rs:32 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T18:31:14.628885Z[0m [32m INFO[0m [1;32mclipcat_menu::cli[0m[32m: [32mInserting clip (index: 0, id: 5ac62e01e5e9007e)[0m
+    [2;3mat[0m clipcat-menu/src/cli/mod.rs:223 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T22:50:37.801074Z[0m [32m INFO[0m [1;32mclipcat_client[0m[32m: [32mConnect to server via endpoint `/run/user/1000/clipcat/grpc.sock`[0m
+    [2;3mat[0m crates/client/src/lib.rs:32 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T22:50:40.432342Z[0m [32m INFO[0m [1;32mclipcat_menu::cli[0m[32m: [32mInserting clip (index: 1, id: 464d8c91352ef677)[0m
+    [2;3mat[0m clipcat-menu/src/cli/mod.rs:223 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T22:55:08.196947Z[0m [32m INFO[0m [1;32mclipcat_client[0m[32m: [32mConnect to server via endpoint `/run/user/1000/clipcat/grpc.sock`[0m
+    [2;3mat[0m crates/client/src/lib.rs:32 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T22:55:11.518518Z[0m [32m INFO[0m [1;32mclipcat_menu::cli[0m[32m: [32mNothing is selected[0m
+    [2;3mat[0m clipcat-menu/src/cli/mod.rs:228 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T23:08:15.806088Z[0m [32m INFO[0m [1;32mclipcat_client[0m[32m: [32mConnect to server via endpoint `/run/user/1000/clipcat/grpc.sock`[0m
+    [2;3mat[0m crates/client/src/lib.rs:32 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T23:08:18.744496Z[0m [32m INFO[0m [1;32mclipcat_menu::cli[0m[32m: [32mInserting clip (index: 1, id: 1917d30899bddda3)[0m
+    [2;3mat[0m clipcat-menu/src/cli/mod.rs:223 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T23:15:43.787725Z[0m [32m INFO[0m [1;32mclipcat_client[0m[32m: [32mConnect to server via endpoint `/run/user/1000/clipcat/grpc.sock`[0m
+    [2;3mat[0m crates/client/src/lib.rs:32 [2;3mon[0m main ThreadId(1)
+
+  [2m2024-03-19T23:15:46.365264Z[0m [32m INFO[0m [1;32mclipcat_menu::cli[0m[32m: [32mInserting clip (index: 0, id: ec1daeda03dcc71b)[0m
+    [2;3mat[0m clipcat-menu/src/cli/mod.rs:223 [2;3mon[0m main ThreadId(1)
+
