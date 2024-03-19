@@ -1,7 +1,7 @@
 [Added Associations]
 x-scheme-handler/magnet=torrent.desktop;
 application/x.bittorrent=torrent.desktop;
-inode/directory=org.kde.dolphin.desktop;
+application/x-torrent=org.qutebrowser.qutebrowser.desktop;
 video/mp4=mpv.desktop;org.kde.koko.desktop;vlc.desktop;org.kde.dragonplayer.desktop;
 video/mpeg=mpv.desktop;org.kde.koko.desktop;vlc.desktop;org.kde.dragonplayer.desktop;
 video/x-matroska=mpv.desktop;org.kde.koko.desktop;org.kde.dragonplayer.desktop;vlc.desktop;
@@ -11,11 +11,14 @@ video/x-ms-wmv=mpv.desktop;org.kde.koko.desktop;vlc.desktop;org.kde.dragonplayer
 video/x-ogm+ogg=mpv.desktop;org.kde.koko.desktop;org.kde.dragonplayer.desktop;vlc.desktop;org.kde.kwave.desktop;
 video/x-theora+ogg=mpv.desktop;org.kde.koko.desktop;org.kde.dragonplayer.desktop;vlc.desktop;org.kde.kwave.desktop;
 x-scheme-handler/geo=marble_geo.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/mailto=org.kde.kmail2.desktop;userapp-Thunderbird-JQUCI2.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-JQUCI2.desktop;
+x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop;
+text/html=org.qutebrowser.qutebrowser.desktop;
 
 [Default Applications]
 inode/directory=org.kde.dolphin.desktop;
@@ -28,9 +31,13 @@ video/x-ms-wmv=mpv.desktop;
 video/x-ogm+ogg=mpv.desktop;
 video/x-theora+ogg=mpv.desktop;
 x-scheme-handler/geo=marble_geo.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-JQUCI2.desktop
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
-message/rfc822=userapp-Thunderbird-JQUCI2.desktop
-x-scheme-handler/mid=userapp-Thunderbird-JQUCI2.desktop
+message/rfc822=userapp-Thunderbird-JQUCI2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-JQUCI2.desktop;
+x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop;
+text/html=org.qutebrowser.qutebrowser.desktop;
+

@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  zoom.default:
-    global: '125'
+  content.user_stylesheets:
+    global: null

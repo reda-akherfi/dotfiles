@@ -1,7 +1,7 @@
 [window]
 decorations = "None"
 dynamic_padding = false
-opacity = 0.5
+opacity = 1
 
 [window.padding]
 x = 25

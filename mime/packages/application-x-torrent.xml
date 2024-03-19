@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+    <mime-type type="application/x-torrent">
+        <comment>a magnet link</comment>
+        <icon name="application-x-torrent"/>
+        <glob-deleteall/>
+        <glob pattern="magnet:*"/>
+    </mime-type>
+</mime-info>
