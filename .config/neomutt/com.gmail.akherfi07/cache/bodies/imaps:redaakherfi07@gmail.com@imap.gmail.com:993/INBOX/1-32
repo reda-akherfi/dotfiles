@@ -1,0 +1,133 @@
+Delivered-To: redaakherfi07@gmail.com
+Received: by 2002:a05:693c:3746:b0:109:4b0c:161 with SMTP id sr6csp1403410dyc;
+        Fri, 22 Mar 2024 10:05:36 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHShotCeC1aRK/UvRzHjmpLQr+9Rf2rCQYEKWGrqoh7W5MxUyjKXVUoFw3qbWKZZISp1OYM
+X-Received: by 2002:a05:6214:2b09:b0:696:7617:2c12 with SMTP id jx9-20020a0562142b0900b0069676172c12mr377448qvb.24.1711127135797;
+        Fri, 22 Mar 2024 10:05:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1711127135; cv=none;
+        d=google.com; s=arc-20160816;
+        b=A4koFKZTsoNvdd2Ljsp9FItdCjQOszLEPJXoEsMjiyGStkR3I18TApmGsbL7mitAd7
+         AUZczOxW9IDLp36AO8ou+QJEF03u0WOzzlXG39KOdm/wN38+kZ2IeGIjf3qvLbqLMzxq
+         lbsgD4M9jjAFi+5HVUk4QL+PG3dKhiD2PZ5jF2M3slQhLF4cwP7ZBkBOaDg9KTQzdA55
+         DCM/1lb/QOQVCCTRQlfx+PCFHFxez+uP7LXCXwLAMTbMYZfV0aYey3RrIizPF+29zDxB
+         LZGj6quiH8Rdfm4VeBpzKgB/UR7rHb0t54r+XCKfPWj7NTrrqFMI5R6vwqOx1NoS95L6
+         ujrA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature:dkim-signature;
+        bh=jNzNeV6r2/qBsY5TAzVSPvBeKfJNlj9+rwhKIN9XU5g=;
+        fh=CpXpwyfwVpQNWZOhoJ0WMqEk3lQxsaH8ffDGLBhOBK4=;
+        b=fjqpgAVOxW+oWMv9ZOhz/FTNawNvANBiDKnO8t6azxl09r2mDZbUejhyL/H7orlTik
+         m23/sves7FmoSONt/vx5RhniB+JG+KglOARNH0zA/V75J2sg0OaH2GHhf2DkayDcm3ks
+         u/AhSgkWI1/esPbaCF3LFfrVHToeL37meNSqS/DOciQ6crG4wKrrXHV3+VMq2nV01+O2
+         MUU7QQgbpydQOOZgZdT1qxOjoXLNUfoU/rZHzbB5jHYq9SkQUjnJxqBPeC6V9Cfahe9m
+         FSnH+lzoqsTGOnaeL7Z88IKM6F4xTKl6cmCOUWQpJwlxy8CsG7u3HpO99nvCnsWfjMKU
+         9Xjw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@redhat.com header.s=mimecast20190719 header.b=AJLj2AGD;
+       dkim=pass header.i=@dkim.mimecast.org header.s=201912 header.b=Nf6o71EF;
+       spf=pass (google.com: domain of no-reply@redhat.com designates 170.10.129.124 as permitted sender) smtp.mailfrom=no-reply@redhat.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=redhat.com
+Return-Path: <no-reply@redhat.com>
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com. [170.10.129.124])
+        by mx.google.com with ESMTPS id iy8-20020a0562140f6800b006967013e353si1179251qvb.450.2024.03.22.10.05.35
+        for <redaakherfi07@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 22 Mar 2024 10:05:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no-reply@redhat.com designates 170.10.129.124 as permitted sender) client-ip=170.10.129.124;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@redhat.com header.s=mimecast20190719 header.b=AJLj2AGD;
+       dkim=pass header.i=@dkim.mimecast.org header.s=201912 header.b=Nf6o71EF;
+       spf=pass (google.com: domain of no-reply@redhat.com designates 170.10.129.124 as permitted sender) smtp.mailfrom=no-reply@redhat.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=redhat.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1711127135;
+	h=from:from:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type; bh=jNzNeV6r2/qBsY5TAzVSPvBeKfJNlj9+rwhKIN9XU5g=;
+	b=AJLj2AGDck9VYm3r1y82Nxp28X1IlqBZG2/0qNHzgr4iAVL+HpbTTOtbW+LU8lfiFeHlFx
+	1ezsznyiONZ5vMeq3P0FWvDZKcUmsRdvxOud0gcAKqcFsTMelIp3wAJelp7WuUafiJAb8Y
+	LRDXMW8OlV7b6dZfRnAhJtr4q2LP0XY=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dkim.mimecast.org;
+	s=201912; t=1711127135; h=from:from:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type; bh=jNzNeV6r2/qBsY5TAzVSPvBeKfJNlj9+rwhKIN9XU5g=;
+	b=Nf6o71EFrT50q9A2bajlV/kyX45r/dD1PFZpITUfcFXTLDTobq1MhZBc/v5Bm2wrTOTX0W
+	EDrkvN1uYc7Z/JZsH4DE3KY/YqlzCOS5ChM9Lx0ENeByeoc8lkzkZzKGLeKBv/S0CLNeMH
+	uU1Hy6NgG620Lo3aX8KZMYQJHQHquZpGgzr+a3YYCvJ2x5o1dQH1z/+yrIlZDfZV221fJx
+	EHLvUbhMg39Q3RckY9WBsawlgWMkf2jjhMwrEPdqBzZNWO6M7aEj8pjQiPbVjq2HT6YTdB
+	pfBhF2efDuxNtHmN9ZoNLJ0GTYsmbM47JysdMfz9lhE6sDAa4SMMti+nXUE7wQ==
+Received: from mimecast-mx02.redhat.com (mx-ext.redhat.com [66.187.233.73])
+ by relay.mimecast.com with ESMTP with STARTTLS (version=TLSv1.3,
+ cipher=TLS_AES_256_GCM_SHA384) id us-mta-57-EpVVfSSBNZC9wa6DdaNSJw-1; Fri,
+ 22 Mar 2024 13:05:33 -0400
+X-MC-Unique: EpVVfSSBNZC9wa6DdaNSJw-1
+Received: from smtp.corp.redhat.com (int-mx01.intmail.prod.int.rdu2.redhat.com [10.11.54.1])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mimecast-mx02.redhat.com (Postfix) with ESMTPS id 1AF4A1C3A4C2
+	for <redaakherfi07@gmail.com>; Fri, 22 Mar 2024 17:05:33 +0000 (UTC)
+Received: from email-service-prod-mpp-aws-east-prod-48-gl7vx (unknown [10.30.44.106])
+	by smtp.corp.redhat.com (Postfix) with ESMTPS id 11AB13C23
+	for <redaakherfi07@gmail.com>; Fri, 22 Mar 2024 17:05:33 +0000 (UTC)
+Date: Fri, 22 Mar 2024 17:05:33 +0000 (UTC)
+From: no-reply@redhat.com
+Reply-To: no-reply@redhat.com
+To: redaakherfi07@gmail.com
+Message-ID: <611479977.31585.1711127133086@email-service-prod-mpp-aws-east-prod-48-gl7vx>
+Subject: Verify email for Red Hat account
+MIME-Version: 1.0
+X-Scanned-By: MIMEDefang 3.4.1 on 10.11.54.1
+X-Mimecast-Spam-Score: 0
+X-Mimecast-Originator: redhat.com
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_31582_1702796869.1711127133045"
+
+------=_Part_31582_1702796869.1711127133045
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_31584_542417634.1711127133045"
+
+------=_Part_31584_542417634.1711127133045
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Someone has created a Red Hat account with this email address. If this was you, click the link below to verify your email address
+
+https://sso.redhat.com/auth/realms/redhat-external/login-actions/action-token?key=eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI0NzQzYTkzMC03YmJiLTRkZGQtOTgzMS00ODcxNGRlZDc0YjUifQ.eyJleHAiOjE3MTEyMTM1MzMsImlhdCI6MTcxMTEyNzEzMywianRpIjoiMDMwYmQxMzAtMzA2NS00YTI1LWI4MjUtZWQxNjhmYjRiYWQ4IiwiaXNzIjoiaHR0cHM6Ly9zc28ucmVkaGF0LmNvbS9hdXRoL3JlYWxtcy9yZWRoYXQtZXh0ZXJuYWwiLCJhdWQiOiJodHRwczovL3Nzby5yZWRoYXQuY29tL2F1dGgvcmVhbG1zL3JlZGhhdC1leHRlcm5hbCIsInN1YiI6ImY6NTI4ZDc2ZmYtZjcwOC00M2VkLThjZDUtZmUxNmY0ZmUwY2U2OmhvbWV3b3JsZHgxNiIsInR5cCI6InZlcmlmeS1lbWFpbCIsImF6cCI6ImFjY291bnQtY29uc29sZSIsIm5vbmNlIjoiMDMwYmQxMzAtMzA2NS00YTI1LWI4MjUtZWQxNjhmYjRiYWQ4IiwiYXNpZCI6IjQ4NDk0NjVmLTNhMzYtNGZjNy1hYzljLTIzZDk5YzcwOGU4Yy5ZdmtfcHR5X2Jtby41NzAwYjM0Mi01MGJkLTQ2MzktOTgxYS02NzQ0Y2E5MWQ0NDIiLCJlbWwiOiJyZWRhYWtoZXJmaTA3QGdtYWlsLmNvbSJ9.DFz6sYn3I1lqqjh-fvK0zEslOKsl_RAwejPnxzffby83Ilt5Qa5AfYN7mvmdynSH8ngDob8QNoGtM0EKpG1mKA&client_id=account-console&tab_id=Yvk_pty_bmo
+
+This link will expire within 1 days.
+
+If you didn't create this account, just ignore this message.
+------=_Part_31584_542417634.1711127133045
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<body>
+<p>Someone has created a Red Hat account with this email address. If this w=
+as you, click the link below to verify your email address</p><p><a href=3D"=
+https://sso.redhat.com/auth/realms/redhat-external/login-actions/action-tok=
+en?key=3DeyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI0NzQzYTkzMC03Ym=
+JiLTRkZGQtOTgzMS00ODcxNGRlZDc0YjUifQ.eyJleHAiOjE3MTEyMTM1MzMsImlhdCI6MTcxMT=
+EyNzEzMywianRpIjoiMDMwYmQxMzAtMzA2NS00YTI1LWI4MjUtZWQxNjhmYjRiYWQ4IiwiaXNzI=
+joiaHR0cHM6Ly9zc28ucmVkaGF0LmNvbS9hdXRoL3JlYWxtcy9yZWRoYXQtZXh0ZXJuYWwiLCJh=
+dWQiOiJodHRwczovL3Nzby5yZWRoYXQuY29tL2F1dGgvcmVhbG1zL3JlZGhhdC1leHRlcm5hbCI=
+sInN1YiI6ImY6NTI4ZDc2ZmYtZjcwOC00M2VkLThjZDUtZmUxNmY0ZmUwY2U2OmhvbWV3b3JsZH=
+gxNiIsInR5cCI6InZlcmlmeS1lbWFpbCIsImF6cCI6ImFjY291bnQtY29uc29sZSIsIm5vbmNlI=
+joiMDMwYmQxMzAtMzA2NS00YTI1LWI4MjUtZWQxNjhmYjRiYWQ4IiwiYXNpZCI6IjQ4NDk0NjVm=
+LTNhMzYtNGZjNy1hYzljLTIzZDk5YzcwOGU4Yy5ZdmtfcHR5X2Jtby41NzAwYjM0Mi01MGJkLTQ=
+2MzktOTgxYS02NzQ0Y2E5MWQ0NDIiLCJlbWwiOiJyZWRhYWtoZXJmaTA3QGdtYWlsLmNvbSJ9.D=
+Fz6sYn3I1lqqjh-fvK0zEslOKsl_RAwejPnxzffby83Ilt5Qa5AfYN7mvmdynSH8ngDob8QNoGt=
+M0EKpG1mKA&client_id=3Daccount-console&tab_id=3DYvk_pty_bmo" rel=3D"nofollo=
+w">Link to e-mail address verification</a></p><p>This link will expire with=
+in 1 days.</p><p>If you didn&#39;t create this account, just ignore this me=
+ssage.</p>
+</body>
+</html>
+
+------=_Part_31584_542417634.1711127133045--
+
+------=_Part_31582_1702796869.1711127133045--
+

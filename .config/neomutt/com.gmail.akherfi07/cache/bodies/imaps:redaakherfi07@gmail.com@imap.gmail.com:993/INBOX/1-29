@@ -1,0 +1,145 @@
+Delivered-To: redaakherfi07@gmail.com
+Received: by 2002:a05:7300:b0a0:b0:109:4b0c:161 with SMTP id db32csp832957dyb;
+        Sun, 17 Mar 2024 07:05:28 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IESuE+qjQSus4ZyNgRCQ9eFhsQv9gc0C1kRkrb+AEiL7OnmHZQBlAW0bqMELD3kSg6A5xKR
+X-Received: by 2002:a05:622a:1b1d:b0:430:ad8b:6138 with SMTP id bb29-20020a05622a1b1d00b00430ad8b6138mr10963024qtb.29.1710684327921;
+        Sun, 17 Mar 2024 07:05:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1710684327; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BkwkXlRStdW8AMfbhFoXSniGg0MoqiRN2sqX4/gB3WPn0mQrTf7NvobZBFR9lmLH55
+         6Wasmdqoc2o1Xa2Zk+Ax+NynUdUT/rhnyngWRLnktNP9qIVSrfpmjmg0aHvzqm0mfVAC
+         cK7hSwUDl8C57wYRtKKqF9yJrJ5S4nNQdTIaaYFigvQHXpusVdMTlLj5kVLw45//fNQA
+         IJWk8optxkQk2hGLsRSF4+ubcdCaYemW5pelVGMEyDqVi+lUbSOOrnnUlwfFG7XWQ537
+         cFHglEEOtG7c64w8s++jq0RXc9n5upI2IZl9stjL1TtEHYq3sSRsAEnm+kqKD2FWbwJM
+         dg1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=destinations:list-unsubscribe-post:list-unsubscribe:list-post
+         :list-archive:list-id:precedence:content-transfer-encoding
+         :mime-version:subject:references:in-reply-to:message-id:cc:to
+         :reply-to:from:date:dkim-signature;
+        bh=6CG2ovm/LVoCYq1/ANP14D3sdj2RKD15l6pDv1ViSd0=;
+        fh=9bgjUVWkwJnHgk4OgZG9WMsXYcimjhdB8+GVTesOiw8=;
+        b=HIoYDJeb9SiUegzQ6sS1p80zTZW3kdHWohm0qzmBjomldgcG27OtU3XNWNMYM/zVSI
+         So5suhHLA/rrgCtHS+Emq+XAz64iN9uTQRSQGOggZ1e2t5GxTioXshKDgXeXVb1Jq9od
+         XEnUWjVDIVnadhI83FAWmDNmTvHUu/BjnaQOJDBag895L05jRTFb4LgiHVg31S8q7BTe
+         DhUeJ1oRUAiRT01/Q3ZlkNFZaGGPLyhPq0j+hY5b1Nq9wiYjyG+SifAER9deKg0lmvS2
+         SvL7QW073TJPMJVIiNYr9hPoDl5AEq8jYAo2BvueqNdNar9tSfKYnDi9yUiCFHB+aIeo
+         tDTA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=dzvJAZlP;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-24.smtp.github.com (out-24.smtp.github.com. [192.30.252.207])
+        by mx.google.com with ESMTPS id d11-20020a05622a100b00b00430b3802e06si4564629qte.625.2024.03.17.07.05.27
+        for <redaakherfi07@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 17 Mar 2024 07:05:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) client-ip=192.30.252.207;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=dzvJAZlP;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-29e8348.ac4-iad.github.net [10.52.160.11])
+	by smtp.github.com (Postfix) with ESMTPA id 5F2C2641058
+	for <redaakherfi07@gmail.com>; Sun, 17 Mar 2024 07:05:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1710684327;
+	bh=6CG2ovm/LVoCYq1/ANP14D3sdj2RKD15l6pDv1ViSd0=;
+	h=Date:From:Reply-To:To:Cc:In-Reply-To:References:Subject:List-ID:
+	 List-Archive:List-Post:List-Unsubscribe:List-Unsubscribe-Post:
+	 From;
+	b=dzvJAZlPyXMYC1JQd239aHPcu0EYaqBO8SUGHB+d8LuOl2pjxzsW2r8dBsLyy0WNG
+	 UYRiLGGubHPmhBvej6dcKGZxvsk4wJo+HKMmWsdu93+bHZvHgJP81he3k063PYCXCc
+	 w/OOGx+H5jJzViZCnk49mh3+3x8yENmlVesRAzZU=
+Date: Sun, 17 Mar 2024 07:05:27 -0700
+From: =?UTF-8?B?xb1pZ2EgU2Fqb3ZpYw==?= <notifications@github.com>
+Reply-To: ZigaSajovic/rofi-wifi-menu-plus-plus <reply+BGM7BHVPTKNNDKUOMZOPFKGEALM2PEVBNHHCEKUPKU@reply.github.com>
+To: ZigaSajovic/rofi-wifi-menu-plus-plus <rofi-wifi-menu-plus-plus@noreply.github.com>
+Cc: reda-akherfi <redaakherfi07@gmail.com>, 
+ Comment <comment@noreply.github.com>
+Message-ID: <ZigaSajovic/rofi-wifi-menu-plus-plus/issues/1/2002483399@github.com>
+In-Reply-To: <ZigaSajovic/rofi-wifi-menu-plus-plus/issues/1@github.com>
+References: <ZigaSajovic/rofi-wifi-menu-plus-plus/issues/1@github.com>
+Subject: Re: [ZigaSajovic/rofi-wifi-menu-plus-plus] cannot find network (#1)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65f6f8a75d261_6017fc556961";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Precedence: list
+X-GitHub-Sender: ZigaSajovic
+X-GitHub-Recipient: reda-akherfi
+X-GitHub-Reason: comment
+List-ID: ZigaSajovic/rofi-wifi-menu-plus-plus
+ <rofi-wifi-menu-plus-plus.ZigaSajovic.github.com>
+List-Archive: https://github.com/ZigaSajovic/rofi-wifi-menu-plus-plus
+List-Post: <mailto:reply+BGM7BHVPTKNNDKUOMZOPFKGEALM2PEVBNHHCEKUPKU@reply.github.com>
+List-Unsubscribe: <mailto:unsub+BGM7BHVPTKNNDKUOMZOPFKGEALM2PEVBNHHCEKUPKU@reply.github.com>,
+ <https://github.com/notifications/unsubscribe/one-click/BGM7BHW4PQLAU7WA5MDBZGDYYWPKPANCNFSM4K6PGWBQ>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Auto-Response-Suppress: All
+destinations: redaakherfi07@gmail.com
+X-GitHub-Recipient-Address: redaakherfi07@gmail.com
+
+
+----==_mimepart_65f6f8a75d261_6017fc556961
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+A long time has passed since this issue. At the time the person did not include the output so I was unable to look into it. The regex needs to be updated to handle your output. What is it?
+
+-- 
+Reply to this email directly or view it on GitHub:
+https://github.com/ZigaSajovic/rofi-wifi-menu-plus-plus/issues/1#issuecomment-2002483399
+You are receiving this because you commented.
+
+Message ID: <ZigaSajovic/rofi-wifi-menu-plus-plus/issues/1/2002483399@github.com>
+----==_mimepart_65f6f8a75d261_6017fc556961
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p></p>
+<p dir=3D"auto">A long time has passed since this issue. At the time the =
+person did not include the output so I was unable to look into it. The re=
+gex needs to be updated to handle your output. What is it?</p>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">&m=
+dash;<br />Reply to this email directly, <a href=3D"https://github.com/Zi=
+gaSajovic/rofi-wifi-menu-plus-plus/issues/1#issuecomment-2002483399">view=
+ it on GitHub</a>, or <a href=3D"https://github.com/notifications/unsubsc=
+ribe-auth/BGM7BHTX5HXB4ZYF7NYVEIDYYWPKPAVCNFSM4K6PGWB2U5DIOJSWCZC7NNSXTN2=
+JONZXKZKDN5WW2ZLOOQ5TEMBQGI2DQMZTHE4Q">unsubscribe</a>.<br />You are rece=
+iving this because you commented.<img src=3D"https://github.com/notificat=
+ions/beacon/BGM7BHXC4TFBGM2272KJ2FTYYWPKPA5CNFSM4K6PGWB2YY3PNVWWK3TUL52HS=
+4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGOO5NXRRY.gif" height=3D"1" widt=
+h=3D"1" alt=3D"" /><span style=3D"color: transparent; font-size: 0; displ=
+ay: none; visibility: hidden; overflow: hidden; opacity: 0; width: 0; hei=
+ght: 0; max-width: 0; max-height: 0; mso-hide: all">Message ID: <span>&lt=
+;ZigaSajovic/rofi-wifi-menu-plus-plus/issues/1/2002483399</span><span>@</=
+span><span>github</span><span>.</span><span>com&gt;</span></span></p>
+<script type=3D"application/ld+json">[
+{
+"@context": "http://schema.org",
+"@type": "EmailMessage",
+"potentialAction": {
+"@type": "ViewAction",
+"target": "https://github.com/ZigaSajovic/rofi-wifi-menu-plus-plus/issues=
+/1#issuecomment-2002483399",
+"url": "https://github.com/ZigaSajovic/rofi-wifi-menu-plus-plus/issues/1#=
+issuecomment-2002483399",
+"name": "View Issue"
+},
+"description": "View this Issue on GitHub",
+"publisher": {
+"@type": "Organization",
+"name": "GitHub",
+"url": "https://github.com"
+}
+}
+]</script>=
+
+----==_mimepart_65f6f8a75d261_6017fc556961--

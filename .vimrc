@@ -32,7 +32,8 @@ hi! link netrwMarkFile Search
 set showcmd
 ""> here is where to continue the setup of netrw :: [Using Netrw, vim's builtin file explorer | Devlog](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/)
 ""> setting up the swap thingy : it is driving me crazy!!
-set directory^=/home/reda/.vim/swappy_temp_dir//
+"set directory^=/home/reda/.vim/swappy_temp_dir//
+set noswapfile
 ""> reading man pages inside of vim, using the built-in :Man command
 runtime! ftplugin/man.vim
 
@@ -60,7 +61,7 @@ set scrolloff=3
 set wildmenu
 set wildoptions+=pum
 ""> set up my colorscheme
-colorscheme sorbet
+colorscheme late_evening
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """    Editing settings
@@ -69,11 +70,11 @@ colorscheme sorbet
 set  tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 ""> more and more undo levels
 set undolevels=1000
-""> moving lines of text/code
-nnoremap <leader>j :m .+1<CR>==
-nnoremap <leader>k :m .-2<CR>==
-vnoremap <leader>j :m '>+1<CR>gv=gv
-vnoremap <leader>k :m '<-2<CR>gv=gv
+""""> moving lines of text/code
+""nnoremap <leader>j :m .+1<CR>==
+""nnoremap <leader>k :m .-2<CR>==
+""vnoremap <leader>j :m '>+1<CR>gv=gv
+""vnoremap <leader>k :m '<-2<CR>gv=gv
 ""> native spell checking | this toggles it
 nnoremap <leader>s :setlocal spell! spelllang=en_us<CR>
 ""> native code autocompletion 
@@ -151,6 +152,9 @@ nnoremap <leader>b :ls<CR>:b
 " nnoremap <leader>q! :qa!<CR>
 ""> running commands in the vim terminal 
 nnoremap <leader>c :terminal<CR>
+""> tabs
+nnoremap <leader>j :tabn<CR>
+nnoremap <leader>k :tabp<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """  setting up the status line
@@ -176,4 +180,14 @@ let wiki_6.path = '~/memalpha/vimwiki/french/'
 let wiki_7 = {}
 let wiki_7.path = '~/memalpha/vimwiki/misc/'
 let g:vimwiki_list = [wiki_1, wiki_2, wiki_3, wiki_4, wiki_5, wiki_6, wiki_7]
+let g:vimwiki_listsyms = '✗○◐●✓'
+
+"> the autosave plugin  I put it in  in ~/.vim/plugins/Autosave.vim
+"> I then :set rtp+=~/.vim/plugins   ; the :source ~/.vim/plugins/Autosave.vim
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
+let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+set rtp+=~/.vim/plugins/
+source ~/.vim/plugins/AutoSave.vim
+
 

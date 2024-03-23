@@ -25,7 +25,7 @@ alias zah="zathura --fork ~/Documents/mental_haven.epub"
 alias zathura="zathura --fork"
 ## neovim and config files
 alias v="vim"
-alias vq="nvim ~/redalo_setup/qtile_shit/qtile/config.py"
+alias vq="vim ~/dotfiles/.config/qtile/config.py"
 alias vb="nvim ~/.bashrc"
 # starting the X server
 alias x="startx"
@@ -41,6 +41,8 @@ alias youtube-dl="yt-dlp"
 
 # tmux
 alias tx="tmux -key-table vi"
+
+alias ueberzug="ueberzugpp"
 
 
 
@@ -58,7 +60,6 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Set prompt string
-PS1="\n${BROWN}\u ${GREEN}󰣇 ${BROWN}\h ${RED}in ${LIGHT_BLUE}\w ${GREEN}${NC}\n$  "
 
 # Explanation:
 # - RED, GREEN, BROWN, LIGHT_BLUE, YELLOW, NC: define color codes using escape sequences.
@@ -69,7 +70,25 @@ PS1="\n${BROWN}\u ${GREEN}󰣇 ${BROWN}\h ${RED}in ${LIGHT_BLUE}\w ${GREEN}${NC}
 # - ${LIGHT_BLUE}in: sets "in" in light blue color.
 # - ${YELLOW}~/.config/qtile: sets the path in yellow color.
 # - ${NC}: resets color to default.
-# - $: displays the current working directory and command prompt symbol.
+#
+PROMPT_COMMAND=__prompt_command    # Function to generate PS1 after CMDs
+
+__prompt_command() {
+    local EXIT="$?"                # This needs to be first
+    PS1=""
+
+
+    local Pur='\[\e[0;35m\]'
+
+    if [ $EXIT != 0 ]; then
+        PS1+="\n${RED}\u"        # Add red if exit code non 0
+    else
+        PS1+="\n${LIGHT_BLUE}\u"
+    fi
+
+##     PS1+="${RCol} @ ${BBlu}\h ${Pur}\W${BYel}$ ${RCol}"
+    PS1+=" ${Pur}󰣇 ${BROWN}\h ${RED}in ${LIGHT_BLUE}\w ${GREEN}  ${NC}\n$  "
+ } 
 
 ################################################################################
 ###    aliases
@@ -125,6 +144,7 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc
 
 export RANGER_LOAD_DEFAULT_RC=false
+export QT_SCALE_FACTOR=4
 
 
 ######################################################################
@@ -134,6 +154,6 @@ export RANGER_LOAD_DEFAULT_RC=false
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
 # Not supported in the "fish" shell.
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 # To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
+# source ~/.cache/wal/colors-tty.sh

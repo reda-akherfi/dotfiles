@@ -357,7 +357,7 @@ c.fonts.completion.entry = '19pt "Roboto Mono"'
 
 # Font used for the debugging console.
 # Type: Font
-c.fonts.debug_console = '19pt "Roboto Mono"'
+c.fonts.debug_console = '29pt "Roboto Mono"'
 
 # Font used for prompts.
 # Type: Font
@@ -500,6 +500,11 @@ tmap('l', 'move-to-next-char')
 tmap('h', 'move-to-prev-char')
 # add back e functionality
 tmap('e', 'move-to-end-of-word')
+# vimlike navigation between suggestions in the search bar
+config.bind('<Ctrl+k>', 'completion-item-focus prev', mode='command')
+config.bind('<Ctrl+j>', 'completion-item-focus next', mode='command')
+#nmap('<Ctrl+k>', 'completion-item-focus prev')
+#nmap('<Ctrl+j>', 'completion-item-focus next')
 ##########################################################################################
 ### these are caret mode default key bindings
 ##########################################################################################
@@ -585,6 +590,7 @@ nmap("'y", ':open --tab https://www.youtube.com/')
 nmap("'p1", ':open --tab https://1337x.to/home/')         
 nmap("'pp", ':open --tab https://pirate-bays.net/torrent-search')        
 nmap("'b", ':open --tab https://search.brave.com/')               
+nmap("'r", ':open --tab https://www.reddit.com/')               
 
 
 ################################################################################

@@ -1,0 +1,194 @@
+Delivered-To: redaakherfi68@gmail.com
+Received: by 2002:a05:7010:e885:b0:3b3:8300:e61e with SMTP id lp5csp1977771mdb;
+        Mon, 4 Mar 2024 09:16:31 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCV1Vk3ouauQf7tbz0klZZTG9UxZp8S6OU43U/5FuLfrpRS8uJpC2c0ZiD+n7mXZExF30+xzX4zKjoSu/aX44BfpDr0uuYkMFw==
+X-Google-Smtp-Source: AGHT+IHDl3VdqZH/jxRq9PB3jTZSv0pq5uU1EhansPLx27JzdiAh1eC9PqIcCz/iDowfLLTmyB8o
+X-Received: by 2002:a2e:a0cd:0:b0:2d2:f148:29fc with SMTP id f13-20020a2ea0cd000000b002d2f14829fcmr6234651ljm.12.1709572590978;
+        Mon, 04 Mar 2024 09:16:30 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1709572590; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vLAMiaPPSwwuN0i/XiQMvLaHEdL7aSK+YKEitnEOKbQnKkF16LaxpTps25u4dciWcl
+         BbM05qaOIxwy46UXgGBqKgq1xTRcZweJxDvyJCuufUVZGjEsaIBUqnpJfaC9YAqAM0N2
+         IUyXYY6HIkRYh/WxQTDZFUv/h26Iw+C/+aUiqZNmUgf2/2s3XfyhlZau97ZpnCj1fdgS
+         bl9+5LMIwNYRYBJTTJa+bHxNonLz8uVBOxyVQgVxpA8Yr3CsfAwAUiamowELKZjLmqOb
+         7hnm3E4xa/vA71uo4Al1KKs+w5yjzDzJPs1IrEZ0Hf1lq9DnAd9EIfsjt+bmBGEHu/VX
+         fsmg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-subscribe:list-post:list-owner:list-help
+         :list-archive:archived-at:list-id:precedence:message-id-hash
+         :message-id:date:to:from:subject:content-transfer-encoding
+         :mime-version:dkim-signature:dkim-signature:dkim-signature
+         :dkim-signature;
+        bh=VT0ddURFDvK6X32MTFIaZdNyRZzWGtTg+A9pGaVjMME=;
+        fh=pHPcLsElggAd7P3WqYRWgHZDpxvHC2/Z8cV7sKaJCRw=;
+        b=umcZkCCaIfqMoPyS2xYNBOrkqFpiEeUl1PiRewwczX4c0qfNviLkD+I2Hu0mUXssvF
+         8Il7VhxZL1DD8juiRKyKtLqIz8Pjlr3EJLvePZ0XhQHlM7WJ/NHYrPnwgoZAVYUh/7G4
+         261tw9SAD2anM1G8boTn8oB5LmONo7ucvgDkOyoY+vV0eX2R0QpaP9C9aG90dvXTgHWF
+         SrOEUQ0ozDuoNlqIn0cdthZy2Ubg5DIZqYeUs4+f74hMyK8eOo8QsAn99PmwzPXJN4lI
+         b5mpslnKOMGXmSLePb59EVOUmXBcLg2owDX82cxP1qek4uHkRfBV9FRVHk80jauePV+h
+         Yuew==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@lists.archlinux.org header.s=dkim-rsa header.b=oyzgdEZJ;
+       dkim=neutral (no key) header.i=@lists.archlinux.org header.s=dkim-ed25519;
+       dkim=neutral (no key) header.i=@archlinux.org header.s=dkim-ed25519;
+       dkim=pass header.i=@archlinux.org header.s=dkim-rsa header.b=kkkNPzbi;
+       spf=pass (google.com: domain of arch-announce-bounces@lists.archlinux.org designates 95.217.236.249 as permitted sender) smtp.mailfrom=arch-announce-bounces@lists.archlinux.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=archlinux.org
+Return-Path: <arch-announce-bounces@lists.archlinux.org>
+Received: from lists.archlinux.org (lists.archlinux.org. [95.217.236.249])
+        by mx.google.com with ESMTPS id y15-20020a2e95cf000000b002d3483ecd1esi1831642ljh.575.2024.03.04.09.16.30
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 04 Mar 2024 09:16:30 -0800 (PST)
+Received-SPF: pass (google.com: domain of arch-announce-bounces@lists.archlinux.org designates 95.217.236.249 as permitted sender) client-ip=95.217.236.249;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@lists.archlinux.org header.s=dkim-rsa header.b=oyzgdEZJ;
+       dkim=neutral (no key) header.i=@lists.archlinux.org header.s=dkim-ed25519;
+       dkim=neutral (no key) header.i=@archlinux.org header.s=dkim-ed25519;
+       dkim=pass header.i=@archlinux.org header.s=dkim-rsa header.b=kkkNPzbi;
+       spf=pass (google.com: domain of arch-announce-bounces@lists.archlinux.org designates 95.217.236.249 as permitted sender) smtp.mailfrom=arch-announce-bounces@lists.archlinux.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=archlinux.org
+Received: from lists.archlinux.org (localhost [IPv6:::1])
+	by lists.archlinux.org (Postfix) with ESMTP id 40B5019419DB;
+	Mon,  4 Mar 2024 17:16:30 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=lists.archlinux.org;
+	s=dkim-rsa; t=1709572590;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:list-id:list-help:
+	 list-owner:list-unsubscribe:list-subscribe:list-post;
+	bh=VT0ddURFDvK6X32MTFIaZdNyRZzWGtTg+A9pGaVjMME=;
+	b=oyzgdEZJUhbF7hg81bUzN2GbdFqidaiidbbJ2x3cAxPpWdn60ucqNiTO3myHXRyb7ai6v8
+	XV1nS7s9yEpMmXLGNaAzUxQzd0udRPGJZdLU+hgxioeXg0YgmhP5efFr5wuBZ2+k7Vg5fm
+	6PMLA6hbILVcSFFmeUCFXxMm0u9bY0fPonEhBr+2y+z2pUemGn+7eDCQZlzCCPJWOt5JpV
+	ICK5TVnTUoQpIGZS6tsIsFrHw6Y1a5i/JAKl80eqD9S+7XjBgXK1S/bNlt+ky46kz2JnxU
+	/VRaf2bknNOsqB72Z9i4gxMZgewLMEQodHIXG2VaWsQ83MWpi90Y5n7qv50kc6jB5XqhF9
+	x64fSbnlruFZU+NIA3hgHi5Q6rA5g8BC4bBHNuVguQ30AJt+28rPrlTgAKtb/s7dYV3WKM
+	LAwgX4Iu4v0hKZ0qj6awtsY1gNJ2CSwpgpidcgR5khymfaKNizsL+PAwfC3oRGYVWK0A6y
+	LTywhbSbPrP+vvIi4jg9JL1lYYeNbfNSS4bJjZfEYNzgbcWDRS7gtphO6WqJOTEfNTlOHf
+	z0YGP9YmS93XVNM8e1vZPfWrjcI5Xjfj8wIVzCjgg+bB6RznFihDtFdbbHfyNU4Oe2hTnD
+	Yp80OOQISrep6NbqYRnTAgTTXLUXCRJ1/CZRrpiP3OTlptkrxxInU=
+DKIM-Signature: v=1; a=ed25519-sha256; c=relaxed/relaxed; d=lists.archlinux.org;
+	s=dkim-ed25519; t=1709572590;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:list-id:list-help:
+	 list-owner:list-unsubscribe:list-subscribe:list-post;
+	bh=VT0ddURFDvK6X32MTFIaZdNyRZzWGtTg+A9pGaVjMME=;
+	b=Dd1urt8RVB7J8p/xTjVSdKp9vNjTaoWmKn+4RU4k5NQnZLaroW5Lcn654EAhdnAzGWEGSS
+	dwqMhvqezO7VuBDA==
+Received: from mail.archlinux.org (mail.archlinux.org
+ [IPv6:2a01:4f9:c010:3052::1])
+	by lists.archlinux.org (Postfix) with ESMTPS id 985B41941663
+	for <arch-announce@lists.archlinux.org>;
+ Mon,  4 Mar 2024 17:14:13 +0000 (UTC)
+Authentication-Results: lists.archlinux.org;
+	dkim=pass header.d=archlinux.org header.s=dkim-ed25519 header.b=mbpoq5yl;
+	dkim=pass header.d=archlinux.org header.s=dkim-rsa header.b=kkkNPzbi;
+	spf=softfail (lists.archlinux.org: 2a01:4f9:c010:3052::1 is neither permitted
+ nor denied by domain of arch-announce@lists.archlinux.org)
+ smtp.mailfrom=arch-announce@lists.archlinux.org;
+	dmarc=pass (policy=none) header.from=archlinux.org
+Content-Type: text/plain; charset="utf-8"
+DKIM-Signature: v=1; a=ed25519-sha256; c=relaxed/relaxed; d=archlinux.org;
+	s=dkim-ed25519; t=1709572453;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=VT0ddURFDvK6X32MTFIaZdNyRZzWGtTg+A9pGaVjMME=;
+	b=mbpoq5yll3LtUnDrn+tMIo5kJoyqkBO6L1/Q7L6Vwq2AAn6CFyvp/pVMp+TRGARYZD+1gV
+	WPXAcOr1x0N3pWAQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=archlinux.org;
+	s=dkim-rsa; t=1709572453;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=VT0ddURFDvK6X32MTFIaZdNyRZzWGtTg+A9pGaVjMME=;
+	b=kkkNPzbijFQHhLgqJ566P81HD2/Cl+B1QvYjMpQX6lJssV8g4Xuh+p5YiMLcw3DbNNfEZI
+	/9nXohmskPS3CKT6W57PbQ7RGAyeOKjZcaJlfvMGaUkO44GgIhxoAaUjf+E+eXSIW7zLmx
+	d+IWBbRty8pvNV28DN4HK6Y//7D+0kwHAaeIYjss2lD/GJcmXhTQDQASA5HFXV1ch3PLZA
+	9sVIr/vmZVBZsBROSLQJUnc7l+cUy0KjBVpNVXWbpT+RZPbN9H4k1tUYgyUseDSxR0e9fI
+	trvKvv1RCi3fxe04LL5mPMutJH/pOyI/HDPefwTER1sWS4nkS8h5zCb0/C6KlfSGK1JjRC
+	HoByvhFs+Mf+kv3b20X4rFWHXA+O2lIOGbmgmqFeMGHyHZeFm64NmW3jUJaHq5e2LTW8O3
+	hnJrE3rumJWLhr8kKMa0hYEOn84BTA/pFrJDnOKIx/96Xv/rNhjU1kNMFfxi7x+N5q1EVB
+	gCk9JI+PfEftJ6Tu1gujY0mQNe5Qt1SLiBE06I0KKDKawWoZOb70tHdOXbQil04xHzddOd
+	v5qBP85L9sn+Ay1K4rLjUBptVkF5isffIFPLZlfbHaHix0Gg4OijJ77+1w5Qat/d96j9bS
+	zPr8eV3qsK1qchCz3nRhRQdZcmdk6BnTWRSVs9yQnLjGLDMoOFfrI=
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: [arch-announce] mkinitcpio hook migration and early microcode
+From: "Arch Linux: Recent news updates: Morten Linderud"
+ <arch-announce@lists.archlinux.org>
+To: arch-announce@lists.archlinux.org
+Date: Mon, 04 Mar 2024 17:14:12 -0000
+Message-ID: <170957245291.17988.1623823304889707648@archlinux.org>
+X-Rspamd-Server: lists.archlinux.org
+X-Rspamd-Queue-Id: 985B41941663
+X-Spamd-Result: default: False [0.00 / 15.00];
+	VIOLATED_DIRECT_SPF(3.50)[];
+	DWL_DNSWL_MED(-2.00)[archlinux.org:dkim];
+	RCVD_DKIM_ARC_DNSWL_MED(-0.50)[];
+	DMARC_POLICY_ALLOW_WITH_FAILURES(-0.50)[];
+	R_DKIM_ALLOW(-0.20)[archlinux.org:s=dkim-ed25519,archlinux.org:s=dkim-rsa];
+	RCVD_IN_DNSWL_MED(-0.20)[2a01:4f9:c010:3052::1:from];
+	MIME_GOOD(-0.10)[text/plain];
+	RCPT_COUNT_ONE(0.00)[1];
+	ASN(0.00)[asn:24940, ipnet:2a01:4f9::/32, country:DE];
+	MISSING_XM_UA(0.00)[];
+	RCVD_COUNT_ZERO(0.00)[0];
+	TO_EQ_FROM(0.00)[];
+	MIME_TRACE(0.00)[0:+];
+	FUZZY_BLOCKED(0.00)[rspamd.com];
+	ARC_NA(0.00)[];
+	MID_RHS_MATCH_FROMTLD(0.00)[];
+	FROM_EQ_ENVFROM(0.00)[];
+	FROM_HAS_DN(0.00)[];
+	NEURAL_HAM(-0.00)[-1.000];
+	DMARC_POLICY_ALLOW(0.00)[archlinux.org,none];
+	TO_DN_NONE(0.00)[];
+	R_SPF_SOFTFAIL(0.00)[~all];
+	TO_MATCH_ENVRCPT_ALL(0.00)[];
+	DKIM_TRACE(0.00)[archlinux.org:+]
+X-Rspamd-Action: no action
+Message-ID-Hash: LJX2RTDLDL4YTGEUYXM2MDTKZU73GP6P
+X-Message-ID-Hash: LJX2RTDLDL4YTGEUYXM2MDTKZU73GP6P
+X-MailFrom: arch-announce@lists.archlinux.org
+X-Mailman-Rule-Hits: approved
+X-Mailman-Rule-Misses: dmarc-mitigation; no-senders
+X-Mailman-Version: 3.3.9
+Precedence: list
+List-Id: "This mailing list is for official announcements for the Arch Linux
+ distribution." <arch-announce.lists.archlinux.org>
+Archived-At: 
+ <https://lists.archlinux.org/hyperkitty/list/arch-announce@lists.archlinux.org/message/LJX2RTDLDL4YTGEUYXM2MDTKZU73GP6P/>
+List-Archive: 
+ <https://lists.archlinux.org/hyperkitty/list/arch-announce@lists.archlinux.org/>
+List-Help: <mailto:arch-announce-request@lists.archlinux.org?subject=help>
+List-Owner: <mailto:arch-announce-owner@lists.archlinux.org>
+List-Post: NO
+List-Subscribe: <mailto:arch-announce-join@lists.archlinux.org>
+List-Unsubscribe: <mailto:arch-announce-leave@lists.archlinux.org>
+
+With the release of [mkinitcpio v38][^1], several hooks previously provided by Arch packages have been
+moved to the mkinitcpio upstream project. The hooks are: systemd, udev, encrypt,
+sd-encrypt, lvm2 and mdadm_udev.
+
+To ensure no breakage of users&#x27; setup occurs, temporary
+conflicts have been introduced into the respective packages to prevent installing packages
+that are no longer compatible.
+
+The following packages needs to be upgraded together:
+
+* mkinitcpio 38-2
+* systemd 255.4-2
+* lvm2 2.03.23-3
+* mdadm 4.3-2
+* cryptsetup 2.7.0-3
+
+Please note that the `mkinitcpio` flag `--microcode`, and the `microcode` option in the preset files,  has been deprecated in favour of
+a new `microcode` hook. This also allows you to drop the microcode `initrd`
+lines from your boot configuration as they are now packed together with the main initramfs image.
+
+[^1]: https://lists.archlinux.org/hyperkitty/list/arch-projects@lists.archlinux.org/thread/PZHWLVJLN5EPW6EVK2HEKVBDBNZWHREN/
+
+URL: https://archlinux.org/news/mkinitcpio-hook-migration-and-early-microcode/

@@ -5,7 +5,7 @@
 server_endpoint = "/run/user/1000/clipcat/grpc.sock"
 
 # The default finder to invoke when no "--finder=<finder>" option provided.
-finder = "rofi"
+finder = "dmenu"
 
 [log]
 # Emit log message to a log file.
@@ -42,15 +42,18 @@ menu_prompt = "Your Clipboard SIIIRE!!"
 # Extra arguments to pass to `dmenu`.
 extra_arguments = [
   "-fn",
-  "JetBrainsMono Nerd Font Mono,JetBrainsMono NFM Light:style=Bold,Regular:size=18",
+  "Roboto Mono:style=Bold:size=20",
   "-nb",
   "#333333",
   "-nf",
   "#f5f5f5",
   "-sb",
-  "#333333",
+  "#ffffff",
   "-sf",
-  "#ffd700",
+  "#000000",
+   "-c",
+  "-bw",
+  "10"
 ]
 
 # Customize your finder.

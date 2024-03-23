@@ -1,0 +1,2360 @@
+Delivered-To: redaakherfi68@gmail.com
+Received: by 2002:a05:7010:e885:b0:3b3:8300:e61e with SMTP id lp5csp1908838mdb;
+        Mon, 4 Mar 2024 07:29:38 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEoVnNATjNoruREt9ohQD2ubdlff9AYCvxnOFdz0BmXsZXFd4I4rDF391m2NcX55xJqjJCk
+X-Received: by 2002:a05:6122:a27:b0:4d3:3446:6bc7 with SMTP id 39-20020a0561220a2700b004d334466bc7mr6695412vkn.14.1709566178242;
+        Mon, 04 Mar 2024 07:29:38 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1709566178; cv=none;
+        d=google.com; s=arc-20160816;
+        b=cCD/+H/PlrHcXQMq6QAvOkt2cn0IaliSrjo7nzx/lw8xz+hlN7Y7FR2xLuah0dkDXI
+         CFwEDqeIm9Lya8U9a5fxGrxCAnHxLGTkVdAn+n8plffyD0gL2MJ78fxDDBZ32BHewSdd
+         lPUwgSTECNYVymZeiqf+DJDoRc2TUC98vaFc0YoK8k1NuXYDBQHi1ESHLKtPq4V77xJ5
+         KVwe00hUdW7qbW/mx+a3nKeGRFytpYWP81vOAsylGHK/BML38tuO9ttgo9O3WHYLU8Vn
+         PX8JLTs57qX2Besse7fgEVgzTyU29Q5CAXCWOqYt1GucxmORdJTftOl8paeBz1OrAc7u
+         uX2A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:reply-to:feedback-id:list-unsubscribe:to:from:subject
+         :mime-version:date:sender:dkim-signature:dkim-signature;
+        bh=wn8Wz4Zn8zmUqpkiIwPVD9NOVam6krpXOLhdNgubw3o=;
+        fh=B20cCbGYlzzC2G58p9sanRzZr+VYhLR3DrmtJS4DMaU=;
+        b=aRMVqMGAXnsHmwfL04CLTZJQX9rFiFigCZ93gpqosCupQki+dhlIRr7DBd8Mz7L9d+
+         gAYjaIS0TBw42pRyICQ4SsYyBYtrJJMos7okpKqctvbfXlWl/K51A080bahP5e+6sR4N
+         QzUhT4ioVuwSm10/3CZTZal/3xoQPHYw8Zdt5UXo9SkaY9uKGqiOKrtDE07/6VXielkb
+         pqFXfu2oVV2M320YgMSuvKoN2JrOKclhuBCvWcPoVaBJ11eh2D0bWHE5xIbhOdkNp1hI
+         9dj3iH4ct6mmG0F3MFv5iJBNqKsiaBmczEDH9dfMDeZsQ1y5eE7xKkUC2HCsBDB/no58
+         GYJA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@itr.mail.codecademy.com header.s=smtp header.b=lFJ8AIbT;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=aHiIOwM3;
+       spf=pass (google.com: domain of bounce+800418.8dce2a-redaakherfi68=gmail.com@itr.mail.codecademy.com designates 69.72.36.88 as permitted sender) smtp.mailfrom="bounce+800418.8dce2a-redaakherfi68=gmail.com@itr.mail.codecademy.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=codecademy.com
+Return-Path: <bounce+800418.8dce2a-redaakherfi68=gmail.com@itr.mail.codecademy.com>
+Received: from m36-88.mailgun.net (m36-88.mailgun.net. [69.72.36.88])
+        by mx.google.com with UTF8SMTPS id u21-20020a05622a011500b0042e4a2cc4fasi4530646qtw.184.2024.03.04.07.29.37
+        for <redaakherfi68@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 04 Mar 2024 07:29:38 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+800418.8dce2a-redaakherfi68=gmail.com@itr.mail.codecademy.com designates 69.72.36.88 as permitted sender) client-ip=69.72.36.88;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@itr.mail.codecademy.com header.s=smtp header.b=lFJ8AIbT;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=aHiIOwM3;
+       spf=pass (google.com: domain of bounce+800418.8dce2a-redaakherfi68=gmail.com@itr.mail.codecademy.com designates 69.72.36.88 as permitted sender) smtp.mailfrom="bounce+800418.8dce2a-redaakherfi68=gmail.com@itr.mail.codecademy.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=codecademy.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=itr.mail.codecademy.com; q=dns/txt; s=smtp; t=1709566176; x=1709573376;
+ h=Message-Id: Reply-To: X-Feedback-ID: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=wn8Wz4Zn8zmUqpkiIwPVD9NOVam6krpXOLhdNgubw3o=;
+ b=lFJ8AIbTijgyggK7T6+sFrpmM/BqapuqPiPRSD0PYP89wogJw3pkIfUordzqxN4elRe8bE+9ChQjK7pGUw/RzskX6Z1HqTzjLqxLVZmstcyW0m/jDbOYKEmYYOfUboynRi1ssEOJejVfVCQGSnhvTdF7DkBYphyXpQmmMuSBSYQ=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1709566176; x=1709573376;
+ h=Message-Id: Reply-To: X-Feedback-ID: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=wn8Wz4Zn8zmUqpkiIwPVD9NOVam6krpXOLhdNgubw3o=;
+ b=aHiIOwM32Ja/T/TBLc0+ZMC5q8rSxPLbfNZEYVAb59XwSCLFM6Vvf1UJOa+0peQI94sGXkPZfNJAEeL9N30Bv+ewbm/RB0F4o3E/s/amoaGzvNSuxr9QlsEsrsNg/CbAExYTXH0kabEIS+qSi2iY5TWJienXODr58XkGqwN2R0s=
+X-Feedback-Id: learn@itr.mail.codecademy.com::5f46d356f141c6f8191fbaa6:mailgun
+X-Mailgun-Sending-Ip: 69.72.36.88
+X-Mailgun-Sid: WyIwNDhhYiIsInJlZGFha2hlcmZpNjhAZ21haWwuY29tIiwiOGRjZTJhIl0=
+Received: from <unknown> (<unknown> []) by 687e9eac72db with HTTP id
+ 65e5e8e0bc08bc2ea3632203; Mon, 04 Mar 2024 15:29:36 GMT
+Sender: learn@itr.mail.codecademy.com
+Date: Mon, 04 Mar 2024 15:29:36 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="2cf554c7f1a7bc201909d35f64fd243c0e920d67ab36ed6b62adacb8b26e"
+Subject: March newsletter: Learn better with AI
+From: Codecademy <learn@itr.mail.codecademy.com>
+To: redaakherfi68@gmail.com
+List-Unsubscribe: <https://itr.links.codecademy.com/e/encryptedUnsubscribe?_r=13e4e7efd5b34d1d982e9fb34505f006&_s=2ceea966cdf54be8b0cbe9f55071defe&_t=IwafvjGj_NtPM4XKbmgYgpouQmlGP-ImMu8fpxElvT70W8ZoHCV5eZLVf_5_efyHYyfEqNKYxvtHXEcWDMfKTq7JiWqNbop26amH2MUXw2JzKtyzKZ4mU5VU6A6tqDC7>,<mailto:unsubscribe+9176432+12138131@unsubscribe.iterable.com>
+X-Campaign-ID: 9176432
+Return-Path: bounces@itr.mail.codecademy.com
+Feedback-ID: 12138131:9176432:34640:iterable
+X-Message-ID: 2ceea966cdf54be8b0cbe9f55071defe
+X-Feedback-ID: 12138131:9176432:34640:iterable
+Reply-To: learn@codecademy.com
+X-Mailgun-Variables: {"metadata":
+ "{\"messageId\":\"2ceea966cdf54be8b0cbe9f55071defe\",\"templateId\":12138131,\"projectId\":9044,\"campaignId\":9176432}"}
+Message-Id: <20240304152936.dd67f05f7d529372@itr.mail.codecademy.com>
+
+--2cf554c7f1a7bc201909d35f64fd243c0e920d67ab36ed6b62adacb8b26e
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Explore new AI features and courses, and our upgraded mobile learning=20
+experience =E2=80=94 plus join us on TikTok! =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=20
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F=20
+
+
+
+
+
+
+
+March 2024
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We=E2=80=99re making it easier to learn=20
+
+From the keyboard shortcuts you can do in your sleep to the clever hack tha=
+t=20
+you learned from TikTok, we all have go-to techniques and tricks that make =
+us=20
+more efficient and creative developers. And now, AI has entered the chat. W=
+e=E2=80=99ve=20
+addednew AI learning tools=20
+<https://www.codecademy.com/resources/blog/new-learning-environment-platfor=
+m-features/?utm_medium=3Demail&utm_campaign=3Dmarch_2024_monthly_newsletter=
+&utm_content=3Dblog_ai_features>
+ to our platform that=E2=80=99ll help you grasp concepts quicker, learn fro=
+m mistakes,=20
+and gain hands-on experience with industry standard tools. Along with these=
+=20
+upgrades, we=E2=80=99ve also made courses and pathsmobile-friendly=20
+<https://www.codecademy.com/resources/blog/behind-the-build-mobile-le/?utm_=
+medium=3Demail&utm_campaign=3Dmarch_2024_monthly_newsletter&utm_content=3Db=
+log_mobile_le>
+, so you can learn from any device =E2=80=94 then get back toyour TikTok fe=
+ed.=20
+<https://www.tiktok.com/@codecademy>
+
+=E2=80=8C
+
+
+Keep crushing it,
+
+The Codecademy Team
+
+
+
+
+
+
+
+NEW FEATURES <>=20
+
+
+
+
+=20
+<https://try.codecademy.com/ai?utm_medium=3Demail&utm_campaign=3Dmarch_2024=
+_monthly_newsletter&utm_content=3Dai_lp>
+
+
+
+
+Get ready for a better learning experience
+
+
+We=E2=80=99ve upgraded our interactive platform with AI-powered assistance =
+like=20
+project hints, error explanations, and courses on writing better generative=
+ AI=20
+prompts. Now you can build skills even faster with our latest tools and=20
+upgrades.
+
+
+Explore the latest updates=20
+<https://try.codecademy.com/ai?utm_medium=3Demail&utm_campaign=3Dmarch_2024=
+_monthly_newsletter&utm_content=3Dai_lp>
+
+
+
+
+
+
+UPDATED COURSES <>=20
+
+
+
+=20
+<https://www.codecademy.com/learn/intro-to-chatgpt?utm_medium=3Demail&utm_c=
+ampaign=3Dmarch_2024_monthly_newsletter&utm_content=3Dcurriculum_2024_chatg=
+pt>
+
+Intro to ChatGPT
+
+
+We=E2=80=99ve added new exercises for you to work on prompt engineering, pl=
+us an=20
+updated portfolio project.
+
+
+Start course=20
+<https://www.codecademy.com/learn/intro-to-chatgpt?utm_medium=3Demail&utm_c=
+ampaign=3Dmarch_2024_monthly_newsletter&utm_content=3Dcurriculum_2024_chatg=
+pt>
+
+=20
+<https://www.codecademy.com/learn/learn-git?utm_medium=3Demail&utm_campaign=
+=3Dmarch_2024_monthly_newsletter&utm_content=3Dcurriculum_2024_git>
+
+Learn Git & GitHub
+
+
+We=E2=80=99ve refreshed this tried-and-true course to include the generativ=
+e AI=20
+assistant GitHub Copilot =E2=80=94 and to reflect GitHub=E2=80=99s latest i=
+nterface.
+
+
+Start course=20
+<https://www.codecademy.com/learn/learn-git?utm_medium=3Demail&utm_campaign=
+=3Dmarch_2024_monthly_newsletter&utm_content=3Dcurriculum_2024_git>
+
+
+
+
+
+
+PRODUCT UPDATE <>=20
+
+
+
+
+=20
+<https://www.codecademy.com/resources/blog/behind-the-build-mobile-le/?utm_=
+medium=3Demail&utm_campaign=3Dmarch_2024_monthly_newsletter&utm_content=3Dm=
+obile_le>
+
+
+Take courses anytime, anywhere, on any device
+
+
+Chances are you=E2=80=99re reading this on your phone or tablet =E2=80=94 n=
+ow you can code=20
+right in your mobile browser, too. Read how our technical team made our=20
+platform more mobile-friendly in =E2=80=9CBehind the Build.=E2=80=9D
+
+
+Read now=20
+<https://www.codecademy.com/resources/blog/behind-the-build-mobile-le/?utm_=
+medium=3Demail&utm_campaign=3Dmarch_2024_monthly_newsletter&utm_content=3Dm=
+obile_le>
+
+
+
+
+
+
+CONNECT WITH US <>=20
+
+
+
+
+
+
+Upcoming event =E2=80=94 March 13
+
+
+Pivoting is Possible: Quick Tips on How to Change Your Career Register Now=
+=20
+<https://community.codecademy.com/e/m5f3mz/>
+
+
+
+
+
+
+
+
+
+
+
+
+Connect with fellow Full-Stack enthusiasts
+
+
+Learners who are at least 85% of the way through the Full-Stack career path=
+=20
+are invited to join our exclusive Full-Stack Chapter LinkedIn group to shar=
+e=20
+insights, seek advice, and more.
+
+Learn more <https://www.linkedin.com/groups/12971330>
+
+
+
+
+
+
+
+
+
+
+
+
+New to TikTok =E2=80=94 but not to tech
+
+
+Follow us on TikTok and scroll your way to success with honest career advic=
+e,=20
+quick coding tips, and industry insights to help you navigate your learning=
+=20
+journey.
+
+Follow Codecademy on TikTok <https://www.tiktok.com/@codecademy>=20
+
+
+
+
+
+
+
+
+
+
+
+
+SPECIAL DISCOUNT <>=20
+
+
+
+
+=20
+<https://www.codecademy.com/pages/codecademy-discount-codes?utm_medium=3Dem=
+ail&utm_campaign=3Dmarch_2024_monthly_newsletter&utm_content=3Dsheerid_lp>
+
+
+Select groups can save on Plus & Pro annual plans
+
+
+If you're a US, UK, or Canada-based healthcare worker, first responder, or=
+=20
+military member, you may be eligible for special discounts. Experience=20
+AI-powered learning and build essential tech skills for less.
+
+
+Learn more=20
+<https://www.codecademy.com/pages/codecademy-discount-codes?utm_medium=3Dem=
+ail&utm_campaign=3Dmarch_2024_monthly_newsletter&utm_content=3Dsheerid_lp>
+
+
+
+
+
+
+FROM THE BLOG <>=20
+
+
+
+
+=20
+<https://www.codecademy.com/resources/blog/case-studies-using-generative-ai=
+-coding?utm_medium=3Demail&utm_campaign=3Dmarch_2024_monthly_newsletter&utm=
+_content=3Dblog_ai_case>
+
+
+Practice Your AI & Coding Skills with These Short-Form Case Studies
+
+
+Get hands-on experience working with generative AI in these short=20
+project-based exercises.
+
+
+Read now=20
+<https://www.codecademy.com/resources/blog/case-studies-using-generative-ai=
+-coding?utm_medium=3Demail&utm_campaign=3Dmarch_2024_monthly_newsletter&utm=
+_content=3Dblog_ai_case>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Don=E2=80=99t gatekeep yourself is the most important advice that I can giv=
+e. There=20
+are many levels of coding and knowledge, and all of them [count as] coding.=
+=20
+
+
+Barbara Perez de Araujo
+
+PhD candidate=20
+Bavaria, Germany=20
+
+
+Read more=20
+<https://www.codecademy.com/resources/blog/how-i-learned-to-code-for-master=
+s-environmental-protection/?utm_medium=3Demail&utm_campaign=3Dmarch_2024_mo=
+nthly_newsletter&utm_content=3Dlearner_story>
+
+
+
+
+
+
+
+
+
+
+
+Share your career wins
+
+
+Have you reached a big career goal using Codecademy? We'd like to hear more=
+=2E=20
+Answer a few questions, and you could get featured on our blog, social medi=
+a,=20
+or even a video.
+
+
+Share your story=20
+<https://codecademyready.typeform.com/to/pt5GKldM#email=3Dredaakherfi68@gma=
+il.com>
+
+
+
+
+
+
+
+
+
+
+
+Stay connected: Instagram <https://www.instagram.com/codecademy/> | LinkedI=
+n=20
+<https://linkedin.com/company/codecademy> | Facebook=20
+<https://www.facebook.com/codecademy> | TikTok=20
+<https://www.tiktok.com/@codecademy> | Forums <https://discuss.codecademy.c=
+om/>
+
+View web version=20
+<https://itr.links.codecademy.com/e/evib?_t=3D13e4e7efd5b34d1d982e9fb34505f=
+006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DIwafvjGj_NtPM4XKbmgYgpouQmlG=
+P-ImMu8fpxElvT4iUyfjRDDvWymFc-UpaG_J>
+ |Email preferences <https://www.codecademy.com/account/mail_settings> |=20
+Unsubscribe=20
+<https://itr.links.codecademy.com/e/encryptedUnsubscribe?_r=3D13e4e7efd5b34=
+d1d982e9fb34505f006&_s=3D2ceea966cdf54be8b0cbe9f55071defe&_t=3DIwafvjGj_NtP=
+M4XKbmgYgpouQmlGP-ImMu8fpxElvT70W8ZoHCV5eZLVf_5_efyHYyfEqNKYxvtHXEcWDMfKTq7=
+JiWqNbop26amH2MUXw2JIBN_h7xgmrm-thHv7KmBe86-fLzrm8pSTX3fpxs10G34eCsXH2UDTGQ=
+MTa7Lzg2k%3D>
+| Privacy policy <https://www.codecademy.com/policy>
+
+Copyright Codecademy. All rights reserved.=20
+
+600 Broadway, 2nd Floor, New York City, NY 10012
+
+--2cf554c7f1a7bc201909d35f64fd243c0e920d67ab36ed6b62adacb8b26e
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns=3D"http://www.w3.org/1999/xht=
+ml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micros=
+oft-com:office:office"><head> <!--[if gte mso 9]><xml> <o:OfficeDocumentSet=
+tings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocume=
+ntSettings> </xml><![endif]--> <meta content=3D"text/html; charset=3DUTF-8"=
+ http-equiv=3D"Content-Type"><meta content=3D"true" name=3D"HandheldFriendl=
+y"><meta content=3D"320" name=3D"MobileOptimized"><meta content=3D"width=3D=
+device-width" name=3D"viewport"><meta content=3D"light only" name=3D"color-=
+scheme"><meta content=3D"light only" name=3D"supported-color-schemes"><titl=
+e></title> <!--[if !mso]><!--> <link href=3D"https://www.cdn1ve3zg.com/shar=
+ed/fonts/SuisseIntlMono/stylesheet.css" rel=3D"stylesheet" type=3D"text/css=
+"><link href=3D"https://fonts.googleapis.com/css2?family=3DIBM+Plex+Mono:it=
+al,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1=
+,500;1,600;1,700&amp;display=3Dswap" rel=3D"stylesheet" type=3D"text/css"><=
+link href=3D"https://www.cdn1ve3zg.com/shared/fonts/Apercu/stylesheet.css" =
+rel=3D"stylesheet" type=3D"text/css"><link href=3D"https://fonts.googleapis=
+=2Ecom/css2?family=3DWork+Sans:ital,wght=
+@0,100;0,200;0,300;0,400;0,500;0,600;=
+0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp=
+;display=3Dswap" rel=3D"stylesheet" type=3D"text/css"> <!--<![endif]--> <st=
+yle type=3D"text/css">span,td,table,div{-webkit-font-smoothing:antialiased;=
+-moz-osx-font-smoothing:grayscale}.st-email-body{width:100%!important;-webk=
+it-text-size-adjust:100%;margin:0 auto!important;padding:0;background-color=
+:#fff}span.st-preheader{display:none!important}td img+div{display:none}a[hr=
+ef^=3Dtel],a[href^=3Dsms]{text-decoration:none;color:inherit!important;poin=
+ter-events:none;cursor:default}u+.st-email-body a{color:inherit;text-decora=
+tion:none;font-size:inherit;font-family:inherit;font-weight:inherit;line-he=
+ight:inherit}*[x-apple-data-detectors]{color:inherit!important;text-decorat=
+ion:none!important;font-size:inherit!important;font-family:inherit!importan=
+t;font-weight:inherit!important;line-height:inherit!important}a,a:hover,a:l=
+ink,a:visited{text-decoration:none!important;outline:0}p{margin:0;padding:0=
+}.st-hide-desktop{display:none;font-size:0;height:0;min-height:0;max-height=
+:0;line-height:0;mso-hide:all}.st-gmail-fix{display:none!important}</style>=
+<style>@media screen and (max-width:480px){.st-col,.st-mobile-full-width,.s=
+t-module-wrapper-table,.st-wrapper,.st-wrapper-table{width:100%!important}.=
+st-col{padding:0!important}.st-resize{width:100%!important}.st-mobile-width=
+-constraint,.st-resize{display:block!important;height:auto!important}.st-mo=
+bile-width-constraint{max-width:100%!important}.st-equal-height,.st-height-=
+auto{height:auto!important}.st-hide-desktop{display:table-row!important}.st=
+-hide-mobile{display:none!important}.st-mobile-inline{display:inline!import=
+ant}.show-img-mobile{display:table-row!important;width:100%!important;float=
+:none;overflow:visible!important;height:auto!important}.st-dynamic-3836-1{m=
+argin:0 auto!important}.st-dynamic-3836-2{margin:0 auto!important;width:100=
+%!important;max-width:277px!important;padding-top:30px!important;padding-bo=
+ttom:30px!important}.st-dynamic-3836-5{padding-top:0!important;padding-bott=
+om:30px!important}.st-dynamic-3836-6 p{text-align:center!important}.st-dyna=
+mic-3836-27{padding-top:0!important;padding-right:32px!important;padding-bo=
+ttom:0!important}.st-dynamic-3836-28{background-image:none!important}.st-dy=
+namic-3887-41,u+.st-email-body .st-dynamic-3887-41 img{width:100%!important=
+;max-width:586px!important}.st-dynamic-3982-145,u+.st-email-body .st-dynami=
+c-3982-145 img{width:100%!important;max-width:33px!important}.st-dynamic-40=
+92-257,u+.st-email-body .st-dynamic-4092-257 img{width:100%!important;max-w=
+idth:60px!important}.st-dynamic-4092-260,u+.st-email-body .st-dynamic-4092-=
+260 img{width:100%!important;max-width:29px!important}.st-wrapper-table{wid=
+th:100%!important;max-width:480px!important;margin:0 auto}}#MessageViewBody=
+ .st-module-wrapper-table{margin-top:-1px}@media(max-width:649px) and (min-=
+width:481px){.st-module-wrapper-table{margin-top:-1px!important}}div>u+.bod=
+y .st-module-wrapper-table{margin-top:0!important}</style> <!--[if !mso]><!=
+--> <style>ul,ol{margin-left:15px;padding-left:0}</style> <!--<![endif]--> =
+<!--[if mso]><style>table{border-collapse:collapse}span.MsoHyperlink{mso-st=
+yle-priority:99;color:inherit}span.MsoHyperlinkFollowed{mso-style-priority:=
+99;color:inherit}ol li,ul li{margin-top:0!important;margin-bottom:0!importa=
+nt}</style><![endif]--> <!--[if gte mso 9]><style>.st-mso-full-width{width:=
+100%}</style><![endif]--> <!--[if IEMobile]><style type=3D"text/css">.st-ms=
+o-full-width{width:100%}</style><![endif]--> <!--[if mso]><style>.monofont =
+h1,h2,h3,h4,h5,h6,p,a,span,td,strong{font-family:IBM Plex Mono',monospace,A=
+rial,sans-serif!important}</style><![endif]--> <!--[if mso]><style>h1,h2,h3=
+,h4,h5,h6,p,a,span,td,strong{font-family:Helvetica,Arial,sans-serif!importa=
+nt}</style><![endif]--> <style>.minw-203 a{min-width:167px!important}.minw-=
+228 a{min-width:192px!important}.minw-180 a{min-width:144px!important}.minw=
+-60{min-width:60px!important}.minw-33{min-width:33px!important}.border-2px-=
+right>table{border-right:solid 2px #10162f!important}.border-2px-top>table{=
+border-top:2px solid #10162f!important}.border-12px-bottom>table{border-bot=
+tom:12px solid #10162f!important}.border-2px-bottom>table{border-bottom:2px=
+ solid #10162f!important}.border-2px-left>table{border-left:2px solid #1016=
+2f!important}.border-15px-left>table{border-left:14px solid #10162f!importa=
+nt}.lh-36 p{line-height:36px!important}.lh-36 span{line-height:36px!importa=
+nt}ul{padding-left:15px!important}ul li{list-style-position:outside!importa=
+nt}.rounded-corners img{border-radius:10px}.circle-image img{border-radius:=
+200px}.remove-element{display:none}.center-text p{text-align:center!importa=
+nt}.yellow-text p{color:#ffd300!important}#MessageViewBody a{color:inherit;=
+text-decoration:none;font-size:inherit;font-family:inherit;font-weight:inhe=
+rit;line-height:inherit}@media(max-width:480px){.padding-top-12{padding-top=
+:12px!important}.vertical-padding-24{padding-top:24px!important;padding-bot=
+tom:24px!important}.padding-sides-22{padding-left:22px!important;padding-ri=
+ght:22px!important}.padding-bottom-56{padding-bottom:56px!important}.paddin=
+g-bottom-15{padding-bottom:15px!important}.padding-bottom-50{padding-bottom=
+:50px!important}.padding-bottom-24{padding-bottom:24px!important}.padding-t=
+op-25{padding-top:25px!important}.padding-top-30{padding-top:30px!important=
+}.padding-sides-32{padding-left:32px!important;padding-right:32px!important=
+}.padding-right-32{padding-right:32px!important}.padding-left-34{padding-le=
+ft:34px!important}.padding-sides-bgimage .bgi-padding-left{width:22px!impor=
+tant}.padding-sides-bgimage .bgi-padding-right{width:22px!important}.reset-=
+padding-sides{padding-left:0!important;padding-right:0!important}.reset-pad=
+ding-top{padding-top:0!important}.padding-right-44{padding-right:44px!impor=
+tant}.padding-left-42{padding-left:42px!important}.padding-right-30{padding=
+-right:30px!important}.padding-left-22{padding-left:22px!important}.padding=
+-left-18{padding-left:18px!important}.padding-right-22{padding-right:22px!i=
+mportant}.center-element td{margin:0 auto!important;text-align:center!impor=
+tant}.center-element{text-align:center!important}.center-element table{marg=
+in:0 auto!important}.center-element p{text-align:center!important}.center-e=
+lement span{text-align:center!important}.center-image img{margin:0 auto!imp=
+ortant}.small-font-mobile p{font-size:calc(100% - 10px)!important;line-heig=
+ht:1.2!important}.small-font-mobile p span{font-size:calc(100% - 10px)!impo=
+rtant;line-height:1.2!important}.large-header-date p span{font-size:18px!im=
+portant}}</style><style type=3D"text/css">.__scope__s7ndo .br-tbl-2 p{borde=
+r-bottom-left-radius:2px!important;border-top-left-radius:2px!important}.__=
+scope__s7ndo .hd-br-br-2 p{border-bottom-right-radius:2px!important}.__scop=
+e__s7ndo .bt-br-bl-0 td{border-bottom-left-radius:0!important}.__scope__s7n=
+do .minw-180 a{min-width:148px!important}.__scope__8iecn .br-tbl-2 p{border=
+-bottom-left-radius:2px!important;border-top-left-radius:2px!important}.__s=
+cope__8iecn .hd-br-br-2 p{border-bottom-right-radius:2px!important}.__scope=
+__8iecn .bt-br-bl-0 td{border-bottom-left-radius:0!important}.__scope__8iec=
+n .minw-180 a{min-width:148px!important}.__scope__vjvq5 .br-tbl-2 p{border-=
+bottom-left-radius:2px!important;border-top-left-radius:2px!important}.__sc=
+ope__vjvq5 .hd-br-br-2 p{border-bottom-right-radius:2px!important}.__scope_=
+_vjvq5 .bt-br-bl-0 td{border-bottom-left-radius:0!important}.__scope__vjvq5=
+ .minw-180 a{min-width:148px!important}</style></head> <body class=3D"st-ce=
+nter-gmail st-email-body" style=3D"-webkit-text-size-adjust: 100%; padding:=
+ 0; background-color: #fff; width: 100% !important; margin: 0 auto!importan=
+t;"><span style=3D"color:transparent;visibility:hidden;display:none;opacity=
+:0;height:0;width:0;font-size:0;">Explore new AI features and courses, and =
+our upgraded mobile learning experience =E2=80=94 plus join us on TikTok!</=
+span><img src=3D"https://itr.links.codecademy.com/e/eo?_t=3D13e4e7efd5b34d1=
+d982e9fb34505f006&amp;_m=3D2ceea966cdf54be8b0cbe9f55071defe&amp;_e=3DIwafvj=
+Gj_NtPM4XKbmgYgpouQmlGP-ImMu8fpxElvT70W8ZoHCV5eZLVf_5_efyHYyfEqNKYxvtHXEcWD=
+MfKTq7JiWqNbop26amH2MUXw2JvRNTAAJGGeY6RWY28wqiGZXvbPtUDg0S41GEegc5B6A%3D%3D=
+" style=3D"border:0;width:1px;height:1px;border-width:0px!important;display=
+:none!important;line-height:0!important;" width=3D"1" height=3D"1"/><div st=
+yle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale; font-size: 0px; display: none; visibility: hidden; opacity: 0; color: =
+transparent; max-height: 0px; height: 0; width: 0; mso-hide: all;"> &#8199;=
+&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847=
+; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8=
+199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&=
+#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &=
+#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199=
+;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#84=
+7; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#=
+8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;=
+&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847=
+; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8=
+199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&=
+#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &=
+#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199=
+;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#84=
+7; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#=
+8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;=
+&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847=
+; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8=
+199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&=
+#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &nbsp; </div> <table bgcolor=3D"#FFFFFF" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-wrapper-table" role=3D"pr=
+esentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale; width: 100%;" width=3D"100%"><tr><td align=3D"center" cl=
+ass=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table ali=
+gn=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-=
+module-wrapper-table st-wrapper st-wrapper-background" role=3D"presentation=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#3A10E5" class=3D"=
+padding-sides-22 st-dynamic-3836-27" style=3D"-webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale; width: 100%; padding-right: 32p=
+x; padding-left: 32px;" valign=3D"top" width=3D"100%"><table align=3D"cente=
+r" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; width: 100%;" width=3D"100%"><tr><td align=3D"left" valign=3D"top" wi=
+dth=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale;"><!--[if gte mso 9]><table role=3D"presentation" width=
+=3D"439.50pt" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"wid=
+th:439.50pt; border-collapse: collapse; table-width: fixed;" align=3D"cente=
+r"> <tr> <td width=3D"219.75pt" style=3D"width:219.75pt" valign=3D"top"><![=
+endif]--> <table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"st-mobile-full-width st-mso-full-width" role=3D"presentatio=
+n" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; width: 293px; float: left;" width=3D"293"><tr><td align=3D"center=
+" class=3D"st-equal-height" height=3D"74" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; height: 74px;" valign=3D"t=
+op" width=3D"293"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%" valign=
+=3D"top" align=3D"left" class=3D"st-dynamic-3836-2" style=3D"-webkit-font-s=
+moothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-top: 25p=
+x; padding-bottom: 25px; width: 100%;"><img border=3D"0" valign=3D"top" wid=
+th=3D"277" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/647f7c1=
+c4e6fa-1686076444.3213.png" alt title class=3D"st-mobile-width-constraint s=
+t-dynamic-3836-1" style=3D"border: 0px; display: block; width: 277px; max-w=
+idth: 100%;"></td></tr></table></td></tr></table> <!--[if gte mso 9]></td><=
+td width=3D"219.75pt" style=3D"width: 219.75pt" align=3D"left" valign=3D"to=
+p"><![endif]--> <table align=3D"left" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" class=3D"st-mobile-full-width st-mso-full-width" role=3D"presen=
+tation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothi=
+ng: grayscale; width: 293px; float: left;" width=3D"293"><tr><td align=3D"c=
+enter" class=3D"st-equal-height" height=3D"74" style=3D"-webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale; height: 74px;" valign=
+=3D"top" width=3D"293"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothing: a=
+ntialiased; -moz-osx-font-smoothing: grayscale;"><tr><td align=3D"left" cla=
+ss=3D"st-dynamic-3836-5 st-dynamic-3836-6" style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; text-align: left; font-fa=
+mily: 'Suisse Intl Mono','IBM Plex Mono',Helvetica; color: #fff0e5; font-si=
+ze: 16px; font-weight: 700; letter-spacing: normal; line-height: 20px; padd=
+ing-top: 25px; padding-bottom: 25px; width: 100%;" valign=3D"top" width=3D"=
+100%"><p style=3D"padding: 0; margin: 0; text-align: right;"><span style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; f=
+ont-size: 16px; line-height: 20px;">March 2024</span></p></td></tr></table>=
+</td></tr></table> <!--[if gte mso 9]></td></tr></table><![endif]--></td></=
+tr><tr><td align=3D"left" valign=3D"top" width=3D"100%" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mobile-full-width =
+st-mso-full-width" role=3D"presentation" style=3D"-webkit-font-smoothing: a=
+ntialiased; -moz-osx-font-smoothing: grayscale; width: 586px;" width=3D"586=
+"><tr><td align=3D"center" valign=3D"top" width=3D"586" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D=
+"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothin=
+g: grayscale;"><tr><td align=3D"left" class=3D"monofont remove-element" sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le; display: none; text-align: left; font-family: 'Suisse Intl Mono','IBM P=
+lex Mono', Helvetica; color: #000; font-size: 14px; font-weight: 700; lette=
+r-spacing: normal; line-height: 24px; padding-bottom: 24px; width: 100%;" v=
+align=3D"top" width=3D"100%"></td></tr></table></td></tr></table></td></tr>=
+<tr><td align=3D"left" valign=3D"top" width=3D"100%" style=3D"-webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mobile-full-width st=
+-mso-full-width" role=3D"presentation" style=3D"-webkit-font-smoothing: ant=
+ialiased; -moz-osx-font-smoothing: grayscale; width: 586px;" width=3D"586">=
+<tr><td align=3D"center" valign=3D"top" width=3D"586" style=3D"-webkit-font=
+-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"1=
+00%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale;"><tr><td align=3D"left" class=3D"remove-element" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display=
+: none; text-align: left; font-family: 'Apercu Pro','Work Sans',Helvetica,A=
+rial,sans-serif; color: #000; font-size: 64px; font-weight: 600; letter-spa=
+cing: normal; line-height: 77px; padding-bottom: 8px; width: 100%;" valign=
+=3D"top" width=3D"100%"></td></tr></table></td></tr></table></td></tr><tr><=
+td align=3D"left" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoot=
+hing: antialiased; -moz-osx-font-smoothing: grayscale;"><table align=3D"lef=
+t" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; width: 100%;" width=3D"100%"><tr><td style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; width: 308px;" valign=3D"=
+top" width=3D"308"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale;"><tr class=3D"st-hide-mobile"><=
+td align=3D"center" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale; padding: 0; width: 100%;" valign=3D"top" width=
+=3D"100%"><p height=3D"1" style=3D"padding: 0; mso-line-height-rule: exactl=
+y; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-size-adjust: 100%; wi=
+dth: 100%; height: 1px; max-height: 1px; margin: 0; font-size: 1px; line-he=
+ight: 1px;" width=3D"100%"> &nbsp; </p></td></tr></table></td><td style=3D"=
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; wi=
+dth: 278px;" valign=3D"top" width=3D"278"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><=
+td align=3D"left" class=3D"monofont remove-element" style=3D"-webkit-font-s=
+moothing: antialiased; -moz-osx-font-smoothing: grayscale; display: none; t=
+ext-align: left; font-family: 'Suisse Intl Mono','IBM Plex Mono',Helvetica;=
+ color: #10162f; font-size: 16px; font-weight: 400; letter-spacing: normal;=
+ line-height: 26px; width: 100%;" valign=3D"top" width=3D"100%"></td></tr><=
+/table></td></tr></table></td></tr></table></td></tr></table></td></tr><tr>=
+<td align=3D"center" class=3D"st-dynamic-3836-28" valign=3D"top" width=3D"1=
+00%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"st-module-wrapper-table st-wrapper st-wrapper-backgroun=
+d" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz=
+-osx-font-smoothing: grayscale; width: 650px;" width=3D"650"><tr><td bgcolo=
+r=3D"#10162F" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; width: 100%;" valign=3D"top" width=3D"100%"><table bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mobile-full-width=
+ st-mso-full-width" role=3D"presentation" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; width: 650px;" width=3D"65=
+0"><tr><td align=3D"center" valign=3D"top" width=3D"650" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale;"><tr><td align=3D"center" style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; padding: 0; width: 100%;"=
+ valign=3D"top" width=3D"100%"><p height=3D"50" style=3D"padding: 0; mso-li=
+ne-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text=
+-size-adjust: 100%; width: 100%; height: 50px; max-height: 50px; margin: 0;=
+ font-size: 50px; line-height: 50px;" width=3D"100%"> &nbsp; </p></td></tr>=
+</table></td></tr></table></td></tr></table></td></tr><tr><td align=3D"cent=
+er" class=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D"-we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tab=
+le align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"st-module-wrapper-table st-wrapper st-wrapper-background" role=3D"prese=
+ntation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smooth=
+ing: grayscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" cl=
+ass=3D"padding-sides-22" style=3D"-webkit-font-smoothing: antialiased; -moz=
+-osx-font-smoothing: grayscale; width: 100%; padding-right: 32px; padding-l=
+eft: 32px;" valign=3D"top" width=3D"100%"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"st-mobile-full-width st-mso-full-width" r=
+ole=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx=
+-font-smoothing: grayscale; width: 586px;" width=3D"586"><tr><td align=3D"c=
+enter" valign=3D"top" width=3D"586" style=3D"-webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><=
+td align=3D"left" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; text-align: left; font-family: 'Apercu Pro','Work =
+Sans',sans-serif; color: #fff0e5; font-size: 16px; font-weight: 400; letter=
+-spacing: normal; line-height: 24px; width: 100%;" valign=3D"top" width=3D"=
+100%"><p style=3D"padding: 0; margin: 0;"><span style=3D"-webkit-font-smoot=
+hing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 22px; lin=
+e-height: 33px;"><strong>We&rsquo;re making it easier to learn</strong></sp=
+an>&nbsp;<br><br>From the keyboard shortcuts you can do in your sleep to th=
+e clever hack that you learned from TikTok, we all have go-to techniques an=
+d tricks that make us more efficient and creative developers. And now, AI h=
+as entered the chat. We&rsquo;ve added <span style=3D"-webkit-font-smoothin=
+g: antialiased; -moz-osx-font-smoothing: grayscale; color: #ffd300;"><a hre=
+f=3D"https://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb3=
+4505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6=
+DNiBMloGtDsUoApMbvx12G81F3wHkY1p9J7DQlQFILjf7g6iuNceBhWJQ9gs3YnLv6ZGLHP-P6b=
+wZlGl2ZwcsOHXPWNgOFE3uCtzlc1YS4YAwCZsS870X6-6INIYVuu5tpdF-0pKt7DwoWca_IPBB-=
+NE86lhMl9JVXvxYS205Gt4g5hkg3vE5pYbF3CPGB9p0KVT_u5YIieJl7TD4dvQewC3qQPelGfrD=
+lbooDVqX6LYU0Xn_-O4abu_LjTncpWYR709XB3VK2bGMqm-RoLkeMmEeoZ_Z_M1p6tMPALkKC_K=
+fkJ4OyllRZK6il538hVJVKmdSSpodlLAbUhHM0ICHCUwK7sCg24WcGfe2viLPAK11VM6-egGhOy=
+Ur8lqA4Q%3D%3D" style=3D"outline: none; color: #ffd300; text-decoration: no=
+ne !important;"><u>new AI learning tools</u></a></span> to our platform tha=
+t&rsquo;ll help you grasp concepts quicker, learn from mistakes, and gain h=
+ands-on experience with industry standard tools. Along with these upgrades,=
+ we&rsquo;ve also made courses and paths <span style=3D"-webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale; color: #ffd300;"><a h=
+ref=3D"https://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9f=
+b34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3=
+B6DNiBMloGtDsUoApMbvx12G81F3wHkY1p9J7DQlQFIqs8GozOpkcdmUPh4d58L4UgslYqwrvX2=
+jZVDViMzo8h_D9Zd2TaY0aVu_J7Q80k9cmf38TIODrwaIOIVq6Kd4l4flmV7BdXBE-D0-iSNuKG=
+kWTsFffRtYdrxuFI6q4ajexxdNs1TGUnZG0BeO6MIRa-nCQo06NIG48KUvGXkaEGI_Z_lzIdo3A=
+KwxXPjZNsUwwnPV4ljlwzK-7_4scjLdD2TTgi-S9AWA3QLM_tL_W5mtALvxRTVoRkSgBTvvtP37=
+627iBIGXkutQ596uXjJYGoobC0thFXUIBIuiyaPIaRL_dntspuA3YefX1SKrM6-" style=3D"o=
+utline: none; color: #ffd300; text-decoration: none !important;"><u>mobile-=
+friendly</u></a></span>, so you can learn from any device &#8212; then get =
+back to <span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; color: #ffd300;"><a class=3D"st-no-tracking" href=3D"h=
+ttps://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f0=
+06&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3ArbpUp3q=
+rYWA5lzzSOn5uT4J0vql62pCVAhJtXoJUn98bxcTnZ8TEGLr_UT8YZg4aj5l2OqhXGZseOdtm2p=
+nU0lm7bbibuO6_Ga-s9lqYjayYVC0EUXghOh1VZFDuNHktX-fUJetCPVbuGndhkgDYIl4J-fG-v=
+RgOy9Qqqo1Lt_6OvouyxZUiET-FTXTWpOPZdeNZd6iMCs8jRbnlkaxBI%3D" style=3D"outli=
+ne: none; color: #ffd300; text-decoration: none !important;"><u>your TikTok=
+ feed.</u></a></span></p> <p style=3D"padding: 0; margin: 0;">&zwnj;<br></p=
+> <p style=3D"padding: 0; margin: 0;">Keep crushing it,</p> <p style=3D"pad=
+ding: 0; margin: 0;">The Codecademy Team</p></td></tr></table></td></tr></t=
+able></td></tr></table></td></tr><tr><td align=3D"center" class=3D"st-dynam=
+ic-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale;"><table align=3D"center" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-=
+table st-wrapper st-wrapper-background" role=3D"presentation" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width:=
+ 650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-2=
+2" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; width: 100%; padding-right: 32px; padding-bottom: 50px; padding-l=
+eft: 32px;" valign=3D"top" width=3D"100%"><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width:=
+ 100%;" width=3D"100%"><tr><td align=3D"left" class=3D"monofont" valign=3D"=
+top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale;"><table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" width=
+=3D"100%"><tr><td class=3D"monofont" style=3D"-webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale; width: 586px;" valign=3D"bottom=
+" width=3D"586"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%" valign=3D"=
+top" align=3D"left" class=3D"st-dynamic-3887-41" style=3D"-webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; padding-top: 30px; =
+padding-bottom: 30px; width: 100%;"><img border=3D"0" valign=3D"top" width=
+=3D"586" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/6478cc48a=
+993c-1685638216.6946.png" alt class=3D"st-mobile-width-constraint" style=3D=
+"border: 0px; display: block; width: 586px; max-width: 100%;"></td></tr><tr=
+><td align=3D"left" class=3D"monofont" style=3D"-webkit-font-smoothing: ant=
+ialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" valign=3D"top" =
+width=3D"100%"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-c=
+om:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=3D"height:2=
+5pt; v-text-anchor:middle; width:107pt; mso-position-horizontal: left" arcs=
+ize=3D"104%" strokecolor=3D"#FFF0E5" strokeweight=3D"1pt" fillcolor=3D"#101=
+62F"> <w:anchorlock/> <v:textbox inset=3D"0,0,0,0"><p style=3D"text-align: =
+center; font-family: Suisse Int\l Mono, IBM Plex Mono, Courier New, Lucida =
+Grande; color: #FFF0E5; font-size: 14px; font-weight: bold; letter-spacing:=
+ 0.028571428571428574em; mso-line-height-rule: exactly; line-height: 14px">=
+<![endif]--> <!--[if !mso]><!--> <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale; border-collapse: initial;"><tr><=
+td width=3D"100%" align=3D"center" height=3D"32" valign=3D"middle" style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; m=
+so-padding-alt: 0px 18px 0px 18px; border-radius: 34px; border-width: 1px; =
+border-style: solid; border-color: #fff0e5; height: 32px; width: 100%; text=
+-align: center; vertical-align: middle;"><!--<![endif]--> <a href target=3D=
+"_blank" valign=3D"middle" style=3D"outline: none; mso-line-height-rule: ex=
+actly; text-align: center; font-family: 'Suisse Intl Mono', 'IBM Plex Mono'=
+, Helvetica; color: #fff0e5; font-size: 14px; font-weight: bold; letter-spa=
+cing: 0.0285714em; line-height: 14px; padding-right: 18px; padding-left: 18=
+px; display: table-cell; height: 32px; border-radius: 34px; vertical-align:=
+ middle; box-sizing: content-box; text-decoration: none !important;"> <span=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; margin: 0px; text-align: center; color: #fff0e5;"><span style=3D"-w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font=
+-size: 14px; line-height: 14px;">NEW FEATURES</span></span></a> <!--[if !ms=
+o]><!--></td></tr></table> <!--<![endif]--> <!--[if mso]></p></v:textbox> <=
+/v:roundrect><![endif]--></td></tr></table></td></tr></table></td></tr></ta=
+ble></td></tr></table></td></tr><tr><td align=3D"center" class=3D"st-dynami=
+c-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: a=
+ntialiased; -moz-osx-font-smoothing: grayscale;"><table align=3D"center" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-t=
+able st-wrapper st-wrapper-background" role=3D"presentation" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: =
+650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-22=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 100%; padding-right: 32px; padding-bottom: 30px; padding-le=
+ft: 32px;" valign=3D"top" width=3D"100%"><table align=3D"center" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: =
+100%;" width=3D"100%"><tr><td align=3D"left" bgcolor=3D"#F5FCFF" valign=3D"=
+top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale;"><table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"st-mobile-full-width st-mso-full-width" role=3D"presentat=
+ion" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale; width: 586px;" width=3D"586"><tr><td align=3D"center" valign=3D=
+"top" width=3D"586" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale;"><table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothi=
+ng: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%=
+" valign=3D"top" align=3D"center" bgcolor=3D"#10162F" class=3D"rounded-corn=
+ers" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale; width: 100%;"><a href=3D"https://itr.links.codecademy.com/u/cli=
+ck?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071d=
+efe&_e=3DgOzijmW9_0N7uzi9Owsw3HE2Ewk6CU0YSaIuIiu1dmmtl-DYYyMpoCZC1v9naR1Tdz=
+h9-YTA6cRywwsTKr_n1tfAux60tEBLYMwr1FEWvjr_01KhF-dxffZZaGAU_1VsKGM3QNzPsjsAJ=
+xiVnACvNRrlNEDmjExsSi2ScDUkuMNk6Y7DkLBi7BZlyoX0ZVzJyn_uaYD8HWYvIyKpEB0nH_-0=
+PTbY7UsiniChmkbN9iOTrGj4V6FXeGPcWf0eVbShxcw_KPbIzSlP3bWrPjHStmiNbsZjqJ-bCeR=
+vyt_9qhGJaar1nloNRjygz6-lL_XY" target=3D"_blank" style=3D"outline: none; di=
+splay: block; text-decoration: none !important;"><img border=3D"0" valign=
+=3D"top" width=3D"586" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/im=
+ages/65df54e808f3e-1709135080.0367.png" alt title class=3D"st-resize" style=
+=3D"border-radius: 10px; border: 0px; display: block; width: 586px; max-wid=
+th: 100%;"> </a></td></tr></table></td></tr></table></td></tr></table></td>=
+</tr></table></td></tr><tr><td align=3D"center" class=3D"st-dynamic-3836-28=
+" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiase=
+d; -moz-osx-font-smoothing: grayscale;"><table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-table st-w=
+rapper st-wrapper-background" role=3D"presentation" style=3D"-webkit-font-s=
+moothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650px;" w=
+idth=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-22" style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; width: 100%; padding-right: 32px; padding-left: 32px;" valign=3D"top" wid=
+th=3D"100%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"st-mobile-full-width st-mso-full-width" role=3D"presentation" style=3D"=
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; wi=
+dth: 586px;" width=3D"586"><tr><td align=3D"center" valign=3D"top" width=3D=
+"586" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing=
+: grayscale;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialias=
+ed; -moz-osx-font-smoothing: grayscale;"><tr><td align=3D"left" class=3D"le=
+ft-align" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale; text-align: left; font-family: 'Apercu Pro','Work Sans',He=
+lvetica,Arial,sans-serif; color: #fff0e5; font-size: 22px; font-weight: 600=
+; letter-spacing: normal; line-height: 33px; padding-bottom: 16px; width: 1=
+00%;" valign=3D"top" width=3D"100%"><p style=3D"padding: 0; margin: 0; text=
+-align: left;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx=
+-font-smoothing: grayscale; font-size: 34px; line-height: 41px;">Get ready =
+for a better learning experience</span></p></td></tr><tr><td align=3D"left"=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; text-align: left; font-family: 'Apercu Pro','Work Sans',sans-serif;=
+ color: #fff0e5; font-size: 16px; font-weight: 400; letter-spacing: normal;=
+ line-height: 24px; width: 100%;" valign=3D"top" width=3D"100%"><p style=3D=
+"padding: 0; margin: 0;">We&rsquo;ve upgraded our interactive platform with=
+ AI-powered assistance like project hints, error explanations, and courses =
+on writing better generative AI prompts. Now you can build skills even fast=
+er with our latest tools and upgrades.</p></td></tr><tr><td align=3D"left" =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale; padding-top: 24px; width: 100%;" valign=3D"top" width=3D"100%"><!--[=
+if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"u=
+rn:schemas-microsoft-com:office:word" style=3D"height:36pt; v-text-anchor:m=
+iddle; width:240pt; mso-position-horizontal: left" arcsize=3D"6%" strokecol=
+or=3D"#FFD300" strokeweight=3D"0pt" fillcolor=3D"#FFD300"> <w:anchorlock/> =
+<v:textbox inset=3D"0,0,0,0"><p style=3D"text-align: center; font-family: A=
+percu Pro, Work Sans, Helvetica, Sans-serif; color: #10162F; font-size: 16p=
+x; font-weight: 600; letter-spacing: normal; mso-line-height-rule: exactly;=
+ line-height: 24px"><![endif]--> <!--[if !mso]><!--> <table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 240px=
+; border-collapse: initial;" width=3D"240"><tr><td width=3D"100%" bgcolor=
+=3D"#ffd300" align=3D"center" height=3D"36" valign=3D"middle" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-pa=
+dding-alt: 0px 16px 0px 16px; border-radius: 2px; border-color: #ffd300; he=
+ight: 36px; width: 100%; text-align: center; background-color: #ffd300; ver=
+tical-align: middle;"><!--<![endif]--> <a width=3D"240" href=3D"https://itr=
+=2Elinks.codecademy.com/u/click?_t=3D13=
+e4e7efd5b34d1d982e9fb34505f006&_m=3D2c=
+eea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3HE2Ewk6CU0YSaIuIiu=
+1dmmtl-DYYyMpoCZC1v9naR1Tdzh9-YTA6cRywwsTKr_n1tfAux60tEBLYMwr1FEWvjr_01KhF-=
+dxffZZaGAU_1VsKGM3QNzPsjsAJxiVnACvNRrlNEDmjExsSi2ScDUkuMMljKAgSSx5dAZ18WOK4=
+rrdVKmVAZm70Tep-qS6-CMVH9AaPc2_0obCaZ2m8TBsDVpLw_DbH_zbczyZXCaBqsd7mleTP5y9=
+VYW-egWc5MiKKmSQPCsuj4uw7gRvo0HIAZZ0Hv6NZYhoHY8BjQtBOuMD" target=3D"_blank"=
+ bgcolor=3D"#FFD300" valign=3D"middle" style=3D"outline: none; mso-line-hei=
+ght-rule: exactly; text-align: center; font-family: 'Apercu Pro', 'Work San=
+s', Helvetica, sans-serif; color: #10162f; font-size: 16px; font-weight: 60=
+0; letter-spacing: normal; line-height: 24px; padding-right: 16px; padding-=
+left: 16px; display: table-cell; width: 240px; height: 36px; border-radius:=
+ 2px; vertical-align: middle; box-sizing: content-box; text-decoration: non=
+e !important;"> <span style=3D"-webkit-font-smoothing: antialiased; -moz-os=
+x-font-smoothing: grayscale; margin: 0px; color: #10162f;"><span style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; fon=
+t-size: 16px; line-height: 24px;">Explore the latest updates</span></span><=
+/a> <!--[if !mso]><!--></td></tr></table> <!--<![endif]--> <!--[if mso]></p=
+></v:textbox> </v:roundrect><![endif]--></td></tr></table></td></tr></table=
+></td></tr></table></td></tr><tr><td align=3D"center" class=3D"st-dynamic-3=
+836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale;"><table align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-tabl=
+e st-wrapper st-wrapper-background" role=3D"presentation" style=3D"-webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650=
+px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-22" s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; width: 100%; padding-right: 32px; padding-bottom: 50px; padding-left:=
+ 32px;" valign=3D"top" width=3D"100%"><table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100=
+%;" width=3D"100%"><tr><td align=3D"left" class=3D"monofont" valign=3D"top"=
+ width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font=
+-smoothing: grayscale;"><table align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" width=3D"100=
+%"><tr><td class=3D"monofont" style=3D"-webkit-font-smoothing: antialiased;=
+ -moz-osx-font-smoothing: grayscale; width: 586px;" valign=3D"bottom" width=
+=3D"586"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%" valign=3D"top" al=
+ign=3D"left" class=3D"st-dynamic-3887-41" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; padding-top: 30px; padding=
+-bottom: 30px; width: 100%;"><img border=3D"0" valign=3D"top" width=3D"586"=
+ src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/6478cc48a993c-168=
+5638216.6946.png" alt class=3D"st-mobile-width-constraint" style=3D"border:=
+ 0px; display: block; width: 586px; max-width: 100%;"></td></tr><tr><td ali=
+gn=3D"left" class=3D"monofont" style=3D"-webkit-font-smoothing: antialiased=
+; -moz-osx-font-smoothing: grayscale; width: 100%;" valign=3D"top" width=3D=
+"100%"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=3D"height:25pt; v-t=
+ext-anchor:middle; width:127pt; mso-position-horizontal: left" arcsize=3D"1=
+04%" strokecolor=3D"#FFF0E5" strokeweight=3D"1pt" fillcolor=3D"#10162F"> <w=
+:anchorlock/> <v:textbox inset=3D"0,0,0,0"><p style=3D"text-align: center; =
+font-family: Suisse Int\l Mono, IBM Plex Mono, Courier New, Lucida Grande; =
+color: #FFF0E5; font-size: 14px; font-weight: bold; letter-spacing: 0.02857=
+1428571428574em; mso-line-height-rule: exactly; line-height: 14px"><![endif=
+]--> <!--[if !mso]><!--> <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; =
+-moz-osx-font-smoothing: grayscale; border-collapse: initial;"><tr><td widt=
+h=3D"100%" align=3D"center" height=3D"32" valign=3D"middle" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-padd=
+ing-alt: 0px 18px 0px 18px; border-radius: 34px; border-width: 1px; border-=
+style: solid; border-color: #fff0e5; height: 32px; width: 100%; text-align:=
+ center; vertical-align: middle;"><!--<![endif]--> <a href target=3D"_blank=
+" valign=3D"middle" style=3D"outline: none; mso-line-height-rule: exactly; =
+text-align: center; font-family: 'Suisse Intl Mono', 'IBM Plex Mono', Helve=
+tica; color: #fff0e5; font-size: 14px; font-weight: bold; letter-spacing: 0=
+=2E0285714em; line-height: 14px; paddin=
+g-right: 18px; padding-left: 18px; dis=
+play: table-cell; height: 32px; border-radius: 34px; vertical-align: middle=
+; box-sizing: content-box; text-decoration: none !important;"> <span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; margin: 0px; text-align: center; color: #fff0e5;"><span style=3D"-webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size:=
+ 14px; line-height: 14px;">UPDATED COURSES</span></span></a> <!--[if !mso]>=
+<!--></td></tr></table> <!--<![endif]--> <!--[if mso]></p></v:textbox> </v:=
+roundrect><![endif]--></td></tr></table></td></tr></table></td></tr></table=
+></td></tr></table></td></tr><tr><td align=3D"center" class=3D"st-dynamic-3=
+836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale;"><table align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-tabl=
+e st-wrapper st-wrapper-background" role=3D"presentation" style=3D"-webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650=
+px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-22" s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; width: 100%; padding-right: 32px; padding-left: 32px;" valign=3D"top"=
+ width=3D"100%"> <!--[if gte mso 9]><table role=3D"presentation" width=3D"4=
+39.50pt" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:43=
+9.50pt; border-collapse: collapse; table-width: fixed;" align=3D"center"> <=
+tr> <td width=3D"219.75pt" style=3D"width:219.75pt" valign=3D"top"><![endif=
+]--> <table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"st-mobile-full-width st-mso-full-width" role=3D"presentation" sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le; width: 293px; float: left;" width=3D"293"><tr><td align=3D"center" clas=
+s=3D"reset-padding-sides st-equal-height" height=3D"344" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-rig=
+ht: 16px; height: 344px;" valign=3D"top" width=3D"293"><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" st=
+yle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale;"><tr><td width=3D"100%" valign=3D"top" align=3D"left" class=3D"rounded=
+-corners" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale; padding-bottom: 20px; width: 100%;"><a href=3D"https://itr=
+=2Elinks.codecademy.com/u/click?_t=3D13=
+e4e7efd5b34d1d982e9fb34505f006&_m=3D2c=
+eea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApM=
+bvx0NwJ_IqihKlRZHhBRDyXde_koguQWkfaGYzGksf5WvZm3I4IzrVL-Moyu2s9DJCLX6YRt7Cg=
+THdVfsazgCI5WaD0TUe0jFkib3YVkyeRfrMIbgGkK1dUag93Rkdaenj2Oh55H6qjg-Z8AAwkkAF=
+DuQFd_bJYxMhmMMPs48k4usl1GVEViRvN31h0ctDHIoUcUEvssAmLhg3zQh_t3UGbeJ76JwPboa=
+X8bWuQnHy-Qdr9ZuZrvs9VIC8cfpclm7pE-4FV372AOjtYxGbQAY3OxcBgf2O23HWRSr3HAiEt2=
+gmc_TrReAMrzGVMQa1hkcJWA%3D" target=3D"_blank" style=3D"outline: none; disp=
+lay: block; text-decoration: none !important;"><img border=3D"0" valign=3D"=
+top" width=3D"260" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images=
+/65e2068b7c070-1709311627.508.png" alt title class=3D"st-resize" style=3D"b=
+order-radius: 10px; border: 0px; display: block; width: 100%; max-width: 10=
+0%;"> </a></td></tr><tr><td align=3D"left" style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; text-align: left; font-fa=
+mily: 'Apercu Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; =
+font-size: 22px; font-weight: 700; letter-spacing: normal; line-height: 28p=
+x; padding-bottom: 12px; width: 100%;" valign=3D"top" width=3D"100%"><p sty=
+le=3D"padding: 0; margin: 0;">Intro to ChatGPT</p></td></tr><tr><td align=
+=3D"left" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale; text-align: left; font-family: 'Apercu Pro','Work Sans',He=
+lvetica,Arial,sans-serif; color: #fff0e5; font-size: 16px; font-weight: 400=
+; letter-spacing: normal; line-height: 23px; padding-bottom: 12px; width: 1=
+00%;" valign=3D"top" width=3D"100%"><p style=3D"padding: 0; margin: 0;">We&=
+rsquo;ve added new exercises for you to work on prompt engineering, plus an=
+ updated portfolio project.</p></td></tr><tr><td align=3D"left" class=3D"ye=
+llow-text" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; width: 100%;" valign=3D"top" width=3D"100%"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; bor=
+der-collapse: initial;"><tr><td width=3D"100%" align=3D"center" height=3D"5=
+" valign=3D"middle" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale; mso-padding-alt: 0px 0px 0px 0px; height: 5px; w=
+idth: 100%; text-align: center; vertical-align: middle;"> <a href=3D"https:=
+//itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=
+=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDs=
+UoApMbvx0NwJ_IqihKlRZHhBRDyXde_koguQWkfaGYzGksf5WvZm3I4IzrVL-Moyu2s9DJCLX6Y=
+Rt7CgTHdVfsazgCI5WaD0TUe0jFkib3YVkyeRfrMIbgGkK1dUag93Rkdaenj2Oh55H6qjg-Z8AA=
+wkkAFDuQFd_bJYxMhmMMPs48k4usl0CltA1vx4pwcT1NbaeblpyULbDglQ4CGemSKwxncn8Ikk7=
+EL4dEJFNYcDdvZln8wzkvot5d1N81ZWzWgzA1XjUKyJgKZBThOEU_lbQ4Tkb0fZRiKUS0CA1EfW=
+LYki5qbGalYl67cPO_5EQ_Zl-g0i0%3D" target=3D"_blank" valign=3D"middle" style=
+=3D"outline: none; mso-line-height-rule: exactly; text-align: center; font-=
+family: 'Apercu Pro', 'Work Sans', Helvetica, Arial, sans-serif; color: #ff=
+d300; font-size: 16px; font-weight: bold; letter-spacing: normal; line-heig=
+ht: 24px; display: table-cell; height: 5px; border-radius: 0px; vertical-al=
+ign: middle; box-sizing: content-box; text-decoration: none !important;"> <=
+span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale; margin: 0px; text-align: left; color: #ffd300;"><span style=3D"=
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; te=
+xt-decoration: underline; color: #ffd300;">Start course</span></span></a></=
+td></tr></table></td></tr></table></td></tr></table> <!--[if gte mso 9]></t=
+d><td width=3D"219.75pt" style=3D"width: 219.75pt" align=3D"left" valign=3D=
+"top"><![endif]--> <table align=3D"left" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" class=3D"st-mobile-full-width st-mso-full-width" role=3D"pre=
+sentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; width: 293px; float: left;" width=3D"293"><tr><td align=
+=3D"center" class=3D"padding-top-25 reset-padding-sides st-equal-height" he=
+ight=3D"344" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale; padding-left: 16px; height: 344px;" valign=3D"top" widt=
+h=3D"293"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -=
+moz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%" valign=3D"top" a=
+lign=3D"left" class=3D"rounded-corners" style=3D"-webkit-font-smoothing: an=
+tialiased; -moz-osx-font-smoothing: grayscale; padding-bottom: 20px; width:=
+ 100%;"><a href=3D"https://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5=
+b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_=
+0N7uzi9Owsw3B6DNiBMloGtDsUoApMbvx19Yyi33XZ-d2AGKoAiGkCWLV8XrmzMIdTajR1pAqYq=
+EZwmpJpQECo4WMP1VhAepNpqMlsg-68B6Y4rGW9dzFKgeImUs9wrUV1y9j8CLQtqSg3DKXIdaKJ=
+Pw0G1x5wDJGzS1EmCO4cZvQWTEHf19VqttWiOpjpEyo2BbIm6iUxVNY9NPMOGTnO28DKIty3sg7=
+jDBRVn36GuW55YSXNgUHRfrjYhJ88w1Zu_OWD1bMe8zm3MJhgeAnJKMV-vnGdZ7tePUC1GMnHLI=
+TcxmBDQNQYxQe-CLtSjdC__OYXbMdPcYJ7pOuOxRl3e0YBfF18knBI%3D" target=3D"_blank=
+" style=3D"outline: none; display: block; text-decoration: none !important;=
+"><img border=3D"0" valign=3D"top" width=3D"260" src=3D"https://www.cdn1ve3=
+zg.com/pihougjls1/en_us/images/65e206aa986d9-1709311658.6243.png" alt title=
+ class=3D"st-resize" style=3D"border-radius: 10px; border: 0px; display: bl=
+ock; width: 100%; max-width: 100%;"> </a></td></tr><tr><td align=3D"left" s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; text-align: left; font-family: 'Apercu Pro','Work Sans',Helvetica,Ari=
+al,sans-serif; color: #fff0e5; font-size: 22px; font-weight: 700; letter-sp=
+acing: normal; line-height: 28px; padding-bottom: 12px; width: 100%;" valig=
+n=3D"top" width=3D"100%"><p style=3D"padding: 0; margin: 0;">Learn Git & Gi=
+tHub</p></td></tr><tr><td align=3D"left" style=3D"-webkit-font-smoothing: a=
+ntialiased; -moz-osx-font-smoothing: grayscale; text-align: left; font-fami=
+ly: 'Apercu Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; fo=
+nt-size: 16px; font-weight: 400; letter-spacing: normal; line-height: 23px;=
+ padding-bottom: 12px; width: 100%;" valign=3D"top" width=3D"100%"><p style=
+=3D"padding: 0; margin: 0;">We&rsquo;ve refreshed this tried-and-true cours=
+e to include the generative AI assistant GitHub Copilot &#8212; and to refl=
+ect GitHub&rsquo;s latest interface.</p></td></tr><tr><td align=3D"left" cl=
+ass=3D"yellow-text" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale; width: 100%;" valign=3D"top" width=3D"100%"><tab=
+le border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; border-collapse: initial;"><tr><td width=3D"100%" align=3D"center" he=
+ight=3D"5" valign=3D"middle" style=3D"-webkit-font-smoothing: antialiased; =
+-moz-osx-font-smoothing: grayscale; mso-padding-alt: 0px 0px 0px 0px; heigh=
+t: 5px; width: 100%; text-align: center; vertical-align: middle;"> <a href=
+=3D"https://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34=
+505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6D=
+NiBMloGtDsUoApMbvx19Yyi33XZ-d2AGKoAiGkCWLV8XrmzMIdTajR1pAqYqEZwmpJpQECo4WMP=
+1VhAepNpqMlsg-68B6Y4rGW9dzFKgeImUs9wrUV1y9j8CLQtqSg3DKXIdaKJPw0G1x5wDJGzS1E=
+mCO4cZvQWTEHf19VqtjIwJXeK5OYFuo94yCAbI5_9fXD8jKxYZdAFflPc96NjAuGdeJMHieKe-E=
+syT6K_GsaQDpgbpy7t7bY7vDb-bPJTbc7In0ZNuzYVR23U1xTRPnxEy_A86Hs0uHTmcw0tLRUVf=
+e2ijuO_dC-oYUzykmV4EIVhp6ZxJVkPoMP0l6HM%3D" target=3D"_blank" valign=3D"mid=
+dle" style=3D"outline: none; mso-line-height-rule: exactly; text-align: cen=
+ter; font-family: 'Apercu Pro', 'Work Sans', Helvetica, Arial, sans-serif; =
+color: #ffd300; font-size: 16px; font-weight: bold; letter-spacing: normal;=
+ line-height: 24px; display: table-cell; height: 5px; border-radius: 0px; v=
+ertical-align: middle; box-sizing: content-box; text-decoration: none !impo=
+rtant;"> <span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale; margin: 0px; text-align: left; color: #ffd300;"><span=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; text-decoration: underline; color: #ffd300;"><span style=3D"-webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size=
+: 16px; line-height: 24px;">Start course</span></span></span></a></td></tr>=
+</table></td></tr></table></td></tr></table> <!--[if gte mso 9]></td></tr><=
+/table><![endif]--></td></tr></table></td></tr><tr><td align=3D"center" cla=
+ss=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-m=
+odule-wrapper-table st-wrapper st-wrapper-background" role=3D"presentation"=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"p=
+adding-sides-22" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fon=
+t-smoothing: grayscale; width: 100%; padding-right: 32px; padding-bottom: 5=
+0px; padding-left: 32px;" valign=3D"top" width=3D"100%"><table align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; width: 100%;" width=3D"100%"><tr><td align=3D"left" class=3D"monofo=
+nt" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale;"><table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 1=
+00%;" width=3D"100%"><tr><td class=3D"monofont" style=3D"-webkit-font-smoot=
+hing: antialiased; -moz-osx-font-smoothing: grayscale; width: 586px;" valig=
+n=3D"bottom" width=3D"586"><table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothin=
+g: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%"=
+ valign=3D"top" align=3D"left" class=3D"st-dynamic-3887-41" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-=
+top: 30px; padding-bottom: 30px; width: 100%;"><img border=3D"0" valign=3D"=
+top" width=3D"586" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images=
+/6478cc48a993c-1685638216.6946.png" alt class=3D"st-mobile-width-constraint=
+" style=3D"border: 0px; display: block; width: 586px; max-width: 100%;"></t=
+d></tr><tr><td align=3D"left" class=3D"monofont" style=3D"-webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" valig=
+n=3D"top" width=3D"100%"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-m=
+icrosoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=
+=3D"height:25pt; v-text-anchor:middle; width:120pt; mso-position-horizontal=
+: left" arcsize=3D"104%" strokecolor=3D"#FFF0E5" strokeweight=3D"1pt" fillc=
+olor=3D"#10162F"> <w:anchorlock/> <v:textbox inset=3D"0,0,0,0"><p style=3D"=
+text-align: center; font-family: Suisse Int\l Mono, IBM Plex Mono, Courier =
+New, Lucida Grande; color: #FFF0E5; font-size: 14px; font-weight: bold; let=
+ter-spacing: 0.028571428571428574em; mso-line-height-rule: exactly; line-he=
+ight: 14px"><![endif]--> <!--[if !mso]><!--> <table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smoot=
+hing: antialiased; -moz-osx-font-smoothing: grayscale; border-collapse: ini=
+tial;"><tr><td width=3D"100%" align=3D"center" height=3D"32" valign=3D"midd=
+le" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: =
+grayscale; mso-padding-alt: 0px 18px 0px 18px; border-radius: 34px; border-=
+width: 1px; border-style: solid; border-color: #fff0e5; height: 32px; width=
+: 100%; text-align: center; vertical-align: middle;"><!--<![endif]--> <a hr=
+ef target=3D"_blank" valign=3D"middle" style=3D"outline: none; mso-line-hei=
+ght-rule: exactly; text-align: center; font-family: 'Suisse Intl Mono', 'IB=
+M Plex Mono', Helvetica; color: #fff0e5; font-size: 14px; font-weight: bold=
+; letter-spacing: 0.0285714em; line-height: 14px; padding-right: 18px; padd=
+ing-left: 18px; display: table-cell; height: 32px; border-radius: 34px; ver=
+tical-align: middle; box-sizing: content-box; text-decoration: none !import=
+ant;"> <span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale; margin: 0px; text-align: center; color: #fff0e5;"><span=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; font-size: 14px; line-height: 14px;">PRODUCT UPDATE</span></span></=
+a> <!--[if !mso]><!--></td></tr></table> <!--<![endif]--> <!--[if mso]></p>=
+</v:textbox> </v:roundrect><![endif]--></td></tr></table></td></tr></table>=
+</td></tr></table></td></tr></table></td></tr><tr><td align=3D"center" clas=
+s=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mo=
+dule-wrapper-table st-wrapper st-wrapper-background" role=3D"presentation" =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"pa=
+dding-sides-22" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font=
+-smoothing: grayscale; width: 100%; padding-right: 32px; padding-left: 32px=
+;" valign=3D"top" width=3D"100%"><table align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" w=
+idth=3D"100%"><tr><td align=3D"left" valign=3D"top" width=3D"100%" style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">=
+<!--[if gte mso 9]><table role=3D"presentation" width=3D"439.50pt" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:439.50pt; border-co=
+llapse: collapse; table-width: fixed;" align=3D"center" dir=3D"rtl"> <tr> <=
+td width=3D"207.75pt" style=3D"width:207.75pt" dir=3D"ltr" valign=3D"top"><=
+![endif]--> <table align=3D"right" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"st-mobile-full-width st-mso-full-width" dir=3D"ltr" role=
+=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; width: 277px; float: right;" width=3D"277"><tr><td=
+ align=3D"center" class=3D"padding-bottom-15 st-equal-height" height=3D"252=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; height: 252px;" valign=3D"top" width=3D"277"><table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le;"><tr><td width=3D"100%" valign=3D"top" align=3D"center" class=3D"rounde=
+d-corners" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; width: 100%;"><a href=3D"https://itr.links.codecademy.com=
+/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f=
+55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApMbvx12G81F3wHkY1p9J7DQ=
+lQFIqs8GozOpkcdmUPh4d58L4UgslYqwrvX2jZVDViMzo8h_D9Zd2TaY0aVu_J7Q80k9cmf38TI=
+ODrwaIOIVq6Kd4l4flmV7BdXBE-D0-iSNuKGkWTsFffRtYdrxuFI6q4ajt_1mWn5WSwICZEEk0E=
+qwM92h0vbbvx_YD-pdPtTYQilZeGn1T7eI2ThWyxrjejLmgDxmXrcCXG3QpYFtSrjO9pXKniAeJ=
+_6rbNmpgT1zWHR_hhgbogt0KVuyLIUWuWrFqKOfjGzywLqgvNgEtHxXKyyXHOWDcap3s20NmKYx=
+XGiXttfzDrmXTlzA_ztmZ6oq" target=3D"_blank" style=3D"outline: none; display=
+: block; text-decoration: none !important;"><img border=3D"0" valign=3D"top=
+" width=3D"260" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/65=
+ded61b16fc2-1709102619.0941.png" alt title class=3D"st-resize" style=3D"bor=
+der-radius: 10px; border: 0px; display: block; width: 100%; max-width: 100%=
+;"> </a></td></tr></table></td></tr></table> <!--[if gte mso 9]></td><td wi=
+dth=3D"231.75pt" style=3D"width: 231.75pt" dir=3D"ltr" align=3D"left" valig=
+n=3D"top"><![endif]--> <table align=3D"right" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"st-mobile-full-width st-mso-full-width" dir=3D=
+"ltr" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -=
+moz-osx-font-smoothing: grayscale; width: 309px; float: right;" width=3D"30=
+9"><tr><td align=3D"center" class=3D"reset-padding-sides st-equal-height" h=
+eight=3D"252" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; padding-right: 32px; height: 252px;" valign=3D"top" wi=
+dth=3D"309"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased;=
+ -moz-osx-font-smoothing: grayscale;"><tr><td align=3D"left" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-al=
+ign: left; font-family: 'Apercu Pro','Work Sans',Helvetica,Arial,sans-serif=
+; color: #fff0e5; font-size: 22px; font-weight: 700; letter-spacing: normal=
+; line-height: 30px; padding-bottom: 12px; width: 100%;" valign=3D"top" wid=
+th=3D"100%"><p style=3D"padding: 0; margin: 0;">Take courses anytime, anywh=
+ere, on any device</p></td></tr><tr><td align=3D"left" style=3D"-webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: l=
+eft; font-family: 'Apercu Pro','Work Sans',Helvetica,Arial,sans-serif; colo=
+r: #fff0e5; font-size: 16px; font-weight: 400; letter-spacing: normal; line=
+-height: 24px; padding-bottom: 12px; width: 100%;" valign=3D"top" width=3D"=
+100%"><p style=3D"padding: 0; margin: 0;">Chances are you&rsquo;re reading =
+this on your phone or tablet &#8212; now you can code right in your mobile =
+browser, too. Read how our technical team made our platform more mobile-fri=
+endly in &ldquo;Behind the Build.&rdquo;</p></td></tr><tr><td align=3D"left=
+" class=3D"yellow-text" style=3D"-webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; width: 100%;" valign=3D"top" width=3D"100%">=
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; border-collapse: initial;"><tr><td width=3D"100%" align=3D"center=
+" height=3D"5" valign=3D"middle" style=3D"-webkit-font-smoothing: antialias=
+ed; -moz-osx-font-smoothing: grayscale; mso-padding-alt: 0px 0px 0px 0px; h=
+eight: 5px; width: 100%; text-align: center; vertical-align: middle;"> <a h=
+ref=3D"https://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9f=
+b34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3=
+B6DNiBMloGtDsUoApMbvx12G81F3wHkY1p9J7DQlQFIqs8GozOpkcdmUPh4d58L4UgslYqwrvX2=
+jZVDViMzo8h_D9Zd2TaY0aVu_J7Q80k9cmf38TIODrwaIOIVq6Kd4l4flmV7BdXBE-D0-iSNuKG=
+kWTsFffRtYdrxuFI6q4ajt_1mWn5WSwICZEEk0EqwM_FlYWDfaUTHB3oTjFZitOnjmOYzQKwCVp=
+UGseCWBGK5vRV4iEJje2KrsA3iR4rTtjHcgLVGh3iQjdcxIC9j6kArJvu1XImxSzHrd5evumAgk=
+ilDnmiFcUnhQ7LNkwT4NZTP0fjKo27JAyY_s1EJ2BniQ5YNJpQ01CGosuTJaoOo" target=3D"=
+_blank" valign=3D"middle" style=3D"outline: none; mso-line-height-rule: exa=
+ctly; text-align: center; font-family: 'Apercu Pro', 'Work Sans', Helvetica=
+, Arial, sans-serif; color: #ffd300; font-size: 16px; font-weight: bold; le=
+tter-spacing: normal; line-height: 24px; display: table-cell; height: 5px; =
+border-radius: 0px; vertical-align: middle; box-sizing: content-box; text-d=
+ecoration: none !important;"> <span style=3D"-webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale; margin: 0px; color: #ffd300;"><s=
+pan style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: =
+grayscale; text-decoration: underline;"><span style=3D"-webkit-font-smoothi=
+ng: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 16px; line-=
+height: 24px;">Read now</span></span></span></a></td></tr></table></td></tr=
+></table></td></tr></table> <!--[if gte mso 9]></td></tr></table><![endif]-=
+-></td></tr></table></td></tr></table></td></tr><tr><td align=3D"center" cl=
+ass=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table ali=
+gn=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-=
+module-wrapper-table st-wrapper st-wrapper-background" role=3D"presentation=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"=
+padding-sides-22" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; width: 100%; padding-right: 32px; padding-bottom: =
+50px; padding-left: 32px;" valign=3D"top" width=3D"100%"><table align=3D"ce=
+nter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 100%;" width=3D"100%"><tr><td align=3D"left" class=3D"monof=
+ont" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale;"><table align=3D"left" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: =
+100%;" width=3D"100%"><tr><td class=3D"monofont" style=3D"-webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; width: 586px;" vali=
+gn=3D"bottom" width=3D"586"><table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothi=
+ng: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%=
+" valign=3D"top" align=3D"left" class=3D"st-dynamic-3887-41" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding=
+-top: 30px; padding-bottom: 30px; width: 100%;"><img border=3D"0" valign=3D=
+"top" width=3D"586" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/image=
+s/6478cc48a993c-1685638216.6946.png" alt class=3D"st-mobile-width-constrain=
+t" style=3D"border: 0px; display: block; width: 586px; max-width: 100%;"></=
+td></tr><tr><td align=3D"left" class=3D"monofont" style=3D"-webkit-font-smo=
+othing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" vali=
+gn=3D"top" width=3D"100%"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-=
+microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=
+=3D"height:25pt; v-text-anchor:middle; width:127pt; mso-position-horizontal=
+: left" arcsize=3D"104%" strokecolor=3D"#FFF0E5" strokeweight=3D"1pt" fillc=
+olor=3D"#10162F"> <w:anchorlock/> <v:textbox inset=3D"0,0,0,0"><p style=3D"=
+text-align: center; font-family: Suisse Int\l Mono, IBM Plex Mono, Courier =
+New, Lucida Grande; color: #FFF0E5; font-size: 14px; font-weight: bold; let=
+ter-spacing: 0.028571428571428574em; mso-line-height-rule: exactly; line-he=
+ight: 14px"><![endif]--> <!--[if !mso]><!--> <table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smoot=
+hing: antialiased; -moz-osx-font-smoothing: grayscale; border-collapse: ini=
+tial;"><tr><td width=3D"100%" align=3D"center" height=3D"32" valign=3D"midd=
+le" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: =
+grayscale; mso-padding-alt: 0px 18px 0px 18px; border-radius: 34px; border-=
+width: 1px; border-style: solid; border-color: #fff0e5; height: 32px; width=
+: 100%; text-align: center; vertical-align: middle;"><!--<![endif]--> <a hr=
+ef target=3D"_blank" valign=3D"middle" style=3D"outline: none; mso-line-hei=
+ght-rule: exactly; text-align: center; font-family: 'Suisse Intl Mono', 'IB=
+M Plex Mono', Helvetica; color: #fff0e5; font-size: 14px; font-weight: bold=
+; letter-spacing: 0.0285714em; line-height: 14px; padding-right: 18px; padd=
+ing-left: 18px; display: table-cell; height: 32px; border-radius: 34px; ver=
+tical-align: middle; box-sizing: content-box; text-decoration: none !import=
+ant;"> <span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale; margin: 0px; text-align: center; color: #fff0e5;"><span=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; font-size: 14px; line-height: 14px;">CONNECT WITH US</span></span><=
+/a> <!--[if !mso]><!--></td></tr></table> <!--<![endif]--> <!--[if mso]></p=
+></v:textbox> </v:roundrect><![endif]--></td></tr></table></td></tr></table=
+></td></tr></table></td></tr></table></td></tr><tr><td align=3D"center" cla=
+ss=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-m=
+odule-wrapper-table st-wrapper st-wrapper-background" role=3D"presentation"=
+ style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"p=
+adding-sides-22" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fon=
+t-smoothing: grayscale; width: 100%; padding-right: 60px; padding-left: 60p=
+x;" valign=3D"top" width=3D"100%"><table align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font=
+-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" =
+width=3D"100%"><tr><td align=3D"left" valign=3D"top" width=3D"100%" style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+;"><table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx=
+-font-smoothing: grayscale; width: 100%;" width=3D"100%"><tr><td style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; wid=
+th: 35px;" valign=3D"top" width=3D"35"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td wi=
+dth=3D"100%" valign=3D"top" align=3D"left" class=3D"minw-33 st-dynamic-3982=
+-145" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing=
+: grayscale; padding-top: 4px; width: 100%; min-width: 33px!important;"><im=
+g border=3D"0" valign=3D"top" width=3D"33" src=3D"https://www.cdn1ve3zg.com=
+/pihougjls1/en_us/images/647f7ffa19949-1686077434.1048.png" alt title class=
+=3D"st-mobile-width-constraint" style=3D"border: 0px; display: block; width=
+: 33px; max-width: 100%;"></td></tr></table></td><td style=3D"-webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-left: 2=
+5px; width: 470px;" valign=3D"top" width=3D"470"><table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">=
+<tr><td align=3D"left" class=3D"monofont" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; text-align: left; font-fam=
+ily: 'Suisse Intl Mono','IBM Plex Mono',Helvetica; color: #fff0e5; font-siz=
+e: 20px; font-weight: 400; letter-spacing: normal; line-height: 28px; width=
+: 100%;" valign=3D"top" width=3D"100%"><p style=3D"padding: 0; margin: 0;">=
+<strong><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; font-size: 20px; line-height: 28px;">Upcoming event &#=
+8212; March 13</span></strong></p></td></tr><tr><td align=3D"left" style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; t=
+ext-align: left; font-family: 'Apercu Pro','Work Sans',Helvetica,Arial,sans=
+-serif; color: #fff0e5; font-size: 16px; font-weight: 400; letter-spacing: =
+normal; line-height: 24px; width: 100%;" valign=3D"top" width=3D"100%"><p s=
+tyle=3D"padding: 0; margin: 0;"><span style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale; font-size: 16px; line-height: =
+24px;">Pivoting is Possible: Quick Tips on How to Change Your Career <span =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale; text-decoration: underline; color: #ffd300;"><strong><a class=3D"st-=
+no-tracking" href=3D"https://itr.links.codecademy.com/u/click?_t=3D13e4e7ef=
+d5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW=
+9_0N7uzi9Owsw3GRu2nNBweaRBeVv1ktg_U_-BRRdkKlBD7xAGo3TKFp2B-4hr49AwMN1H4fkJL=
+PvBKhWzi_cebZJj1H3uCB6su5XOhBZNQfmjztXXilF2QWLEMDokhii17efN4yDgR4St_dmwCTLD=
+EoOfENGJY8yBia-XJzgl6M-3z07_WhOtqbLbC3dH3yLzw1MDHalMuqzA2JW-euo9EkC9pTK-S_Z=
+b6g%3D" style=3D"outline: none; color: #ffd300; text-decoration: none !impo=
+rtant;">Register Now</a></strong></span></span></p></td></tr></table></td><=
+/tr></table></td></tr><tr><td align=3D"left" valign=3D"top" width=3D"100%" =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st=
+-mobile-full-width st-mso-full-width" role=3D"presentation" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 5=
+30px;" width=3D"530"><tr><td align=3D"center" valign=3D"top" width=3D"530" =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -mo=
+z-osx-font-smoothing: grayscale;"><tr><td align=3D"center" style=3D"-webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 10=
+0%;" valign=3D"top" width=3D"100%"><p height=3D"24" style=3D"padding: 0; ms=
+o-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+text-size-adjust: 100%; width: 100%; height: 24px; max-height: 24px; margin=
+: 0; font-size: 24px; line-height: 24px;" width=3D"100%"> &nbsp; </p></td><=
+/tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr=
+><tr><td align=3D"center" class=3D"st-dynamic-3836-28" valign=3D"top" width=
+=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale;"><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"st-module-wrapper-table st-wrapper st-wrapper-back=
+ground" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased;=
+ -moz-osx-font-smoothing: grayscale; width: 650px;" width=3D"650"><tr><td b=
+gcolor=3D"#10162F" class=3D"padding-sides-22" style=3D"-webkit-font-smoothi=
+ng: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%; padding-r=
+ight: 60px; padding-left: 60px;" valign=3D"top" width=3D"100%"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothi=
+ng: grayscale; width: 100%;" width=3D"100%"><tr><td align=3D"left" valign=
+=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale;"><table align=3D"left" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smo=
+othing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" widt=
+h=3D"100%"><tr><td style=3D"-webkit-font-smoothing: antialiased; -moz-osx-f=
+ont-smoothing: grayscale; width: 35px;" valign=3D"top" width=3D"35"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" widt=
+h=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale;"><tr><td width=3D"100%" valign=3D"top" align=3D"left" cla=
+ss=3D"minw-33 st-dynamic-3982-145" style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; padding-top: 4px; width: 100%; mi=
+n-width: 33px!important;"><img border=3D"0" valign=3D"top" width=3D"33" src=
+=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/65df775b01e78-1709143=
+899.0078.png" alt title class=3D"st-mobile-width-constraint" style=3D"borde=
+r: 0px; display: block; width: 33px; max-width: 100%;"></td></tr></table></=
+td><td style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothin=
+g: grayscale; padding-left: 25px; width: 470px;" valign=3D"top" width=3D"47=
+0"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx=
+-font-smoothing: grayscale;"><tr><td align=3D"left" class=3D"monofont" styl=
+e=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; text-align: left; font-family: 'Suisse Intl Mono','IBM Plex Mono',Helvet=
+ica; color: #fff0e5; font-size: 20px; font-weight: 400; letter-spacing: nor=
+mal; line-height: 28px; width: 100%;" valign=3D"top" width=3D"100%"><p styl=
+e=3D"padding: 0; margin: 0;"><strong><span style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; font-size: 20px; line-hei=
+ght: 28px;">Connect with fellow Full-Stack enthusiasts</span></strong></p><=
+/td></tr><tr><td align=3D"left" style=3D"-webkit-font-smoothing: antialiase=
+d; -moz-osx-font-smoothing: grayscale; text-align: left; font-family: 'Aper=
+cu Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; font-size: =
+16px; font-weight: 400; letter-spacing: normal; line-height: 24px; width: 1=
+00%;" valign=3D"top" width=3D"100%"><p style=3D"padding: 0; margin: 0;">Lea=
+rners who are at least 85% of the way through the Full-Stack career path ar=
+e invited to join our exclusive Full-Stack Chapter LinkedIn group to share =
+insights, seek advice, and more.</p> <p style=3D"padding: 0; margin: 0;"><s=
+pan style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: =
+grayscale; color: #ffd300;"><strong><span style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: underline=
+;"><a class=3D"st-no-tracking" href=3D"https://itr.links.codecademy.com/u/c=
+lick?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f5507=
+1defe&_e=3DgOzijmW9_0N7uzi9Owsw3Dx9elQta7u3EkvBGefbG6MoLeAM-4V3N2cm_rsiTzzM=
+QnfKPRmIb1pRwkSQLpOYujFirQ4w1BEmrVvSXUhjzMwwJwM5aUOgGRELIhZudigekUmsmo_Bz5v=
+6dlrmtElNQMeSJh40V3n1M3IZyS5gJt1LK9ecOFdpk5rJ2he4QJ20e76X4TXI7SYbZOj41hMWJI=
+YuxrDc_2Dw7ApyTamrHHQ%3D" style=3D"outline: none; color: #ffd300; text-deco=
+ration: none !important;">Learn more</a></span></strong></span></p></td></t=
+r></table></td></tr></table></td></tr><tr><td align=3D"left" valign=3D"top"=
+ width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font=
+-smoothing: grayscale;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"st-mobile-full-width st-mso-full-width" role=3D"presentatio=
+n" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; width: 530px;" width=3D"530"><tr><td align=3D"center" valign=3D"t=
+op" width=3D"530" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothing=
+: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td align=3D"center=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 100%;" valign=3D"top" width=3D"100%"><p height=3D"24" style=
+=3D"padding: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; text-size-adjust: 100%; width: 100%; height: 24px; max-he=
+ight: 24px; margin: 0; font-size: 24px; line-height: 24px;" width=3D"100%">=
+ &nbsp; </p></td></tr></table></td></tr></table></td></tr></table></td></tr=
+></table></td></tr><tr><td align=3D"center" class=3D"st-dynamic-3836-28" va=
+lign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -=
+moz-osx-font-smoothing: grayscale;"><table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-table st-wrapp=
+er st-wrapper-background" role=3D"presentation" style=3D"-webkit-font-smoot=
+hing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650px;" width=
+=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-22" style=3D"-w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; widt=
+h: 100%; padding-right: 60px; padding-left: 60px;" valign=3D"top" width=3D"=
+100%"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -mo=
+z-osx-font-smoothing: grayscale; width: 100%;" width=3D"100%"><tr><td align=
+=3D"left" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: an=
+tialiased; -moz-osx-font-smoothing: grayscale;"><table align=3D"left" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"=
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; wi=
+dth: 100%;" width=3D"100%"><tr><td style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; width: 35px;" valign=3D"top" widt=
+h=3D"35"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%" valign=3D"top" al=
+ign=3D"left" class=3D"minw-33 st-dynamic-3982-145" style=3D"-webkit-font-sm=
+oothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-top: 4px;=
+ width: 100%; min-width: 33px!important;"><img border=3D"0" valign=3D"top" =
+width=3D"33" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/65df7=
+5302c611-1709143344.1818.png" alt title class=3D"st-mobile-width-constraint=
+" style=3D"border: 0px; display: block; width: 33px; max-width: 100%;"></td=
+></tr></table></td><td style=3D"-webkit-font-smoothing: antialiased; -moz-o=
+sx-font-smoothing: grayscale; padding-left: 25px; width: 470px;" valign=3D"=
+top" width=3D"470"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" width=3D"100%" style=3D"-webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale;"><tr><td align=3D"left" class=
+=3D"monofont" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; text-align: left; font-family: 'Suisse Intl Mono','IBM=
+ Plex Mono',Helvetica; color: #fff0e5; font-size: 20px; font-weight: 400; l=
+etter-spacing: normal; line-height: 28px; width: 100%;" valign=3D"top" widt=
+h=3D"100%"><p style=3D"padding: 0; margin: 0;"><strong><span style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-si=
+ze: 20px; line-height: 28px;">New to TikTok &#8212; but not to tech</span><=
+/strong></p></td></tr><tr><td align=3D"left" style=3D"-webkit-font-smoothin=
+g: antialiased; -moz-osx-font-smoothing: grayscale; text-align: left; font-=
+family: 'Apercu Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5=
+; font-size: 16px; font-weight: 400; letter-spacing: normal; line-height: 2=
+4px; width: 100%;" valign=3D"top" width=3D"100%"><p style=3D"padding: 0; ma=
+rgin: 0;">Follow us on TikTok and scroll your way to success with honest ca=
+reer advice, quick coding tips, and industry insights to help you navigate =
+your learning journey.</p> <p style=3D"padding: 0; margin: 0;"><span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; color: #ffd300;"><strong><span style=3D"-webkit-font-smoothing: antialias=
+ed; -moz-osx-font-smoothing: grayscale; text-decoration: underline;"><a cla=
+ss=3D"st-no-tracking" href=3D"https://itr.links.codecademy.com/u/click?_t=
+=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_=
+e=3DgOzijmW9_0N7uzi9Owsw3ArbpUp3qrYWA5lzzSOn5uT4J0vql62pCVAhJtXoJUn9UjmDwf6=
+pLIytLi_97daXYvRJFZu32wDeiGWYhoPo0BP9Um20TtE9v_AT3YIw9tXlsFBNfmUTDUIw9ofG8e=
+Z3c8F1UzMAygDJGn1Ee5FYyztFIExTosb2qIl_0rUhWDyMl_q5xO_zikorzSc30awA-homdfoyl=
+29X6fCeZUUccG8%3D" style=3D"outline: none; color: #ffd300; text-decoration:=
+ none !important;">Follow Codecademy on TikTok</a></span></strong> </span><=
+/p></td></tr></table></td></tr></table></td></tr><tr><td align=3D"left" val=
+ign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale;"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"st-mobile-full-width st-mso-full-width" role=3D"pr=
+esentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale; width: 530px;" width=3D"530"><tr><td align=3D"center" va=
+lign=3D"top" width=3D"530" style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale;"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td align=
+=3D"center" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale; width: 100%;" valign=3D"top" width=3D"100%"><p height=3D=
+"24" style=3D"padding: 0; mso-line-height-rule: exactly; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; text-size-adjust: 100%; width: 100%; height: 24=
+px; max-height: 24px; margin: 0; font-size: 24px; line-height: 24px;" width=
+=3D"100%"> &nbsp; </p></td></tr></table></td></tr></table></td></tr></table=
+></td></tr></table></td></tr><tr><td align=3D"center" class=3D"st-dynamic-3=
+836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale;"><table align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-tabl=
+e st-wrapper st-wrapper-background" role=3D"presentation" style=3D"-webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650=
+px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-22" s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; width: 100%; padding-right: 32px; padding-bottom: 50px; padding-left:=
+ 32px;" valign=3D"top" width=3D"100%"><table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100=
+%;" width=3D"100%"><tr><td align=3D"left" class=3D"monofont" valign=3D"top"=
+ width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font=
+-smoothing: grayscale;"><table align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;" width=3D"100=
+%"><tr><td class=3D"monofont" style=3D"-webkit-font-smoothing: antialiased;=
+ -moz-osx-font-smoothing: grayscale; width: 586px;" valign=3D"bottom" width=
+=3D"586"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale;"><tr><td width=3D"100%" valign=3D"top" al=
+ign=3D"left" class=3D"st-dynamic-3887-41" style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; padding-top: 30px; padding=
+-bottom: 30px; width: 100%;"><img border=3D"0" valign=3D"top" width=3D"586"=
+ src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/6478cc48a993c-168=
+5638216.6946.png" alt class=3D"st-mobile-width-constraint" style=3D"border:=
+ 0px; display: block; width: 586px; max-width: 100%;"></td></tr><tr><td ali=
+gn=3D"left" class=3D"monofont" style=3D"-webkit-font-smoothing: antialiased=
+; -moz-osx-font-smoothing: grayscale; width: 100%;" valign=3D"top" width=3D=
+"100%"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=3D"height:25pt; v-t=
+ext-anchor:middle; width:133pt; mso-position-horizontal: left" arcsize=3D"1=
+04%" strokecolor=3D"#FFF0E5" strokeweight=3D"1pt" fillcolor=3D"#10162F"> <w=
+:anchorlock/> <v:textbox inset=3D"0,0,0,0"><p style=3D"text-align: center; =
+font-family: Suisse Int\l Mono, IBM Plex Mono, Courier New, Lucida Grande; =
+color: #FFF0E5; font-size: 14px; font-weight: bold; letter-spacing: 0.02857=
+1428571428574em; mso-line-height-rule: exactly; line-height: 14px"><![endif=
+]--> <!--[if !mso]><!--> <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; =
+-moz-osx-font-smoothing: grayscale; border-collapse: initial;"><tr><td widt=
+h=3D"100%" align=3D"center" height=3D"32" valign=3D"middle" style=3D"-webki=
+t-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-padd=
+ing-alt: 0px 18px 0px 18px; border-radius: 34px; border-width: 1px; border-=
+style: solid; border-color: #fff0e5; height: 32px; width: 100%; text-align:=
+ center; vertical-align: middle;"><!--<![endif]--> <a href target=3D"_blank=
+" valign=3D"middle" style=3D"outline: none; mso-line-height-rule: exactly; =
+text-align: center; font-family: 'Suisse Intl Mono', 'IBM Plex Mono',Helvet=
+ica; color: #fff0e5; font-size: 14px; font-weight: bold; letter-spacing: 0.=
+0285714em; line-height: 14px; padding-right: 18px; padding-left: 18px; disp=
+lay: table-cell; height: 32px; border-radius: 34px; vertical-align: middle;=
+ box-sizing: content-box; text-decoration: none !important;"> <span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; margin: 0px; text-align: center; color: #fff0e5;"><span style=3D"-webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size:=
+ 14px; line-height: 14px;">SPECIAL DISCOUNT</span></span></a> <!--[if !mso]=
+><!--></td></tr></table> <!--<![endif]--> <!--[if mso]></p></v:textbox> </v=
+:roundrect><![endif]--></td></tr></table></td></tr></table></td></tr></tabl=
+e></td></tr></table></td></tr><tr><td align=3D"center" class=3D"st-dynamic-=
+3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: ant=
+ialiased; -moz-osx-font-smoothing: grayscale;"><table align=3D"center" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-tab=
+le st-wrapper st-wrapper-background" role=3D"presentation" style=3D"-webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 65=
+0px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"padding-sides-22" =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale; width: 100%; padding-right: 32px; padding-left: 32px;" valign=3D"top=
+" width=3D"100%"><table align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale; width: 100%;" width=3D"100%"><t=
+r><td align=3D"left" valign=3D"top" width=3D"100%" style=3D"-webkit-font-sm=
+oothing: antialiased; -moz-osx-font-smoothing: grayscale;"><!--[if gte mso =
+9]><table role=3D"presentation" width=3D"439.50pt" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" style=3D"width:439.50pt; border-collapse: collapse=
+; table-width: fixed;" align=3D"center" dir=3D"rtl"> <tr> <td width=3D"207.=
+75pt" style=3D"width:207.75pt" dir=3D"ltr" valign=3D"top"><![endif]--> <tab=
+le align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"st-mobile-full-width st-mso-full-width" dir=3D"ltr" role=3D"presentatio=
+n" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; width: 277px; float: right;" width=3D"277"><tr><td align=3D"cente=
+r" class=3D"padding-bottom-15 st-equal-height" height=3D"252" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; height=
+: 252px;" valign=3D"top" width=3D"277"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td wi=
+dth=3D"100%" valign=3D"top" align=3D"center" class=3D"rounded-corners" styl=
+e=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; width: 100%;"><a href=3D"https://itr.links.codecademy.com/u/click?_t=3D1=
+3e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3D=
+gOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApMbvx39e8uXKT20jyvV3RtSqoLCPPVGrcqRvp6=
+WsMRWksjayItpunmTAAWOy9Gib6bCssdytF0gRn04vxTPjY6QEiaY7dHJcCQZ7Ij4rRFDNGZhHo=
+XdNpu7cJpOuVZmuQfEzp5UIdONmxz9W3brJpC8Zv0G-ndqXbmypEnXd_X8Ll7e9Pu3xuCfGLfuv=
+xJ9yhyd-ubKAKY1-W22T9uM8ZP8cw70bKtB6zwjbDn0JhpZvw4OJ9YbjpdLt96Tnbl8DEUTgs_x=
+hTUXELl_ujJA5AIwTUCVxD8_Jic8fi0-7Rfp0aP-2RToZT2SYI5FGKH1E2Lp90w%3D" target=
+=3D"_blank" style=3D"outline: none; display: block; text-decoration: none !=
+important;"><img border=3D"0" valign=3D"top" width=3D"260" src=3D"https://w=
+ww.cdn1ve3zg.com/pihougjls1/en_us/images/65e208cab7729-1709312202.7514.png"=
+ alt title class=3D"st-resize" style=3D"border-radius: 10px; border: 0px; d=
+isplay: block; width: 100%; max-width: 100%;"> </a></td></tr></table></td><=
+/tr></table> <!--[if gte mso 9]></td><td width=3D"231.75pt" style=3D"width:=
+ 231.75pt" dir=3D"ltr" align=3D"left" valign=3D"top"><![endif]--> <table al=
+ign=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-=
+mobile-full-width st-mso-full-width" dir=3D"ltr" role=3D"presentation" styl=
+e=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; width: 309px; float: right;" width=3D"309"><tr><td align=3D"center" clas=
+s=3D"reset-padding-sides st-equal-height" height=3D"252" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-rig=
+ht: 32px; height: 252px;" valign=3D"top" width=3D"309"><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" st=
+yle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale;"><tr><td align=3D"left" style=3D"-webkit-font-smoothing: antialiased; =
+-moz-osx-font-smoothing: grayscale; text-align: left; font-family: 'Apercu =
+Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; font-size: 22p=
+x; font-weight: 700; letter-spacing: normal; line-height: 30px; padding-bot=
+tom: 12px; width: 100%;" valign=3D"top" width=3D"100%"><p style=3D"padding:=
+ 0; margin: 0;">Select groups can save on Plus & Pro annual plans</p></td><=
+/tr><tr><td align=3D"left" style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale; text-align: left; font-family: 'Apercu Pr=
+o','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; font-size: 16px;=
+ font-weight: 400; letter-spacing: normal; line-height: 24px; padding-botto=
+m: 12px; width: 100%;" valign=3D"top" width=3D"100%"><p style=3D"padding: 0=
+; margin: 0;">If you're a US, UK, or Canada-based healthcare worker, first =
+responder, or military member, you may be eligible for special discounts. E=
+xperience AI-powered learning and build essential tech skills for less.</p>=
+</td></tr><tr><td align=3D"left" class=3D"yellow-text" style=3D"-webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;"=
+ valign=3D"top" width=3D"100%"><table border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale; border-collapse: initial;"><tr><td=
+ width=3D"100%" align=3D"center" height=3D"5" valign=3D"middle" style=3D"-w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-=
+padding-alt: 0px 0px 0px 0px; height: 5px; width: 100%; text-align: center;=
+ vertical-align: middle;"> <a href=3D"https://itr.links.codecademy.com/u/cl=
+ick?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071=
+defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApMbvx39e8uXKT20jyvV3RtSqoLCP=
+PVGrcqRvp6WsMRWksjayItpunmTAAWOy9Gib6bCssdytF0gRn04vxTPjY6QEiaY7dHJcCQZ7Ij4=
+rRFDNGZhHoXdNpu7cJpOuVZmuQfEzp5UIdONmxz9W3brJpC8Zv0G-ndqXbmypEnXd_X8Ll7e9He=
+J6TRAH7we49MPKWKCPkbu1u8QnjDm2CVnrpGdcqE8uYmZ-0jSe1jFrT6mWLpiGMadK9-DggHp-n=
+dMpLEkGCi_DDO90AOZ5m3hAGbc8ClSzv-vFFuNWD5UQXnJqnpBbiShJHUAI9QHmkbaFkk5Hq4%3=
+D" target=3D"_blank" valign=3D"middle" style=3D"outline: none; mso-line-hei=
+ght-rule: exactly; text-align: center; font-family: 'Apercu Pro', 'Work San=
+s', Helvetica, Arial, sans-serif; color: #ffd300; font-size: 16px; font-wei=
+ght: bold; letter-spacing: normal; line-height: 24px; display: table-cell; =
+height: 5px; border-radius: 0px; vertical-align: middle; box-sizing: conten=
+t-box; text-decoration: none !important;"> <span style=3D"-webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0px; color:=
+ #ffd300;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fon=
+t-smoothing: grayscale; text-decoration: underline;"><span style=3D"-webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size=
+: 16px; line-height: 24px;">Learn more</span></span></span></a></td></tr></=
+table></td></tr></table></td></tr></table> <!--[if gte mso 9]></td></tr></t=
+able><![endif]--></td></tr></table></td></tr></table></td></tr><tr><td alig=
+n=3D"center" class=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"st-module-wrapper-table st-wrapper st-wrapper-background" role=
+=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#1=
+0162F" class=3D"padding-sides-22" style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale; width: 100%; padding-right: 32px; =
+padding-bottom: 50px; padding-left: 32px;" valign=3D"top" width=3D"100%"><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; width: 100%;" width=3D"100%"><tr><td align=3D"left=
+" class=3D"monofont" valign=3D"top" width=3D"100%" style=3D"-webkit-font-sm=
+oothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table align=3D"=
+left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 100%;" width=3D"100%"><tr><td class=3D"monofont" style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; wid=
+th: 586px;" valign=3D"bottom" width=3D"586"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><=
+td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-3887-41=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; padding-top: 30px; padding-bottom: 30px; width: 100%;"><img border=
+=3D"0" valign=3D"top" width=3D"586" src=3D"https://www.cdn1ve3zg.com/pihoug=
+jls1/en_us/images/6478cc48a993c-1685638216.6946.png" alt class=3D"st-mobile=
+-width-constraint" style=3D"border: 0px; display: block; width: 586px; max-=
+width: 100%;"></td></tr><tr><td align=3D"left" class=3D"monofont" style=3D"=
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; wi=
+dth: 100%;" valign=3D"top" width=3D"100%"><!--[if mso]><v:roundrect xmlns:v=
+=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:off=
+ice:word" style=3D"height:25pt; v-text-anchor:middle; width:114pt; mso-posi=
+tion-horizontal: left" arcsize=3D"104%" strokecolor=3D"#FFF0E5" strokeweigh=
+t=3D"1pt" fillcolor=3D"#10162F"> <w:anchorlock/> <v:textbox inset=3D"0,0,0,=
+0"><p style=3D"text-align: center; font-family: Suisse Int\l Mono, IBM Plex=
+ Mono, Courier New, Lucida Grande; color: #FFF0E5; font-size: 14px; font-we=
+ight: bold; letter-spacing: 0.028571428571428574em; mso-line-height-rule: e=
+xactly; line-height: 14px"><![endif]--> <!--[if !mso]><!--> <table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; bor=
+der-collapse: initial;"><tr><td width=3D"100%" align=3D"center" height=3D"3=
+2" valign=3D"middle" style=3D"-webkit-font-smoothing: antialiased; -moz-osx=
+-font-smoothing: grayscale; mso-padding-alt: 0px 18px 0px 18px; border-radi=
+us: 34px; border-width: 1px; border-style: solid; border-color: #fff0e5; he=
+ight: 32px; width: 100%; text-align: center; vertical-align: middle;"><!--<=
+![endif]--> <a href target=3D"_blank" valign=3D"middle" style=3D"outline: n=
+one; mso-line-height-rule: exactly; text-align: center; font-family: 'Suiss=
+e Intl Mono', 'IBM Plex Mono',Helvetica; color: #fff0e5; font-size: 14px; f=
+ont-weight: bold; letter-spacing: 0.0285714em; line-height: 14px; padding-r=
+ight: 18px; padding-left: 18px; display: table-cell; height: 32px; border-r=
+adius: 34px; vertical-align: middle; box-sizing: content-box; text-decorati=
+on: none !important;"> <span style=3D"-webkit-font-smoothing: antialiased; =
+-moz-osx-font-smoothing: grayscale; margin: 0px; text-align: center; color:=
+ #fff0e5;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fon=
+t-smoothing: grayscale; font-size: 14px; line-height: 14px;">FROM THE BLOG<=
+/span></span></a> <!--[if !mso]><!--></td></tr></table> <!--<![endif]--> <!=
+--[if mso]></p></v:textbox> </v:roundrect><![endif]--></td></tr></table></t=
+d></tr></table></td></tr></table></td></tr></table></td></tr><tr><td align=
+=3D"center" class=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" styl=
+e=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"st-module-wrapper-table st-wrapper st-wrapper-background" role=
+=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#1=
+0162F" class=3D"padding-sides-22" style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale; width: 100%; padding-right: 32px; =
+padding-left: 32px;" valign=3D"top" width=3D"100%"><table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; width: 100%;" width=3D"100%"><tr><td align=3D"left" valign=3D"top" width=
+=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale;"><!--[if gte mso 9]><table role=3D"presentation" width=3D"=
+439.50pt" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:4=
+39.50pt; border-collapse: collapse; table-width: fixed;" align=3D"center" d=
+ir=3D"rtl"> <tr> <td width=3D"207.75pt" style=3D"width:207.75pt" dir=3D"ltr=
+" valign=3D"top"><![endif]--> <table align=3D"right" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" class=3D"st-mobile-full-width st-mso-full-width"=
+ dir=3D"ltr" role=3D"presentation" style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; width: 277px; float: right;" widt=
+h=3D"277"><tr><td align=3D"center" class=3D"padding-bottom-15 st-equal-heig=
+ht" height=3D"210" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-f=
+ont-smoothing: grayscale; height: 210px;" valign=3D"top" width=3D"277"><tab=
+le border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" w=
+idth=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale;"><tr><td width=3D"100%" valign=3D"top" align=3D"center=
+" class=3D"rounded-corners" style=3D"-webkit-font-smoothing: antialiased; -=
+moz-osx-font-smoothing: grayscale; width: 100%;"><a href=3D"https://itr.lin=
+ks.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea9=
+66cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApMbvx1=
+2G81F3wHkY1p9J7DQlQFIaXrGoMrZ8jsz4-tJtIritVOFCeBsSrG5irJua30OFU_OjCXnGr1vvs=
+MFuenzzzbwRVJfaTow9FseR0ybmKcqctkRyhzbM2Wd17Rp0aS8o_p1Asl7mb-IKmi7t_Ygvuecy=
+mn3Flz2Z5b40ckZSEzrWOg3a9ApcHdfdGSE9wm53iFS-JgsNywteFAjxPykfAiEv-_zZ8iymu8W=
+0ktPuH93_kPP4frHd-9mIy9Vyr8tGq-2kzZxb9Nz_oJ1pyok6MfSiqqFQk6_s-VEDW4vfF4C9ED=
+eaK3x-nCBk_mttK4YfSJZNkKZoxgKVsz9DbMiWDALkfQZ-u9Qn0bpBv3pb3FlaQ%3D%3D" targ=
+et=3D"_blank" style=3D"outline: none; display: block; text-decoration: none=
+ !important;"><img border=3D"0" valign=3D"top" width=3D"260" src=3D"https:/=
+/www.cdn1ve3zg.com/pihougjls1/en_us/images/65dedaa0442a5-1709103776.2792.jp=
+g" alt title class=3D"st-resize" style=3D"border-radius: 10px; border: 0px;=
+ display: block; width: 100%; max-width: 100%;"> </a></td></tr></table></td=
+></tr></table> <!--[if gte mso 9]></td><td width=3D"231.75pt" style=3D"widt=
+h: 231.75pt" dir=3D"ltr" align=3D"left" valign=3D"top"><![endif]--> <table =
+align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"s=
+t-mobile-full-width st-mso-full-width" dir=3D"ltr" role=3D"presentation" st=
+yle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale; width: 309px; float: right;" width=3D"309"><tr><td align=3D"center" cl=
+ass=3D"reset-padding-sides st-equal-height" height=3D"210" style=3D"-webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-r=
+ight: 32px; height: 210px;" valign=3D"top" width=3D"309"><table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" =
+style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale;"><tr><td align=3D"left" style=3D"-webkit-font-smoothing: antialiased=
+; -moz-osx-font-smoothing: grayscale; text-align: left; font-family: 'Aperc=
+u Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; font-size: 2=
+2px; font-weight: 700; letter-spacing: normal; line-height: 30px; padding-b=
+ottom: 12px; width: 100%;" valign=3D"top" width=3D"100%"><p style=3D"paddin=
+g: 0; margin: 0;">Practice Your AI & Coding Skills with These Short-Form Ca=
+se Studies</p></td></tr><tr><td align=3D"left" style=3D"-webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: left; fon=
+t-family: 'Apercu Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0=
+e5; font-size: 16px; font-weight: 400; letter-spacing: normal; line-height:=
+ 24px; padding-bottom: 12px; width: 100%;" valign=3D"top" width=3D"100%"><p=
+ style=3D"padding: 0; margin: 0;">Get hands-on experience working with gene=
+rative AI in these short project-based exercises.</p></td></tr><tr><td alig=
+n=3D"left" class=3D"yellow-text" style=3D"-webkit-font-smoothing: antialias=
+ed; -moz-osx-font-smoothing: grayscale; width: 100%;" valign=3D"top" width=
+=3D"100%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale; border-collapse: initial;"><tr><td width=3D"100%" align=
+=3D"center" height=3D"5" valign=3D"middle" style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; mso-padding-alt: 0px 0px =
+0px 0px; height: 5px; width: 100%; text-align: center; vertical-align: midd=
+le;"> <a href=3D"https://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b3=
+4d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N=
+7uzi9Owsw3B6DNiBMloGtDsUoApMbvx12G81F3wHkY1p9J7DQlQFIaXrGoMrZ8jsz4-tJtIritV=
+OFCeBsSrG5irJua30OFU_OjCXnGr1vvsMFuenzzzbwRVJfaTow9FseR0ybmKcqctkRyhzbM2Wd1=
+7Rp0aS8o_p1Asl7mb-IKmi7t_Ygvuecymn3Flz2Z5b40ckZSEzrWOg3a9ApcHdfdGSE9wm53iEg=
+ExssXn8gB9ulNrBol05mUQJH10Q_bsxEDOcXqPL6NFbDFmQxcmSA9VaMNlyWhH5sztPnkCUKU8i=
+deofPvzCu1jHqjWwQaN6nPTQJ0u4bTcoQJhicVNwOXChmiPrUGsXEguI8Di4wGAmxIiYOV8ds56=
+7jPAJ2U-QXU-ULYcQkxA%3D%3D" target=3D"_blank" valign=3D"middle" style=3D"ou=
+tline: none; mso-line-height-rule: exactly; text-align: center; font-family=
+: 'Apercu Pro', 'Work Sans', Helvetica, Arial, sans-serif; color: #ffd300; =
+font-size: 16px; font-weight: bold; letter-spacing: normal; line-height: 24=
+px; display: table-cell; height: 5px; border-radius: 0px; vertical-align: m=
+iddle; box-sizing: content-box; text-decoration: none !important;"> <span s=
+tyle=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; margin: 0px; color: #ffd300;"><span style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: underline=
+;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smooth=
+ing: grayscale; font-size: 16px; line-height: 24px;">Read now</span></span>=
+</span></a></td></tr></table></td></tr></table></td></tr></table> <!--[if g=
+te mso 9]></td></tr></table><![endif]--></td></tr></table></td></tr></table=
+></td></tr><tr><td align=3D"center" class=3D"st-dynamic-3836-28" valign=3D"=
+top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale;"><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-table st-wrapper st-wr=
+apper-background" role=3D"presentation" style=3D"-webkit-font-smoothing: an=
+tialiased; -moz-osx-font-smoothing: grayscale; width: 650px;" width=3D"650"=
+><tr><td bgcolor=3D"#10162F" style=3D"-webkit-font-smoothing: antialiased; =
+-moz-osx-font-smoothing: grayscale; width: 100%;" valign=3D"top" width=3D"1=
+00%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mo=
+bile-full-width st-mso-full-width" role=3D"presentation" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650p=
+x;" width=3D"650"><tr><td align=3D"center" valign=3D"top" width=3D"650" sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-o=
+sx-font-smoothing: grayscale;"><tr><td align=3D"center" style=3D"-webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding: 0; =
+width: 100%;" valign=3D"top" width=3D"100%"><p height=3D"30" style=3D"paddi=
+ng: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; text-size-adjust: 100%; width: 100%; height: 30px; max-height: 30p=
+x; margin: 0; font-size: 30px; line-height: 30px;" width=3D"100%"> &nbsp; <=
+/p></td></tr><tr><td align=3D"center" style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale; padding: 20px 32px 50px; width=
+: 100%;" valign=3D"top" width=3D"100%"><p height=3D"1" style=3D"padding: 0;=
+ mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; text-size-adjust: 100%; width: 100%; height: 1px; max-height: 1px; backg=
+round-color: #ccc; margin: 0; font-size: 1px; line-height: 1px;" width=3D"1=
+00%"> &nbsp; </p></td></tr></table></td></tr></table></td></tr></table></td=
+></tr><tr><td align=3D"center" class=3D"st-dynamic-3836-28" valign=3D"top" =
+width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale;"><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"st-module-wrapper-table st-wrapper st-wrapper=
+-background" role=3D"presentation" style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; width: 650px;" width=3D"650"><tr>=
+<td bgcolor=3D"#10162F" class=3D"padding-sides-22" style=3D"-webkit-font-sm=
+oothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%; padd=
+ing-right: 60px; padding-left: 60px;" valign=3D"top" width=3D"100%"><table =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale; width: 100%;" width=3D"100%"><tr><td class=3D"reset-pad=
+ding-sides" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale; padding-top: 5px; width: 60px;" valign=3D"top" width=3D"=
+60"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-os=
+x-font-smoothing: grayscale;"><tr><td width=3D"100%" valign=3D"top" align=
+=3D"left" class=3D"minw-60 circle-image st-dynamic-4092-257" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: =
+100%; min-width: 60px!important;"><img border=3D"0" valign=3D"top" width=3D=
+"60" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/65dec786cabe1=
+-1709098886.8304.png" height=3D"60" alt title class=3D"st-mobile-width-cons=
+traint" style=3D"border-radius: 200px; border: 0px; display: block; width: =
+60px; max-width: 100%;"></td></tr></table></td><td style=3D"-webkit-font-sm=
+oothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-left: 27p=
+x; width: 443px;" valign=3D"top" width=3D"443"><table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><t=
+r><td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-4092=
+-260" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing=
+: grayscale; padding-bottom: 16px; width: 100%;"><img border=3D"0" valign=
+=3D"top" width=3D"29" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/ima=
+ges/647f99faee6d5-1686084090.9766.png" height=3D"23" alt title class=3D"st-=
+mobile-width-constraint" style=3D"border: 0px; display: block; width: 29px;=
+ max-width: 100%;"></td></tr><tr><td align=3D"left" class=3D"monofont" styl=
+e=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; text-align: left; font-family: 'Suisse Intl Mono','IBM Plex Mono',Helvet=
+ica; color: #fff0e5; font-size: 22px; font-weight: 400; letter-spacing: nor=
+mal; line-height: 30px; padding-bottom: 16px; width: 100%;" valign=3D"top" =
+width=3D"100%"><p style=3D"padding: 0; margin: 0;"><strong>Don&rsquo;t gate=
+keep yourself is the most important advice that I can give. There are many =
+levels of coding and knowledge, and all of them [count as] coding.</strong>=
+&nbsp;</p></td></tr><tr><td align=3D"left" style=3D"-webkit-font-smoothing:=
+ antialiased; -moz-osx-font-smoothing: grayscale; text-align: left; font-fa=
+mily: 'Apercu Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; =
+font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 20p=
+x; padding-bottom: 8px; width: 100%;" valign=3D"top" width=3D"100%"><p styl=
+e=3D"padding: 0; margin: 0;"><span style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; font-size: 14px; line-height: 20p=
+x;"><strong>Barbara Perez de Araujo</strong></span></p> <p style=3D"padding=
+: 0; margin: 0;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-o=
+sx-font-smoothing: grayscale; font-size: 14px; line-height: 20px;">PhD cand=
+idate <br>Bavaria, Germany </span></p></td></tr><tr><td align=3D"left" styl=
+e=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; width: 100%;" valign=3D"top" width=3D"100%"><table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-webkit-font-smo=
+othing: antialiased; -moz-osx-font-smoothing: grayscale; border-collapse: i=
+nitial;"><tr><td width=3D"100%" align=3D"center" height=3D"5" valign=3D"mid=
+dle" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale; mso-padding-alt: 0px 0px 0px 0px; height: 5px; width: 100%; tex=
+t-align: center; vertical-align: middle;"> <a href=3D"https://itr.links.cod=
+ecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf5=
+4be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApMbvx12G81F3=
+wHkY1p9J7DQlQFIzxnqTtgsmwD7iherH5MPsM0QA5vO5nXrN7uJ80FttSbw_TY-Ndrkoec7nqHC=
+X-wlHQOMwy55oGZrB3JQA09WxMe_rsBZbtXAMOXctE6sBuqn0TUOABd4_6xTrKllQuIe9Kcfok3=
+1XU7rOrhTFZRnhSOMBUadDiu2EXM17NJtbNOkx5Lg7QjlqxM_cTHCG88XNKqdupeTZ_gqWsxKe8=
+7xLlUxhuroT1mOYn0fbGfcBVRMoGIZ5cKigLu5NnapgldBFp9_dkNrL0O85yJ2ANTo7IVGUAK1V=
+m9dhoRYN_rM0aL3-1Z2Qt9vgUgzRwcMwlS2wC8xCEp2dbECosxVlA-7d2HOfs6swOAK1c8kPWbj=
+Gzk%3D" target=3D"_blank" valign=3D"middle" style=3D"outline: none; mso-lin=
+e-height-rule: exactly; text-align: center; font-family: 'Apercu Pro', 'Wor=
+k Sans', Helvetica, Arial, sans-serif; color: #ffd300; font-size: 16px; fon=
+t-weight: bold; letter-spacing: normal; line-height: 24px; display: table-c=
+ell; height: 5px; border-radius: 0px; vertical-align: middle; box-sizing: c=
+ontent-box; text-decoration: none !important;"> <span style=3D"-webkit-font=
+-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0px; c=
+olor: #ffd300;"><strong><span style=3D"-webkit-font-smoothing: antialiased;=
+ -moz-osx-font-smoothing: grayscale; text-decoration: underline;"><span sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le; font-size: 16px; line-height: 24px;">Read more</span></span></strong></=
+span></a></td></tr></table></td></tr></table></td></tr></table></td></tr></=
+table></td></tr><tr><td align=3D"center" class=3D"st-dynamic-3836-28" valig=
+n=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz=
+-osx-font-smoothing: grayscale;"><table align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" class=3D"st-module-wrapper-table st-wrapper =
+st-wrapper-background" role=3D"presentation" style=3D"-webkit-font-smoothin=
+g: antialiased; -moz-osx-font-smoothing: grayscale; width: 650px;" width=3D=
+"650"><tr><td bgcolor=3D"#10162F" style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale; width: 100%;" valign=3D"top" width=
+=3D"100%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"=
+st-mobile-full-width st-mso-full-width" role=3D"presentation" style=3D"-web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width:=
+ 650px;" width=3D"650"><tr><td align=3D"center" valign=3D"top" width=3D"650=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" width=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -=
+moz-osx-font-smoothing: grayscale;"><tr><td align=3D"center" style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding=
+: 0; width: 100%;" valign=3D"top" width=3D"100%"><p height=3D"30" style=3D"=
+padding: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; text-size-adjust: 100%; width: 100%; height: 30px; max-height=
+: 30px; margin: 0; font-size: 30px; line-height: 30px;" width=3D"100%"> &nb=
+sp; </p></td></tr><tr><td width=3D"100%" valign=3D"top" align=3D"left" clas=
+s=3D"st-dynamic-3887-41" style=3D"-webkit-font-smoothing: antialiased; -moz=
+-osx-font-smoothing: grayscale; padding-bottom: 30px; padding-right: 32px; =
+padding-left: 32px; width: 100%;"><img border=3D"0" valign=3D"top" width=3D=
+"586" src=3D"https://www.cdn1ve3zg.com/pihougjls1/en_us/images/647f91c27977=
+f-1686081986.4975.png" alt class=3D"st-mobile-width-constraint" style=3D"bo=
+rder: 0px; display: block; width: 586px; max-width: 100%;"></td></tr></tabl=
+e></td></tr></table></td></tr></table></td></tr><tr><td align=3D"center" cl=
+ass=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><table ali=
+gn=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-=
+module-wrapper-table st-wrapper st-wrapper-background" role=3D"presentation=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; width: 650px;" width=3D"650"><tr><td bgcolor=3D"#10162F" class=3D"=
+padding-sides-22" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; width: 100%; padding-right: 32px; padding-left: 32=
+px;" valign=3D"top" width=3D"100%"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"st-mobile-full-width st-mso-full-width" role=3D"pr=
+esentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale; width: 586px;" width=3D"586"><tr><td align=3D"center" va=
+lign=3D"top" width=3D"586" style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale;"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"-webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tr><td align=
+=3D"left" class=3D"left-align" style=3D"-webkit-font-smoothing: antialiased=
+; -moz-osx-font-smoothing: grayscale; text-align: left; font-family: 'Aperc=
+u Pro','Work Sans',Helvetica,Arial,sans-serif; color: #fff0e5; font-size: 2=
+2px; font-weight: 600; letter-spacing: normal; line-height: 33px; padding-b=
+ottom: 16px; width: 100%;" valign=3D"top" width=3D"100%"><p style=3D"paddin=
+g: 0; margin: 0; text-align: left;"><span style=3D"-webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale; font-size: 34px; line-heig=
+ht: 41px;">Share your career wins</span></p></td></tr><tr><td align=3D"left=
+" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; text-align: left; font-family: 'Apercu Pro','Work Sans',sans-serif=
+; color: #fff0e5; font-size: 16px; font-weight: 400; letter-spacing: normal=
+; line-height: 24px; width: 100%;" valign=3D"top" width=3D"100%"><p style=
+=3D"padding: 0; margin: 0;">Have you reached a big career goal using Codeca=
+demy? We'd like to hear more. Answer a few questions, and you could get fea=
+tured on our blog, social media, or even a video.</p></td></tr><tr><td alig=
+n=3D"left" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; width: 100%;" valign=3D"top" width=3D"100%"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"-=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; bor=
+der-collapse: initial;"><tr><td width=3D"100%" align=3D"center" height=3D"5=
+" valign=3D"middle" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-=
+font-smoothing: grayscale; mso-padding-alt: 10px 0px 0px 0px; height: 5px; =
+width: 100%; text-align: center; vertical-align: middle;"> <a href=3D"https=
+://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_=
+m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3GUGGV-53lOtP=
+DGTZ0OtXvS6M_1EBQJ1HWxeiwoOYNglSYghdiWUevMW6ExpQ6asHRDIFOSx7S1VqeWvMj1Rt24J=
+NOMSrf2Vzs9slNSdCV2tgeRIh60GHRXngBQjVI8kEOEhESujpmfyWCiYwz3WzXjVLkIc_Lkkurt=
+DtxbUc0oBAE9tGd-BBbKLAJT94BGrJNbXQhAWn4uYSeGswaMBcKxk-7E6nMmRGkC-hx3lkKBBU8=
+XKIbBl5LH-_i46f7kofA%3D%3D" target=3D"_blank" title valign=3D"middle" class=
+=3D"st-no-tracking" style=3D"outline: none; mso-line-height-rule: exactly; =
+text-align: center; font-family: 'Apercu Pro', 'Work Sans', Helvetica, Aria=
+l, sans-serif; color: #ffd300; font-size: 16px; font-weight: bold; letter-s=
+pacing: normal; line-height: 24px; padding-top: 10px; display: table-cell; =
+height: 5px; border-radius: 0px; vertical-align: middle; box-sizing: conten=
+t-box; text-decoration: none !important;"> <span style=3D"-webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0px; color:=
+ #ffd300;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fon=
+t-smoothing: grayscale; text-decoration: underline;"><span style=3D"-webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size=
+: 16px; line-height: 24px;">Share your story</span></span></span></a></td><=
+/tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr=
+><tr><td align=3D"center" class=3D"st-dynamic-3836-28" valign=3D"top" width=
+=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale;"><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"st-module-wrapper-table st-wrapper st-wrapper-back=
+ground" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased;=
+ -moz-osx-font-smoothing: grayscale; width: 650px;" width=3D"650"><tr><td b=
+gcolor=3D"#10162F" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-f=
+ont-smoothing: grayscale; width: 100%;" valign=3D"top" width=3D"100%"><tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mobile-full-=
+width st-mso-full-width" role=3D"presentation" style=3D"-webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale; width: 650px;" width=
+=3D"650"><tr><td align=3D"center" valign=3D"top" width=3D"650" style=3D"-we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><tab=
+le border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" w=
+idth=3D"100%" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale;"><tr><td align=3D"center" style=3D"-webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale; padding: 0; width: 10=
+0%;" valign=3D"top" width=3D"100%"><p height=3D"50" style=3D"padding: 0; ms=
+o-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+text-size-adjust: 100%; width: 100%; height: 50px; max-height: 50px; margin=
+: 0; font-size: 50px; line-height: 50px;" width=3D"100%"> &nbsp; </p></td><=
+/tr></table></td></tr></table></td></tr></table></td></tr><tr><td align=3D"=
+center" class=3D"st-dynamic-3836-28" valign=3D"top" width=3D"100%" style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">=
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"st-module-wrapper-table st-wrapper st-wrapper-background" role=3D"pr=
+esentation" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale; width: 650px;" width=3D"650"><tr><td class=3D"padding-si=
+des-22" style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothi=
+ng: grayscale; width: 100%; padding: 50px 90px;" valign=3D"top" width=3D"10=
+0%"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; width: 100%;" width=3D"100%"><tr><td align=
+=3D"left" valign=3D"top" width=3D"100%" style=3D"-webkit-font-smoothing: an=
+tialiased; -moz-osx-font-smoothing: grayscale;"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" class=3D"st-mobile-full-width st-mso-full-widt=
+h" role=3D"presentation" style=3D"-webkit-font-smoothing: antialiased; -moz=
+-osx-font-smoothing: grayscale; width: 470px;" width=3D"470"><tr><td align=
+=3D"center" valign=3D"top" width=3D"470" style=3D"-webkit-font-smoothing: a=
+ntialiased; -moz-osx-font-smoothing: grayscale;"><table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D=
+"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">=
+<tr><td align=3D"left" style=3D"-webkit-font-smoothing: antialiased; -moz-o=
+sx-font-smoothing: grayscale; text-align: left; font-family: 'Apercu Pro','=
+Work Sans',Helvetica,Arial,sans-serif; color: #10162f; font-size: 14px; fon=
+t-weight: 400; letter-spacing: normal; line-height: 24px; width: 100%;" val=
+ign=3D"top" width=3D"100%"><p style=3D"padding: 0; margin: 0; text-align: c=
+enter;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; color: #10162f;"><span style=3D"-webkit-font-smoothing=
+: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 14px; line-he=
+ight: 24px;">Stay connected: </span></span><span style=3D"-webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: un=
+derline; color: #00f;"><strong><span style=3D"-webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale; font-size: 14px; line-height: 2=
+4px;"><a class=3D"st-no-tracking" href=3D"https://itr.links.codecademy.com/=
+u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f5=
+5071defe&_e=3DgOzijmW9_0N7uzi9Owsw3PAPJgi0hoKRW3Oth3oItAYJcuH-Vk80eLNyB1cGV=
+Q_Gtih4yuTyCBrHCRWZHi4Em-Lzcv59QXDpPk4k-t9AEXwm1tNpld0HBWawGMQaXRlYvCjav8NA=
+bruvRzMB-4wKkeiIamlleOOjxoaBTaVr8u679d2QFenQAvh5veo4SO3nRtbDo53G9z82q5N7e0I=
+uDrIEucMVmQCtMPRGrHFmj_Y%3D" style=3D"outline: none; color: #00f; text-deco=
+ration: none !important;">Instagram</a></span></strong></span> <span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; color: #10162f;"><span style=3D"-webkit-font-smoothing: antialiased; -moz=
+-osx-font-smoothing: grayscale; font-size: 14px; line-height: 24px;">| </sp=
+an></span><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font=
+-smoothing: grayscale; font-size: 14px; line-height: 24px; color: #00f;"><s=
+pan style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: =
+grayscale; text-decoration: underline;"><strong><span style=3D"-webkit-font=
+-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoratio=
+n: underline;"><a class=3D"st-no-tracking" href=3D"https://itr.links.codeca=
+demy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be=
+8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3FcmlcC4Bp5gDmoID_V0yrvz58Yr897E=
+5Q6hcTx17ujezaHBUF70WkfMAP7PdloYjw7KG6seY3Se75ukDR6E0UOlNY7GAqNaP6q2QNvlOrG=
+TWABfdYDri33z-RbfS8Rygb4BXLZz4uzwFn7ICCkAOBpJBwdkpHzQ8tP-nNZycQu9HCkvM_80zr=
+ucByf8s4hfXPrZmX8NJoLexY1-baSjnrE%3D" style=3D"outline: none; color: #00f; =
+text-decoration: none !important;">LinkedIn</a></span></strong></span></spa=
+n><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothi=
+ng: grayscale; color: #10162f;"><span style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale; font-size: 14px; line-height: =
+24px;"> |<span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale; color: #3a10e5;">&nbsp;</span></span></span><span sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le; color: #00f;"><a class=3D"st-no-tracking" href=3D"https://itr.links.cod=
+ecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf5=
+4be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3IWS1HJYOo_r4t2xTDoR9g7JGpTEr=
+_wHaMBJ282LLEYDrsYNH41fvarDMO2WC4238rHsPdwYWgbhH9tRaHNkhUMoYa_QQuCNWrxGqe9w=
+Uuv9Le-becGuiS9IkPKFCBMnLsT2wVq_cmMlrDmS5kyE9eS-f43oO0IyhSGskhdW4KD1vU9fo3f=
+T4KzSVv2BmFsTGyjUCE9JfqC8i6NOsnc0zXw%3D" style=3D"outline: none; color: #00=
+f; text-decoration: none !important;"><strong><span style=3D"-webkit-font-s=
+moothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 14px;=
+ line-height: 24px;"><span style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale; text-decoration: underline;">Fa</span></s=
+pan></strong><strong><span style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale; font-size: 14px; line-height: 24px;"><spa=
+n style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gr=
+ayscale; text-decoration: underline;">ceboo</span></span></strong><strong><=
+span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:=
+ grayscale; font-size: 14px; line-height: 24px;"><span style=3D"-webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decorati=
+on: underline;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-os=
+x-font-smoothing: grayscale; text-decoration: underline;">k</span></span></=
+span></strong></a></span><span style=3D"-webkit-font-smoothing: antialiased=
+; -moz-osx-font-smoothing: grayscale; color: #10162f;"><span style=3D"-webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: =
+#000;"> |</span>&nbsp;</span><span style=3D"-webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale; color: #00f;"><strong><span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; font-size: 14px; line-height: 24px;"><span style=3D"-webkit-font-smoothin=
+g: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: underl=
+ine;"><a class=3D"st-no-tracking" href=3D"https://itr.links.codecademy.com/=
+u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f5=
+5071defe&_e=3DgOzijmW9_0N7uzi9Owsw3ArbpUp3qrYWA5lzzSOn5uT4J0vql62pCVAhJtXoJ=
+Un9M0CKgw7DZC9P_eZw7yf5LixtY2DCQVuWVgHrrMbpn5c5FUXOdPm8qruajzXiHue4cIwxpWfq=
+SBM_NJW-fTsm2mpv5MsFg_CtFEnj1SUpS6TEJhDNjGXVAJLlftdIiLk_y6WNYQXPYFdOVTxlT_j=
+PgaLJLhXLIZWyUFerYoh870U%3D" style=3D"outline: none; color: #00f; text-deco=
+ration: none !important;">TikTok</a></span></span></strong></span><span sty=
+le=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le; color: #10162f;"><span style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale; font-size: 14px; line-height: 24px;"> |</=
+span><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; font-size: 14px; line-height: 24px;">&nbsp;</span></span>=
+<span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing=
+: grayscale; font-size: 14px; line-height: 24px; color: #00f;"><span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; text-decoration: underline;"><strong><a class=3D"st-no-tracking" href=3D"=
+https://itr.links.codecademy.com/u/click?_t=3D13e4e7efd5b34d1d982e9fb34505f=
+006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3ILCaNFz=
+AktKXKgCPl03eR2buCUCx8YEma7xx_2s6C4CjJ25Q7P7iPs_Vomr86R3Icd-zf--QRVweXjchbX=
+9wmkAQsJPTDi3s2l4qSUySFKJ0rWCSopubb_Iqe6TMv8rbc6KyAnKqyOv3bIzXhRsW8ml3K0NPA=
+ggaPjhXma_iNGmdhzcshFG5Mc3RDKL8MzE3w%3D%3D" style=3D"outline: none; color: =
+#00f; text-decoration: none !important;">Forums</a></strong></span></span><=
+/p> <p style=3D"padding: 0; margin: 0; text-align: center;"><span style=3D"=
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; fo=
+nt-size: 14px; line-height: 24px; color: #fff0e5;"><a class=3D"st-no-tracki=
+ng" href=3D"https://itr.links.codecademy.com/e/evib?_t=3D13e4e7efd5b34d1d98=
+2e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=3DIwafvjGj_NtPM4XKb=
+mgYgpouQmlGP-ImMu8fpxElvT4iUyfjRDDvWymFc-UpaG_J" style=3D"outline: none; co=
+lor: #fff0e5; text-decoration: none !important;"><span style=3D"-webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #000;"=
+>View web version</span></a><span style=3D"-webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale; color: #10162f;"> | </span><a clas=
+s=3D"st-no-tracking" href=3D"https://itr.links.codecademy.com/u/click?_t=3D=
+13e4e7efd5b34d1d982e9fb34505f006&_m=3D2ceea966cdf54be8b0cbe9f55071defe&_e=
+=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApMbvx1TPnZUx_kUdzQ7NAEAelb7KSi12rZp=
+F82UK3x3aHYR4kpSUm1Yyl68puDJFagMnHOwvB2nbKQNXapFhAAoPEQzjj5nh7UNOCojvlnmn6G=
+XYynJNxdWUeEcpsAeYklb-CjhOZACDaaD3wnbH-JjrrAWAXZHu8c2m7r41bJJ4hozTb8PvhpwhY=
+7Lr7luGuyQV-g%3D" style=3D"outline: none; color: #fff0e5; text-decoration: =
+none !important;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; color: #000;">Email preferences</span></a><s=
+pan style=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: =
+grayscale; color: #10162f;"> |</span> <a class=3D"st-no-tracking" href=3D"h=
+ttps://itr.links.codecademy.com/e/encryptedUnsubscribe?_r=3D13e4e7efd5b34d1=
+d982e9fb34505f006&_s=3D2ceea966cdf54be8b0cbe9f55071defe&_t=3DIwafvjGj_NtPM4=
+XKbmgYgpouQmlGP-ImMu8fpxElvT70W8ZoHCV5eZLVf_5_efyHYyfEqNKYxvtHXEcWDMfKTq7Ji=
+WqNbop26amH2MUXw2JIBN_h7xgmrm-thHv7KmBe86-fLzrm8pSTX3fpxs10G34eCsXH2UDTGQMT=
+a7Lzg2k%3D" style=3D"outline: none; color: #fff0e5; text-decoration: none !=
+important;"><span style=3D"-webkit-font-smoothing: antialiased; -moz-osx-fo=
+nt-smoothing: grayscale; color: #000;">Unsubscribe</span></a> <span style=
+=3D"-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; color: #10162f;">|</span> <a class=3D"st-no-tracking" href=3D"https://itr=
+=2Elinks.codecademy.com/u/click?_t=3D13=
+e4e7efd5b34d1d982e9fb34505f006&_m=3D2c=
+eea966cdf54be8b0cbe9f55071defe&_e=3DgOzijmW9_0N7uzi9Owsw3B6DNiBMloGtDsUoApM=
+bvx0GGpM6hhLn-RqwQiTIfG4kDzr_l6pFfieZ3a0W5uthHpE0rntADx59gHIduHn8I11U1HyH8I=
+RNYHv7ktEgZbCPCVJnw4LKeWL7UDgXGh-OqB8KZ2AeqWKWNzqvglK1UGpUKG2n4N-iRUV0eED0Y=
+LH7v44i_SB7i1XkGFu32_1pmAyy_aB5_mcDQqJZoZgsdEU%3D" style=3D"outline: none; =
+color: #fff0e5; text-decoration: none !important;"><span style=3D"-webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #000=
+;">Privacy policy</span></a></span></p> <p style=3D"padding: 0; margin: 0; =
+text-align: center;"><span style=3D"-webkit-font-smoothing: antialiased; -m=
+oz-osx-font-smoothing: grayscale; font-size: 14px; line-height: 24px;">Copy=
+right Codecademy. All rights reserved. </span></p> <p style=3D"padding: 0; =
+margin: 0; text-align: center;"><span style=3D"-webkit-font-smoothing: anti=
+aliased; -moz-osx-font-smoothing: grayscale; font-size: 14px; line-height: =
+24px;">600 Broadway, 2nd Floor, New York City, NY 10012</span></p></td></tr=
+></table></td></tr></table></td></tr></table></td></tr></table></td></tr><!=
+--[if false]><!--> <tr><td class=3D"st-gmail-fix" style=3D"-webkit-font-smo=
+othing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 0; line=
+-height: 0; height: 0; min-width: 650px; display: none !important;"> &nbsp;=
+ </td></tr><!--<![endif]--> </table><img width=3D"1px" height=3D"1px" alt=
+=3D"" src=3D"http://mg.itr.mail.codecademy.com/o/eJw8zztuAzEMBNDTaMsFRX0oFS=
+ryaXIMmqTsTazYWKvJ7QPDicvBmylGW1Ex5MWaJ6gpZ095OTUUIFBTUKESikoUjylG7VTJalq2h=
+oARAkSfsIa8qmbqkDrpPRO6CNvc18HbeZWLmrDa-FnlMpZhk5UnN0evDnHY7cZH-1CH6MKLQ0Qx=
+45qzaE_xYOUAcrDaUwLyat3uRXxziNPG9czzufXoQ_HBP_S6Xz5N5j9WiPEBwuPK2_H7KZ5yDOj=
+ofdnbbsr8dbK9b7m4CMe_C-M3AAD__268VW0"></body></html>
+
+--2cf554c7f1a7bc201909d35f64fd243c0e920d67ab36ed6b62adacb8b26e--

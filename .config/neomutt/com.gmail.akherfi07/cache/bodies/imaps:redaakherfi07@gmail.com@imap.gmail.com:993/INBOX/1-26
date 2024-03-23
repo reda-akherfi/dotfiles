@@ -1,0 +1,72 @@
+Delivered-To: redaakherfi07@gmail.com
+Received: by 2002:a05:7300:ac13:b0:109:4b0c:161 with SMTP id cs19csp2885879dyb;
+        Fri, 8 Mar 2024 15:12:23 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGg8LepfOhORfFA9iRHw4rgySY49XCb0kFBB3I2L1uKh5/4EnINRDRHEV4Z2KGPRKFEAmqt
+X-Received: by 2002:a25:be52:0:b0:dcd:a9ad:7d67 with SMTP id d18-20020a25be52000000b00dcda9ad7d67mr400183ybm.8.1709939542922;
+        Fri, 08 Mar 2024 15:12:22 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1709939542; cv=none;
+        d=google.com; s=arc-20160816;
+        b=M22DViHHbf2J8BJOv0V27WA1kxHxPBOy25IHmAp+3NnOeo55dBgcHPy4ECVZIeBiN9
+         ArBA7MfbHdSFevxknZIuHXEEZB+DecUw0RWKwM5apc+NjXk/LamFbVa5SF9IZU1PBrCs
+         GPufK/EU0MCAifhoO1eYPZcgmXouaI8jkcwotFtS/qN44oQLtdGetQ9nH4c5Ne4zgG+F
+         nHPSg4b0rMyPN5I7GGmvEtSeopA4r1aqqoRtmMzcYG6DEGbmm3kk25y7zDxL+bhyy8se
+         BVmrITmeoDKGUV+uPca/T5vbvoPKypcQ0t8wCqw5QNiTxAblIdpG20niVNMgbueeIJIv
+         0G/A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=AWiIsLhcdDEmssXNW6Y3dlJPvHqVkS4SHNCfHwtMZts=;
+        fh=CpsQJLTU6CiUnH2pf0+np0Q71NRoqvQLApJgDgA/gr0=;
+        b=luJRvb3XLleTaKqZb8xnvNX8iegX76Rc3CpFi50rfJZCzJdPvrZy9Ve+u5Fc/B/FuS
+         DakgWsOtuZvCjz5xKzeTV63le6KOoMquw5nj2ZcZtPvzscuntmuXjBN51vmil3szjQqx
+         hkq48jWsFaFBYXvWoqlqvaXsmYKXJtCw5Lq6DkEzM7+wOMBz0y7UHtGPYSvsvJXKBFug
+         hDpZ7kimDABGX9wtURgMOMepeDkhSp06KEiRdVPVjjFEYAHstVP7IzRpvnBOJk6iQARR
+         jCs+HRdlxadQu5/u0xWeKAmMv42/URfokGw/gvVLBsQRAAUjYjgVN/qzTHVDgEC+/RIA
+         CddQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=j+eXTqnw;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-24.smtp.github.com (out-24.smtp.github.com. [192.30.252.207])
+        by mx.google.com with ESMTPS id o7-20020ac87c47000000b0042ee0557898si577346qtv.5.2024.03.08.15.12.22
+        for <redaakherfi07@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 08 Mar 2024 15:12:22 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) client-ip=192.30.252.207;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=j+eXTqnw;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-e5258bc.ac4-iad.github.net [10.52.148.36])
+	by smtp.github.com (Postfix) with ESMTPA id 77F07640C22
+	for <redaakherfi07@gmail.com>; Fri,  8 Mar 2024 15:12:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1709939542;
+	bh=AWiIsLhcdDEmssXNW6Y3dlJPvHqVkS4SHNCfHwtMZts=;
+	h=Date:From:To:Subject:From;
+	b=j+eXTqnwuxYhnYv0xqLQbnvoW8wDaJjsgji2nGHRZJFC518D16AmSNvzhCv7RDRTA
+	 3v5fp13TTo6dfByyM3wWMnxfFh+uKKGmsRbT5t0kxySUlEnyIurWHNkzCcrfHveB9n
+	 n4HVQ8WrbaBMQ375dSChxn55bXBAez0yoXKWo3+I=
+Date: Fri, 08 Mar 2024 15:12:22 -0800
+From: GitHub <noreply@github.com>
+To: reda-akherfi <redaakherfi07@gmail.com>
+Message-ID: <65eb9b56766eb_6517d41070fe@lowworker-d59d6557f-7c52d.mail>
+Subject: [GitHub] A new SSH authentication public key was added to your
+ account
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+The following SSH key was added to your account:
+
+github_reda-akherfi_qtile.pub
+SHA256:V51OzBCAJg6nh65DD1umR6CmDrIUaSWerF71ROb5pWY
+
+If you believe this key was added in error, you can remove the key and disable
+access at the following location:
+
+https://github.com/settings/keys
