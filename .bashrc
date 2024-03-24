@@ -144,7 +144,9 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc
 
 export RANGER_LOAD_DEFAULT_RC=false
-export QT_SCALE_FACTOR=4
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_SCALE_FACTOR=1.3
+export QUTE_QT_WRAPPER=PyQt5
 
 
 ######################################################################
@@ -157,3 +159,11 @@ export QT_SCALE_FACTOR=4
 # (cat ~/.cache/wal/sequences &)
 # To add support for TTYs this line can be optionally added.
 # source ~/.cache/wal/colors-tty.sh
+#
+#
+
+function dict() {
+	sdcv -n --utf8-output --color "$@" 2>&1 | \
+	fold --width=$(tput cols) | \
+	less --quit-if-one-screen -RX
+}

@@ -357,7 +357,7 @@ c.fonts.completion.entry = '19pt "Roboto Mono"'
 
 # Font used for the debugging console.
 # Type: Font
-c.fonts.debug_console = '29pt "Roboto Mono"'
+c.fonts.debug_console = '39pt "Roboto Mono"'
 
 # Font used for prompts.
 # Type: Font

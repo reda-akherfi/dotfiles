@@ -23,11 +23,12 @@ nnoremap <leader>f :Lexplore<CR>
 let g:netrw_keepdir = 0 ""> Keep the current directory and the browsing directory synced. This helps you avoid the move files error.
 let g:netrw_banner = 0  ""> hide the annoying banner in netrw
 ""> netrw is going tree-style
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 1
 ""> Change the copy command. Mostly to enable recursive copy of directories.
 let g:netrw_localcopydircmd = 'cp -r'
 ""> Highlight marked files in the same way search matches are.
 hi! link netrwMarkFile Search
+set modifiable
 "">  show theys I type in normal  mode at the bottom of the page
 set showcmd
 ""> here is where to continue the setup of netrw :: [Using Netrw, vim's builtin file explorer | Devlog](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/)
@@ -190,4 +191,13 @@ let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 set rtp+=~/.vim/plugins/
 source ~/.vim/plugins/AutoSave.vim
 
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+" May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
+" utf-8 byte sequence
+set encoding=utf-8
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
 
